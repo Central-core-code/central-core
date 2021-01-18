@@ -9,7 +9,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>MAIN HEADER</h1>
+        <div className="container">
+          <h1>MAIN HEADER</h1>
+        </div>
       </main>
 
       <footer>FOOTER</footer>
