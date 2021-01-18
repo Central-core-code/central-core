@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,12 +10,16 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="container">
-          <h1>MAIN HEADER</h1>
-        </div>
+        <Link href="#footer">
+          <a>that one now works</a>
+        </Link>
+        <h1>MAIN HEADER</h1>
+        <div style={{ height: "3000px", backgroundColor: "red" }} />
       </main>
 
-      <footer>FOOTER</footer>
+      <footer id="footer" name="footer">
+        FOOTER
+      </footer>
     </div>
   );
 }
