@@ -1,7 +1,13 @@
 import Head from "next/head";
 import Link from "next/link";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import { useRouter } from "next/router";
+import translations from "../translations";
 
 export default function Home() {
+  let router = useRouter();
+  const locale = router.locale;
+
   return (
     <div>
       <Head>
@@ -10,6 +16,11 @@ export default function Home() {
       </Head>
 
       <main>
+        {translations[locale].helloWorld} <br />
+        <LanguageSwitcher />
+        <br />
+        <br />
+        <br />
         <Link href="#footer">
           <a>that one now works</a>
         </Link>
