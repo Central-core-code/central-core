@@ -14,8 +14,14 @@ export default function Home() {
         <title>Central corp</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div className="load-wrap">
+        <div className="load-wrap__content">
+          <h1>Hello</h1>
+        </div>
+      </div>
 
       <main>
+        <p>to tlumaczymy</p>
         {translations[locale].helloWorld} <br />
         <LanguageSwitcher />
         <br />
@@ -25,8 +31,8 @@ export default function Home() {
           <a>that one now works</a>
         </Link>
         <h1>MAIN HEADER</h1>
-        <div style={{ height: "3000px", backgroundColor: "red" }} />
       </main>
+      <div style={{ height: "3000px", backgroundColor: "red" }} />
 
       <footer id="footer" name="footer">
         FOOTER
