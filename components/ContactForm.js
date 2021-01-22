@@ -1,14 +1,19 @@
 import React, { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import Recaptcha from "react-recaptcha";
 
 export default function ContactForm() {
-  const recaptchaRef = React.createRef();
-  const onChange = () => {
-    const recaptchaValue = recaptchaRef.current.getValue();
-    this.props.onSubmit(recaptchaValue);
+  const [isVerifed, setVerified] = useState(false);
+  const [isSuccess, setStatus] = useState(false);
+
+  const recaptchaLoaded = () => {
+    console.log("cap loaded");
   };
 
-  const [isSuccess, setStatus] = useState(false);
+  const verifyCallback = (res) => {
+    if (response) {
+      setVerified(true);
+    }
+  };
 
   return (
     <form
@@ -37,7 +42,12 @@ export default function ContactForm() {
         <label htmlFor="yourmessage">Message:</label>
         <textarea name="message" id="yourmessage"></textarea>
       </p>
-      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
+      <Recaptcha
+        sitekey={process.env.SITE_RECAPTCHA_KEY}
+        render="explicit"
+        onloadCallback={recaptchaLoaded}
+        verifyCallback={verifyCallback}
+      />
       <p>
         <button type="submit">Send</button>
       </p>

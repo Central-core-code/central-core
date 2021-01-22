@@ -16,6 +16,11 @@ export default function Home() {
       <Head>
         <title>Central corp</title>
         <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+          async
+          defer
+        ></script>
       </Head>
       <div className="load-wrap">
         <div className="load-wrap__content">
