@@ -1,6 +1,13 @@
 import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
+  const recaptchaRef = React.createRef();
+  const onChange = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.props.onSubmit(recaptchaValue);
+  };
+
   const [isSuccess, setStatus] = useState(false);
 
   return (
@@ -12,7 +19,6 @@ export default function ContactForm() {
         e.preventDefault();
         console.log("message has been sent.");
       }}
-      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
@@ -31,7 +37,7 @@ export default function ContactForm() {
         <label htmlFor="yourmessage">Message:</label>
         <textarea name="message" id="yourmessage"></textarea>
       </p>
-      <div data-netlify-recaptcha="true" />
+      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
       <p>
         <button type="submit">Send</button>
       </p>
