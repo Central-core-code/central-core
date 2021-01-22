@@ -4,6 +4,8 @@ import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { useRouter } from "next/router";
 import translations from "../translations";
 
+//getStaticProps to handle prerender
+
 export default function Home() {
   let router = useRouter();
   const locale = router.locale;
