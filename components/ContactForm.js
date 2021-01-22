@@ -8,9 +8,11 @@ export default function ContactForm() {
       name="contact"
       method="POST"
       data-netlify="true"
-      onSubmit={() => {
+      onSubmit={(e) => {
+        e.preventDefault();
         console.log("message has been sent.");
       }}
+      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
@@ -29,6 +31,7 @@ export default function ContactForm() {
         <label htmlFor="yourmessage">Message:</label>
         <textarea name="message" id="yourmessage"></textarea>
       </p>
+      <div data-netlify-recaptcha="true" />
       <p>
         <button type="submit">Send</button>
       </p>
