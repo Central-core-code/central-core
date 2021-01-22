@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { useRouter } from "next/router";
 import translations from "../translations";
+import ContactForm from "@components/ContactForm";
 
 //getStaticProps to handle prerender
 
@@ -21,6 +22,7 @@ export default function Home() {
           <h1>Hello</h1>
         </div>
       </div>
+      <ContactForm />
 
       <main>
         <p>to tlumaczymy</p>
