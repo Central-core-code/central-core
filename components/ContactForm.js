@@ -1,28 +1,18 @@
-import React, { useState, useEffect } from "react";
-
-const handleLoaded = () => {
-  window.grecaptcha.ready(() => {
-    window.grecaptcha.execute(process.env.SITE_RECAPTCHA_KEY, {
-      action: "homepage",
-    });
-  });
-};
+import React, { useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const [isSuccess, setStatus] = useState(false);
 
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://www.google.com/recaptcha/api.js";
-    script.addEventListener("load", handleLoaded);
-    window.onSubmit = () => alert("recaptcha submit");
-    document.body.appendChild(script);
-  }, []);
+  const onChange = (value) => {
+    console.log("cos tu", value);
+  };
 
   return (
     <form
       name="contact"
       method="POST"
+      data-netlify-recaptcha="true"
       data-netlify="true"
       onSubmit={(e) => {
         e.preventDefault();
@@ -46,12 +36,7 @@ export default function ContactForm() {
         <label htmlFor="yourmessage">Message:</label>
         <textarea name="message" id="yourmessage"></textarea>
       </p>
-      <div
-        className="g-recaptcha"
-        data-sitekey={process.env.SITE_RECAPTCHA_KEY}
-        data-callback="onSubmit"
-      />
-
+      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
       <p>
         <button type="submit">Send</button>
       </p>
