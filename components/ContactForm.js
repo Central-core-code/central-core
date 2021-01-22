@@ -1,19 +1,23 @@
-import React, { useState } from "react";
-import Recaptcha from "react-recaptcha";
+import React, { useState, useEffect } from "react";
+
+const handleLoaded = () => {
+  window.grecaptcha.ready(() => {
+    window.grecaptcha.execute(process.env.SITE_RECAPTCHA_KEY, {
+      action: "homepage",
+    });
+  });
+};
 
 export default function ContactForm() {
-  const [isVerifed, setVerified] = useState(false);
   const [isSuccess, setStatus] = useState(false);
 
-  const recaptchaLoaded = () => {
-    console.log("cap loaded");
-  };
-
-  const verifyCallback = (res) => {
-    if (response) {
-      setVerified(true);
-    }
-  };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://www.google.com/recaptcha/api.js";
+    script.addEventListener("load", handleLoaded);
+    window.onSubmit = () => alert("recaptcha submit");
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <form
@@ -42,12 +46,12 @@ export default function ContactForm() {
         <label htmlFor="yourmessage">Message:</label>
         <textarea name="message" id="yourmessage"></textarea>
       </p>
-      <Recaptcha
-        sitekey={process.env.SITE_RECAPTCHA_KEY}
-        render="explicit"
-        onloadCallback={recaptchaLoaded}
-        verifyCallback={verifyCallback}
+      <div
+        className="g-recaptcha"
+        data-sitekey={process.env.SITE_RECAPTCHA_KEY}
+        data-callback="onSubmit"
       />
+
       <p>
         <button type="submit">Send</button>
       </p>
