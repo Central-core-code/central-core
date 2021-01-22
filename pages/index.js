@@ -5,8 +5,6 @@ import { useRouter } from "next/router";
 import translations from "../translations";
 import ContactForm from "@components/ContactForm";
 
-//getStaticProps to handle prerender
-
 export default function Home() {
   let router = useRouter();
   const locale = router.locale;

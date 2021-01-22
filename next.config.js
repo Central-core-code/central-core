@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    SITE_RECAPTCHA_KEY: "6LeIzjcaAAAAALKA4L1d0C0V4i21soeAofZYUKJ6",
+    SITE_RECAPTCHA_KEY: "6Lcf3jcaAAAAAOYouTXhA1rf-xU0MRhhaMJajIoP",
   },
   i18n: {
     locales: ["en", "pl"],
