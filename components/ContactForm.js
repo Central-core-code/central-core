@@ -3,9 +3,24 @@ import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
   const [isSuccess, setStatus] = useState(false);
+  const [form, setForm] = useState({
+    name: "",
+    surname: "",
+    email: "",
+    message: "",
+  });
 
-  const onChange = (value) => {
+  const onChange = value => {
     console.log("cos tu", value);
+  };
+
+  const handleChange = e => {
+    const { name, value } = e.target;
+
+    setForm(prevState => ({
+      ...prevState,
+      [name]: value,
+    }));
   };
 
   return (
@@ -14,27 +29,58 @@ export default function ContactForm() {
       method="POST"
       data-netlify-recaptcha="true"
       data-netlify="true"
-      onSubmit={(e) => {
+      onSubmit={e => {
         e.preventDefault();
         console.log("message has been sent.");
       }}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
-        <label htmlFor="firstname">Your Name:</label>
-        <input type="text" name="firstname" id="firstname" />
+        <label htmlFor="name">
+          Your Name:
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value={form.name}
+            onChange={handleChange}
+          />
+        </label>
       </p>
       <p>
-        <label htmlFor="lastname">Your Name:</label>
-        <input type="text" name="name" id="lastname" />
+        <label htmlFor="surname">
+          Your Surname:
+          <input
+            type="text"
+            name="surname"
+            id="surname"
+            value={form.surname}
+            onChange={handleChange}
+          />
+        </label>
       </p>
       <p>
-        <label htmlFor="youremail">Your Email:</label>
-        <input type="email" name="email" id="youremail" />
+        <label htmlFor="email">
+          Your Email:
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value={form.email}
+            onChange={handleChange}
+          />
+        </label>
       </p>
       <p>
-        <label htmlFor="yourmessage">Message:</label>
-        <textarea name="message" id="yourmessage"></textarea>
+        <label htmlFor="message">
+          Message:
+          <textarea
+            name="message"
+            id="message"
+            value={form.message}
+            onChange={handleChange}
+          ></textarea>
+        </label>
       </p>
       <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
       <p>
