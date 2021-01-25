@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useRouter } from "next/router";
+import translations from "../translations";
 
 export default function ContactForm() {
+  let router = useRouter();
+  const locale = router.locale;
   const [isSuccess, setStatus] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -172,7 +176,7 @@ export default function ContactForm() {
           onChange={onChange}
         />
         <p>
-          <button type="submit">Send</button>
+          <button type="submit">{translations[locale].sendButton}</button>
         </p>
       </form>
       {form.successMessage && <h3>{form.successMessage}</h3>}
