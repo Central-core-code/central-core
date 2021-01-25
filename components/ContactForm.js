@@ -9,7 +9,34 @@ export default function ContactForm() {
     email: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: false,
+    surname: false,
+    email: false,
+    message: false,
+  });
 
+  const messages = {
+    name_incorrect: "Nazwa musi miec conajmniej 3 znakow",
+    surname_incorrect: "Nazwa musi miec conajmniej 3 znakow",
+    email_incorrect: "brak @ w adresie e-mail",
+    message_incorrect: "malo! wincyj!",
+  };
+  const handleSubmit = e => {
+    e.preventDefault();
+    const validation = formValidation();
+    console.log(validation);
+
+    if (validation.correct) {
+      console.log("wyslane");
+      setForm({
+        name: "",
+        surname: "",
+        email: "",
+        message: "",
+      });
+    }
+  };
   const onChange = value => {
     console.log("cos tu", value);
   };
@@ -23,16 +50,43 @@ export default function ContactForm() {
     }));
   };
 
+  const formValidation = () => {
+    let { name, surname, email, message, correct } = false;
+
+    if (form.name.length > 3) {
+      name = true;
+    }
+    if (form.surname.length > 3) {
+      surname = true;
+    }
+    if (form.email.indexOf("@") !== -1) {
+      email = true;
+    }
+    if (form.message.length > 3) {
+      message = true;
+    }
+    if (name && surname && email && message) {
+      correct = true;
+    }
+    return {
+      name,
+      surname,
+      email,
+      message,
+      correct,
+    };
+  };
+
   return (
     <form
       name="contact"
       method="POST"
       data-netlify-recaptcha="true"
       data-netlify="true"
-      onSubmit={e => {
-        e.preventDefault();
-        console.log("message has been sent.");
-      }}
+      // onSubmit={e => {
+      //   e.preventDefault();
+      //   console.log("message has been sent.");
+      // }}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p>
@@ -84,7 +138,9 @@ export default function ContactForm() {
       </p>
       <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
       <p>
-        <button type="submit">Send</button>
+        <button onClick={handleSubmit} type="submit">
+          Send
+        </button>
       </p>
     </form>
   );
