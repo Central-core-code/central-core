@@ -2,57 +2,44 @@ import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRouter } from "next/router";
 import translations from "../translations";
+import formVadidation from "../components/FormValidation";
+
+const initialFormState = {
+  name: "",
+  surname: "",
+  email: "",
+  message: "",
+};
+
+const initialErrorsState = {
+  name: false,
+  surname: false,
+  email: false,
+  message: false,
+};
 
 export default function ContactForm() {
   let router = useRouter();
   const locale = router.locale;
-  const [isSuccess, setStatus] = useState(false);
-  const [form, setForm] = useState({
-    name: "",
-    surname: "",
-    email: "",
-    message: "",
-    successMessage: "",
-  });
-  const [errors, setErrors] = useState({
-    name: false,
-    surname: false,
-    email: false,
-    message: false,
-  });
+  const [form, setForm] = useState(initialFormState);
+  const [errors, setErrors] = useState(initialErrorsState);
+  const [successMessage, setSuccessMessage] = useState("");
+  const {
+    text_incorrect,
+    email_incorrect,
+    message_incorrect,
+    succesMessage,
+  } = translations[locale].contactForm.messages;
 
-  const messages = {
-    text_incorrect: "To pole powinno zawierać min 3 znaki",
-    email_incorrect: "brak @ w adresie e-mail",
-    message_incorrect: "min 3 znaki max 200",
-  };
   const handleSubmit = e => {
     e.preventDefault();
     const validation = formValidation();
     console.log(validation);
 
     if (validation.correct) {
-      console.log("wyslane");
-      setForm({
-        name: "",
-        surname: "",
-        email: "",
-        message: "",
-        successMessage: "Formularz został wysłany",
-      });
-      setErrors({
-        name: false,
-        surname: false,
-        email: false,
-        message: false,
-      });
-    } else {
-      setErrors({
-        name: !validation.name,
-        surname: !validation.surname,
-        email: !validation.email,
-        message: !validation.message,
-      });
+      setForm(initialFormState);
+      setErrors(initialErrorsState);
+      setSuccessMessage(succesMessage);
     }
   };
   const onChange = value => {
@@ -66,6 +53,17 @@ export default function ContactForm() {
       ...prevState,
       [name]: value,
     }));
+    const validation = formValidation();
+    console.log(validation);
+
+    if (!validation.correct) {
+      setErrors({
+        name: !validation.name,
+        surname: !validation.surname,
+        email: !validation.email,
+        message: !validation.message,
+      });
+    }
   };
 
   const formValidation = () => {
@@ -96,15 +94,8 @@ export default function ContactForm() {
     };
   };
   useEffect(() => {
-    if (form.successMessage !== "") {
-      setTimeout(
-        () =>
-          setForm(prevState => ({
-            ...prevState,
-            successMessage: "",
-          })),
-        3000
-      );
+    if (successMessage !== "") {
+      setTimeout(() => setSuccessMessage(""), 3000);
     }
   });
 
@@ -129,7 +120,7 @@ export default function ContactForm() {
               value={form.name}
               onChange={handleChange}
             />
-            {errors.name && <span>{messages.text_incorrect}</span>}
+            {errors.name && <span>{text_incorrect}</span>}
           </label>
         </p>
         <p>
@@ -142,7 +133,7 @@ export default function ContactForm() {
               value={form.surname}
               onChange={handleChange}
             />
-            {errors.surname && <span>{messages.text_incorrect}</span>}
+            {errors.surname && <span>{text_incorrect}</span>}
           </label>
         </p>
         <p>
@@ -155,7 +146,7 @@ export default function ContactForm() {
               value={form.email}
               onChange={handleChange}
             />
-            {errors.email && <span>{messages.email_incorrect}</span>}
+            {errors.email && <span>{email_incorrect}</span>}
           </label>
         </p>
         <p>
@@ -166,9 +157,9 @@ export default function ContactForm() {
               id="message"
               value={form.message}
               onChange={handleChange}
-            ></textarea>
+            />
             <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{messages.message_incorrect}</span>}
+            {errors.message && <span>{message_incorrect}</span>}
           </label>
         </p>
         <ReCAPTCHA
@@ -176,10 +167,12 @@ export default function ContactForm() {
           onChange={onChange}
         />
         <p>
-          <button type="submit">{translations[locale].sendButton}</button>
+          <button type="submit">
+            {translations[locale].contactForm.sendButton}
+          </button>
         </p>
       </form>
-      {form.successMessage && <h3>{form.successMessage}</h3>}
+      {successMessage && <h3>{successMessage}</h3>}
     </>
   );
 }

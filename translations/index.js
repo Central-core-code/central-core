@@ -1,10 +1,26 @@
 export default {
   en: {
     helloWorld: "helloWorld",
-    sendButton: "Send",
+    contactForm: {
+      sendButton: "Send",
+      messages: {
+        text_incorrect: "This fieled sshould have min 3characters",
+        email_incorrect: "brak @ w adresie e-mail",
+        message_incorrect: "min 3 znaki max 200",
+        succesMessage: "Mesage send",
+      },
+    },
   },
   pl: {
     helloWorld: "Witaj swiecie",
-    sendButton: "Wyślij",
+    contactForm: {
+      sendButton: "Wyślij",
+      messages: {
+        text_incorrect: "To pole powinno zawierać min 3 znaki",
+        email_incorrect: "brak @ w adresie e-mail",
+        message_incorrect: "min 3 znaki max 200",
+        succesMessage: "Widomość wysłana",
+      },
+    },
   },
 };
