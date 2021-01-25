@@ -20,11 +20,11 @@ export default function Home() {
           defer
         ></script>
       </Head>
-      <div className="load-wrap">
+      {/* <div className="load-wrap">
         <div className="load-wrap__content">
           <h1>Hello</h1>
         </div>
-      </div>
+      </div> */}
       <ContactForm />
 
       <main>

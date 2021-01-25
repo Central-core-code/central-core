@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactForm() {
@@ -8,6 +8,7 @@ export default function ContactForm() {
     surname: "",
     email: "",
     message: "",
+    successMessage: "",
   });
   const [errors, setErrors] = useState({
     name: false,
@@ -17,10 +18,9 @@ export default function ContactForm() {
   });
 
   const messages = {
-    name_incorrect: "Nazwa musi miec conajmniej 3 znakow",
-    surname_incorrect: "Nazwa musi miec conajmniej 3 znakow",
+    text_incorrect: "To pole powinno zawierać min 3 znaki",
     email_incorrect: "brak @ w adresie e-mail",
-    message_incorrect: "malo! wincyj!",
+    message_incorrect: "min 3 znaki max 200",
   };
   const handleSubmit = e => {
     e.preventDefault();
@@ -34,6 +34,20 @@ export default function ContactForm() {
         surname: "",
         email: "",
         message: "",
+        successMessage: "Formularz został wysłany",
+      });
+      setErrors({
+        name: false,
+        surname: false,
+        email: false,
+        message: false,
+      });
+    } else {
+      setErrors({
+        name: !validation.name,
+        surname: !validation.surname,
+        email: !validation.email,
+        message: !validation.message,
       });
     }
   };
@@ -53,18 +67,19 @@ export default function ContactForm() {
   const formValidation = () => {
     let { name, surname, email, message, correct } = false;
 
-    if (form.name.length > 3) {
+    if (form.name.length >= 3) {
       name = true;
     }
-    if (form.surname.length > 3) {
+    if (form.surname.length >= 3) {
       surname = true;
     }
     if (form.email.indexOf("@") !== -1) {
       email = true;
     }
-    if (form.message.length > 3) {
+    if (form.message.length >= 3 && form.message.length <= 200) {
       message = true;
     }
+
     if (name && surname && email && message) {
       correct = true;
     }
@@ -76,72 +91,91 @@ export default function ContactForm() {
       correct,
     };
   };
+  useEffect(() => {
+    if (form.successMessage !== "") {
+      setTimeout(
+        () =>
+          setForm(prevState => ({
+            ...prevState,
+            successMessage: "",
+          })),
+        3000
+      );
+    }
+  });
 
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-      // onSubmit={e => {
-      //   e.preventDefault();
-      //   console.log("message has been sent.");
-      // }}
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <p>
-        <label htmlFor="name">
-          Your Name:
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={form.name}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="surname">
-          Your Surname:
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            value={form.surname}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="email">
-          Your Email:
-          <input
-            type="email"
-            name="email"
-            id="email"
-            value={form.email}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="message">
-          Message:
-          <textarea
-            name="message"
-            id="message"
-            value={form.message}
-            onChange={handleChange}
-          ></textarea>
-        </label>
-      </p>
-      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
-      <p>
-        <button onClick={handleSubmit} type="submit">
-          Send
-        </button>
-      </p>
-    </form>
+    <>
+      <form
+        name="contact"
+        // method="POST"
+        // data-netlify-recaptcha="true"
+        // data-netlify="true"
+        onSubmit={handleSubmit}
+        noValidate
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p>
+          <label htmlFor="name">
+            Your Name:
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={form.name}
+              onChange={handleChange}
+            />
+            {errors.name && <span>{messages.text_incorrect}</span>}
+          </label>
+        </p>
+        <p>
+          <label htmlFor="surname">
+            Your Surname:
+            <input
+              type="text"
+              name="surname"
+              id="surname"
+              value={form.surname}
+              onChange={handleChange}
+            />
+            {errors.surname && <span>{messages.text_incorrect}</span>}
+          </label>
+        </p>
+        <p>
+          <label htmlFor="email">
+            Your Email:
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value={form.email}
+              onChange={handleChange}
+            />
+            {errors.email && <span>{messages.email_incorrect}</span>}
+          </label>
+        </p>
+        <p>
+          <label htmlFor="message">
+            Message:
+            <textarea
+              name="message"
+              id="message"
+              value={form.message}
+              onChange={handleChange}
+            ></textarea>
+            <span>{`${form.message.length}/200`}</span>
+            {errors.message && <span>{messages.message_incorrect}</span>}
+          </label>
+        </p>
+        <ReCAPTCHA
+          sitekey={process.env.SITE_RECAPTCHA_KEY}
+          onChange={onChange}
+        />
+        <p>
+          <button type="submit">Send</button>
+        </p>
+      </form>
+      {form.successMessage && <h3>{form.successMessage}</h3>}
+    </>
   );
 }
