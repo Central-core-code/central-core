@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from "emailjs-com";
 
 export default function ContactForm() {
   const [isSuccess, setStatus] = useState(false);
@@ -10,30 +11,43 @@ export default function ContactForm() {
     message: "",
   });
 
-  const onChange = value => {
+  const onChange = (value) => {
     console.log("cos tu", value);
+    //validacja recatpchy
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm(prevState => ({
+    setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.EMAILJS_SERVICE_KEY,
+        process.env.EMAILJS_TEMPLATE_KEY,
+        e.target,
+        process.env.EMAILJS_USER_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
+
   return (
-    <form
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-      onSubmit={e => {
-        e.preventDefault();
-        console.log("message has been sent.");
-      }}
-    >
+    <form name="contact" method="POST" onSubmit={onSubmit}>
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <label htmlFor="name">
@@ -43,18 +57,6 @@ export default function ContactForm() {
             name="name"
             id="name"
             value={form.name}
-            onChange={handleChange}
-          />
-        </label>
-      </p>
-      <p>
-        <label htmlFor="surname">
-          Your Surname:
-          <input
-            type="text"
-            name="surname"
-            id="surname"
-            value={form.surname}
             onChange={handleChange}
           />
         </label>
@@ -83,9 +85,7 @@ export default function ContactForm() {
         </label>
       </p>
       <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
-      <p>
-        <button type="submit">Send</button>
-      </p>
+      <button type="submit">Send</button>
     </form>
   );
 }
