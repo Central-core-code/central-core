@@ -3,7 +3,7 @@ import Link from "next/link";
 import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { useRouter } from "next/router";
 import translations from "../translations";
-import ContactForm from "@components/ContactForm";
+import ContactForm from "@components/ContactForm/ContactForm";
 
 export default function Home() {
   let router = useRouter();

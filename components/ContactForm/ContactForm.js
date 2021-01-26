@@ -1,26 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRouter } from "next/router";
 import emailjs from "emailjs-com";
 
-import translations from "../translations";
-import formValidation from "../components/FormValidation";
-
-const initialFormState = {
-  name: "",
-  surname: "",
-  phone: "",
-  email: "",
-  message: "",
-};
-
-const initialErrorsState = {
-  name: false,
-  surname: false,
-  phone: false,
-  email: false,
-  message: false,
-};
+import translations from "../../translations";
+import formValidation from "../FormValidation";
+import { initialErrorsState, initialFormState } from "./const";
 
 export default function ContactForm() {
   let router = useRouter();
@@ -44,18 +29,9 @@ export default function ContactForm() {
     });
 
     if (!isValidationFailed) {
+      sendEmail(e);
       setForm(initialFormState);
       setErrors(initialErrorsState);
-      setSuccessMessage(success_text_message);
-
-      sendEmail(e);
-    } else {
-      const { name, value } = e.target;
-      const validation = formValidation(name, value) === true;
-      setErrors((prevState) => ({
-        ...prevState,
-        [name]: validation,
-      }));
     }
   };
 
@@ -70,11 +46,20 @@ export default function ContactForm() {
       ...prevState,
       [name]: value,
     }));
+
+    if (errors[name]) {
+      const validation = formValidation(name, value);
+      assignErrors(name, validation);
+    }
   };
 
   const handleOnBlur = (e) => {
     const { name, value } = e.target;
     const validation = formValidation(name, value);
+    assignErrors(name, validation);
+  };
+
+  const assignErrors = (name, validation) => {
     setErrors((prevState) => ({
       ...prevState,
       [name]: validation,
@@ -93,6 +78,8 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
+          setSuccessMessage(success_text_message);
+
           //success message
           console.log(result.text);
         },
@@ -102,12 +89,6 @@ export default function ContactForm() {
         }
       );
   };
-
-  useEffect(() => {
-    if (successMessage !== "") {
-      setTimeout(() => setSuccessMessage(""), 3000);
-    }
-  });
 
   return (
     <>
@@ -125,20 +106,6 @@ export default function ContactForm() {
               onBlur={handleOnBlur}
             />
             {errors.name && <span>{input_text_message}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="surname">
-            Your Surname:
-            <input
-              type="text"
-              name="surname"
-              id="surname"
-              value={form.surname}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.surname && <span>{input_text_message}</span>}
           </label>
         </p>
         <p>
