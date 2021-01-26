@@ -45,7 +45,7 @@ export default function ContactForm() {
       setSuccessMessage(succesMessage);
     } else {
       console.log("nie wsylano");
-      const { name } = e.target;
+      const { name, value } = e.target;
       const validation = formValidation(name, value);
       setErrors(prevState => ({
         ...prevState,
