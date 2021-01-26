@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRouter } from "next/router";
+import emailjs from "emailjs-com";
+
 import translations from "../translations";
 import formValidation from "../components/FormValidation";
 
@@ -26,6 +28,7 @@ export default function ContactForm() {
   const [form, setForm] = useState(initialFormState);
   const [errors, setErrors] = useState(initialErrorsState);
   const [successMessage, setSuccessMessage] = useState("");
+
   const {
     input_text_message,
     input_phone_message,
@@ -34,9 +37,9 @@ export default function ContactForm() {
     success_text_message,
   } = translations[locale].contactForm.messages;
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const isValidationFailed = Object.keys(errors).some(k => {
+    const isValidationFailed = Object.keys(errors).some((k) => {
       return errors[k] === true || form[k] === "";
     });
 
@@ -44,34 +47,60 @@ export default function ContactForm() {
       setForm(initialFormState);
       setErrors(initialErrorsState);
       setSuccessMessage(success_text_message);
+
+      sendEmail(e);
     } else {
       const { name, value } = e.target;
       const validation = formValidation(name, value) === true;
-      setErrors(prevState => ({
+      setErrors((prevState) => ({
         ...prevState,
         [name]: validation,
       }));
     }
   };
-  const onChange = value => {
+
+  const onChange = (value) => {
     console.log("cos tu", value);
+    //validacja recatpchy
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm(prevState => ({
+    setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
-  const handleOnBlur = e => {
+  const handleOnBlur = (e) => {
     const { name, value } = e.target;
     const validation = formValidation(name, value);
-    setErrors(prevState => ({
+    setErrors((prevState) => ({
       ...prevState,
       [name]: validation,
     }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        process.env.EMAILJS_SERVICE_KEY,
+        process.env.EMAILJS_TEMPLATE_KEY,
+        e.target,
+        process.env.EMAILJS_USER_KEY
+      )
+      .then(
+        (result) => {
+          //success message
+          console.log(result.text);
+        },
+        (error) => {
+          //errors message
+          console.log(error.text);
+        }
+      );
   };
 
   useEffect(() => {
@@ -82,14 +111,7 @@ export default function ContactForm() {
 
   return (
     <>
-      <form
-        name="contact"
-        // method="POST"
-        // data-netlify-recaptcha="true"
-        // data-netlify="true"
-        onSubmit={handleSubmit}
-        noValidate
-      >
+      <form name="contact" onSubmit={handleSubmit} noValidate>
         <input type="hidden" name="form-name" value="contact" />
         <p>
           <label htmlFor="name">
