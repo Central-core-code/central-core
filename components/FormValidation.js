@@ -2,15 +2,15 @@ const validateName = value => {
   return value.length < 3;
 };
 
-const validateSurname = value => {
-  return value.length < 3;
+const validateNumber = value => {
+  return !/^[\+]?\d{7,20}$/.test(value);
 };
 
 const validateEmail = value => {
   return value.indexOf("@") == -1;
 };
 const validateMessage = value => {
-  return value.length < 3;
+  return value.length < 3 || value.length > 200;
 };
 
 export default function formValidation(inputName, value) {
@@ -18,7 +18,9 @@ export default function formValidation(inputName, value) {
     case "name":
       return validateName(value);
     case "surname":
-      return validateSurname(value);
+      return validateName(value);
+    case "phone":
+      return validateNumber(value);
     case "email":
       return validateEmail(value);
     case "message":

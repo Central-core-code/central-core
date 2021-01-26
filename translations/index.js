@@ -4,10 +4,12 @@ export default {
     contactForm: {
       sendButton: "Send",
       messages: {
-        text_incorrect: "This fieled should have min 3 characters",
-        email_incorrect: "brak @ w adresie e-mail",
-        message_incorrect: "min 3 znaki max 200",
-        succesMessage: "Mesage send",
+        input_text_message: "This fieled should have min 3 characters",
+        input_phone_message:
+          "In this field can be only numbers, min 7 characters",
+        input_email_message: "brak @ w adresie e-mail",
+        input_textarea_message: "min 3 znaki max 200",
+        success_text_message: "Mesage send",
       },
     },
   },
@@ -16,10 +18,12 @@ export default {
     contactForm: {
       sendButton: "Wyślij",
       messages: {
-        text_incorrect: "To pole powinno zawierać min 3 znaki",
-        email_incorrect: "brak @ w adresie e-mail",
-        message_incorrect: "min 3 znaki max 200",
-        succesMessage: "Widomość wysłana",
+        input_text_message: "To pole powinno zawierać min 3 znaki",
+        input_phone_message:
+          "W tym polu mogą znajdować się tylko cyfry, minimum 7 cyfr",
+        input_email_message: "brak @ w adresie e-mail",
+        input_textarea_message: "min 3 znaki max 200",
+        success_text_message: "Widomość wysłana",
       },
     },
   },

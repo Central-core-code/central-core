@@ -7,6 +7,7 @@ import formValidation from "../components/FormValidation";
 const initialFormState = {
   name: "",
   surname: "",
+  phone: "",
   email: "",
   message: "",
 };
@@ -14,6 +15,7 @@ const initialFormState = {
 const initialErrorsState = {
   name: false,
   surname: false,
+  phone: false,
   email: false,
   message: false,
 };
@@ -25,28 +27,26 @@ export default function ContactForm() {
   const [errors, setErrors] = useState(initialErrorsState);
   const [successMessage, setSuccessMessage] = useState("");
   const {
-    text_incorrect,
-    email_incorrect,
-    message_incorrect,
-    succesMessage,
+    input_text_message,
+    input_phone_message,
+    input_email_message,
+    input_textarea_message,
+    success_text_message,
   } = translations[locale].contactForm.messages;
 
   const handleSubmit = e => {
     e.preventDefault();
-    const validation = Object.keys(errors).some(k => {
+    const isValidationFailed = Object.keys(errors).some(k => {
       return errors[k] === true || form[k] === "";
     });
 
-    console.log(validation);
-    if (!validation) {
-      console.log("wyslane");
+    if (!isValidationFailed) {
       setForm(initialFormState);
       setErrors(initialErrorsState);
-      setSuccessMessage(succesMessage);
+      setSuccessMessage(success_text_message);
     } else {
-      console.log("nie wsylano");
       const { name, value } = e.target;
-      const validation = formValidation(name, value);
+      const validation = formValidation(name, value) === true;
       setErrors(prevState => ({
         ...prevState,
         [name]: validation,
@@ -102,7 +102,7 @@ export default function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.name && <span>{text_incorrect}</span>}
+            {errors.name && <span>{input_text_message}</span>}
           </label>
         </p>
         <p>
@@ -116,7 +116,21 @@ export default function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.surname && <span>{text_incorrect}</span>}
+            {errors.surname && <span>{input_text_message}</span>}
+          </label>
+        </p>
+        <p>
+          <label htmlFor="phone">
+            Your Phone number:
+            <input
+              type="text"
+              name="phone"
+              id="phone"
+              value={form.phone}
+              onChange={handleChange}
+              onBlur={handleOnBlur}
+            />
+            {errors.phone && <span>{input_phone_message}</span>}
           </label>
         </p>
         <p>
@@ -130,7 +144,7 @@ export default function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.email && <span>{email_incorrect}</span>}
+            {errors.email && <span>{input_email_message}</span>}
           </label>
         </p>
         <p>
@@ -144,7 +158,7 @@ export default function ContactForm() {
               onBlur={handleOnBlur}
             />
             <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{message_incorrect}</span>}
+            {errors.message && <span>{input_textarea_message}</span>}
           </label>
         </p>
         <ReCAPTCHA
