@@ -4,7 +4,7 @@ export default {
     contactForm: {
       sendButton: "Send",
       messages: {
-        text_incorrect: "This fieled sshould have min 3characters",
+        text_incorrect: "This fieled should have min 3 characters",
         email_incorrect: "brak @ w adresie e-mail",
         message_incorrect: "min 3 znaki max 200",
         succesMessage: "Mesage send",

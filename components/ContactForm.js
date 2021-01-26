@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRouter } from "next/router";
 import translations from "../translations";
-import formVadidation from "../components/FormValidation";
+import formValidation from "../components/FormValidation";
 
 const initialFormState = {
   name: "",
@@ -33,13 +33,24 @@ export default function ContactForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const validation = formValidation();
-    console.log(validation);
+    const validation = Object.keys(errors).some(k => {
+      return errors[k] === true || form[k] === "";
+    });
 
-    if (validation.correct) {
+    console.log(validation);
+    if (!validation) {
+      console.log("wyslane");
       setForm(initialFormState);
       setErrors(initialErrorsState);
       setSuccessMessage(succesMessage);
+    } else {
+      console.log("nie wsylano");
+      const { name } = e.target;
+      const validation = formValidation(name, value);
+      setErrors(prevState => ({
+        ...prevState,
+        [name]: validation,
+      }));
     }
   };
   const onChange = value => {
@@ -48,51 +59,21 @@ export default function ContactForm() {
 
   const handleChange = e => {
     const { name, value } = e.target;
-
     setForm(prevState => ({
       ...prevState,
       [name]: value,
     }));
-    const validation = formValidation();
-    console.log(validation);
-
-    if (!validation.correct) {
-      setErrors({
-        name: !validation.name,
-        surname: !validation.surname,
-        email: !validation.email,
-        message: !validation.message,
-      });
-    }
   };
 
-  const formValidation = () => {
-    let { name, surname, email, message, correct } = false;
-
-    if (form.name.length >= 3) {
-      name = true;
-    }
-    if (form.surname.length >= 3) {
-      surname = true;
-    }
-    if (form.email.indexOf("@") !== -1) {
-      email = true;
-    }
-    if (form.message.length >= 3 && form.message.length <= 200) {
-      message = true;
-    }
-
-    if (name && surname && email && message) {
-      correct = true;
-    }
-    return {
-      name,
-      surname,
-      email,
-      message,
-      correct,
-    };
+  const handleOnBlur = e => {
+    const { name, value } = e.target;
+    const validation = formValidation(name, value);
+    setErrors(prevState => ({
+      ...prevState,
+      [name]: validation,
+    }));
   };
+
   useEffect(() => {
     if (successMessage !== "") {
       setTimeout(() => setSuccessMessage(""), 3000);
@@ -119,6 +100,7 @@ export default function ContactForm() {
               id="name"
               value={form.name}
               onChange={handleChange}
+              onBlur={handleOnBlur}
             />
             {errors.name && <span>{text_incorrect}</span>}
           </label>
@@ -132,6 +114,7 @@ export default function ContactForm() {
               id="surname"
               value={form.surname}
               onChange={handleChange}
+              onBlur={handleOnBlur}
             />
             {errors.surname && <span>{text_incorrect}</span>}
           </label>
@@ -145,6 +128,7 @@ export default function ContactForm() {
               id="email"
               value={form.email}
               onChange={handleChange}
+              onBlur={handleOnBlur}
             />
             {errors.email && <span>{email_incorrect}</span>}
           </label>
@@ -157,6 +141,7 @@ export default function ContactForm() {
               id="message"
               value={form.message}
               onChange={handleChange}
+              onBlur={handleOnBlur}
             />
             <span>{`${form.message.length}/200`}</span>
             {errors.message && <span>{message_incorrect}</span>}
