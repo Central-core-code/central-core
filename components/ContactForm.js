@@ -37,13 +37,14 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
+          //success message
           console.log(result.text);
         },
         (error) => {
+          //errors message
           console.log(error.text);
         }
       );
-    e.target.reset();
   };
 
   return (
