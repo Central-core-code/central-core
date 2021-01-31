@@ -1,6 +1,6 @@
 import React from "react";
 import translations from "translations";
-import ContactForm from "./ContactForm";
+import { ContactForm } from "./ContactForm/ContactForm";
 import getLocale from "../utils/getLocale";
 import Link from "next/link";
 

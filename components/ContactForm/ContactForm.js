@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
+import ErrorMessage from "./ErrorMessage";
+import SuccessMessage from "./SuccessMessage";
 
-export default function ContactForm() {
-  const [isSuccess, setStatus] = useState(false);
+export function ContactForm() {
+  const [isSuccess, setSuccessStatus] = useState(false);
+  const [isError, setErrorStatus] = useState(false);
   const [form, setForm] = useState({
     name: "",
     surname: "",
@@ -38,14 +41,24 @@ export default function ContactForm() {
       .then(
         (result) => {
           //success message
+          setSuccessStatus(true);
           console.log(result.text);
         },
         (error) => {
           //errors message
+          setErrorStatus(true);
           console.log(error.text);
         }
       );
   };
+
+  if (isError) {
+    return <ErrorMessage />;
+  }
+
+  if (isSuccess) {
+    return <SuccessMessage />;
+  }
 
   return (
     <form name="contact" method="POST" onSubmit={onSubmit}>
