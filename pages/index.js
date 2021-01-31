@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { LanguageSwitcher } from "../components/LanguageSwitcher";
 import { useRouter } from "next/router";
 import translations from "../translations";
 import ContactForm from "@components/ContactForm";
@@ -20,17 +19,16 @@ export default function Home() {
           defer
         ></script>
       </Head>
-      <div className="load-wrap">
+      {/* <div className="load-wrap">
         <div className="load-wrap__content">
           <h1>Hello</h1>
         </div>
-      </div>
+      </div> */}
       <ContactForm />
 
       <main>
         <p>to tlumaczymy</p>
         {translations[locale].helloWorld} <br />
-        <LanguageSwitcher />
         <br />
         <br />
         <br />
@@ -39,11 +37,6 @@ export default function Home() {
         </Link>
         <h1>MAIN HEADER</h1>
       </main>
-      <div style={{ height: "3000px", backgroundColor: "red" }} />
-
-      <footer id="footer" name="footer">
-        FOOTER
-      </footer>
     </div>
   );
 }
