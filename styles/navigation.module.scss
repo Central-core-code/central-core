@@ -1,5 +1,13 @@
 .nav {
   height: 100px;
   width: 100%;
-  background: red;
+  color: $black;
+  &__header {
+    // color: white;
+  }
+  &__logo {
+    width: 60px;
+    height: 60px;
+    background-color: green;
+  }
 }
