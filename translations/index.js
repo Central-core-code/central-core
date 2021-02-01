@@ -12,6 +12,12 @@ export default {
         success_text_message: "Mesage send",
       },
     },
+    navigation: {
+      about_us: "About us",
+      our_projects: "Our projects",
+      our_offer: "Our offer",
+      contact: "Contact",
+    },
   },
   pl: {
     helloWorld: "Witaj swiecie",
@@ -25,6 +31,12 @@ export default {
         input_textarea_message: "min 3 znaki max 200",
         success_text_message: "Widomość wysłana",
       },
+    },
+    navigation: {
+      about_us: "O nas",
+      our_projects: "Nasze projekty",
+      our_offer: "Oferta",
+      contact: "Kontakt",
     },
   },
 };
