@@ -9,7 +9,7 @@ export default function Home() {
   const locale = getLocale();
 
   return (
-    <div>
+    <>
       <Head>
         <title>Central corp</title>
         <link rel="icon" href="/favicon.ico" />
@@ -31,6 +31,6 @@ export default function Home() {
         </Link>
         <h1>MAIN HEADER</h1>
       </div>
-    </div>
+    </>
   );
 }
