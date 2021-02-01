@@ -1,25 +1,26 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useRouter } from "next/router";
 import emailjs from "emailjs-com";
 
+import ErrorMessage from "./ErrorMessage";
+import SuccessMessage from "./SuccessMessage";
 import translations from "../../translations";
 import formValidation from "../FormValidation";
 import { initialErrorsState, initialFormState } from "./const";
+import getLocale from "../../utils/getLocale";
 
-export default function ContactForm() {
-  let router = useRouter();
-  const locale = router.locale;
+export function ContactForm() {
+  const locale = getLocale();
   const [form, setForm] = useState(initialFormState);
   const [errors, setErrors] = useState(initialErrorsState);
-  const [successMessage, setSuccessMessage] = useState("");
+  const [isSuccess, setSuccessStatus] = useState(false);
+  const [isError, setErrorStatus] = useState(false);
 
   const {
     input_text_message,
     input_phone_message,
     input_email_message,
     input_textarea_message,
-    success_text_message,
   } = translations[locale].contactForm.messages;
 
   const handleSubmit = (e) => {
@@ -42,6 +43,7 @@ export default function ContactForm() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+
     setForm((prevState) => ({
       ...prevState,
       [name]: value,
@@ -66,7 +68,7 @@ export default function ContactForm() {
     }));
   };
 
-  const sendEmail = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
     emailjs
@@ -78,17 +80,24 @@ export default function ContactForm() {
       )
       .then(
         (result) => {
-          setSuccessMessage(success_text_message);
-
-          //success message
+          setSuccessStatus(true);
           console.log(result.text);
         },
         (error) => {
           //errors message
+          setErrorStatus(true);
           console.log(error.text);
         }
       );
   };
+
+  if (isError) {
+    return <ErrorMessage />;
+  }
+
+  if (isSuccess) {
+    return <SuccessMessage />;
+  }
 
   return (
     <>
@@ -160,7 +169,6 @@ export default function ContactForm() {
           </button>
         </p>
       </form>
-      {successMessage && <h3>{successMessage}</h3>}
     </>
   );
 }
