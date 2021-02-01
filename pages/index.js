@@ -20,7 +20,6 @@ export default function Home() {
         ></script>
       </Head>
       <div>
-        <ContactForm />
         <p>to tlumaczymy</p>
         {translations[locale].helloWorld} <br />
         <br />
@@ -30,6 +29,7 @@ export default function Home() {
           <a>that one now works</a>
         </Link>
         <h1>MAIN HEADER</h1>
+        <ContactForm />
       </div>
     </>
   );

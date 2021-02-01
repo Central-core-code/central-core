@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
+import styles from "@styles/contactForm.module.scss";
 
 import ErrorMessage from "./ErrorMessage";
 import SuccessMessage from "./SuccessMessage";
 import translations from "../../translations";
-import formValidation from "../FormValidation";
+import formValidation from "./FormValidation";
 import { initialErrorsState, initialFormState } from "./const";
 import getLocale from "../../utils/getLocale";
 
@@ -25,6 +26,7 @@ export function ContactForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const isValidationFailed = Object.keys(errors).some((k) => {
       return errors[k] === true || form[k] === "";
     });
@@ -68,7 +70,7 @@ export function ContactForm() {
     }));
   };
 
-  const onSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -100,75 +102,48 @@ export function ContactForm() {
   }
 
   return (
-    <>
-      <form name="contact" onSubmit={handleSubmit} noValidate>
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label htmlFor="name">
-            Your Name:
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value={form.name}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.name && <span>{input_text_message}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="phone">
-            Your Phone number:
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              value={form.phone}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.phone && <span>{input_phone_message}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="email">
-            Your Email:
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={form.email}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.email && <span>{input_email_message}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="message">
-            Message:
-            <textarea
-              name="message"
-              id="message"
-              value={form.message}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{input_textarea_message}</span>}
-          </label>
-        </p>
-        <ReCAPTCHA
-          sitekey={process.env.SITE_RECAPTCHA_KEY}
-          onChange={onChange}
+    <form
+      className={styles.contact_form}
+      name="contact"
+      onSubmit={handleSubmit}
+      noValidate
+    >
+      <div class="form-group">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={form.email}
+          onChange={handleChange}
+          onBlur={handleOnBlur}
+          placeholder="e-mail"
         />
-        <p>
-          <button type="submit">
-            {translations[locale].contactForm.sendButton}
-          </button>
-        </p>
-      </form>
-    </>
+      </div>
+      <div class="form-group">
+        <textarea
+          name="message"
+          id="message"
+          value={form.message}
+          onChange={handleChange}
+          onBlur={handleOnBlur}
+          rows="5"
+        />
+        <small id="emailHelp" class="form-text text-muted">
+          {`${form.message.length}/200`}
+        </small>
+      </div>
+      <p>
+        <label htmlFor="message">
+          Message:
+          {errors.message && <span>{input_textarea_message}</span>}
+        </label>
+      </p>
+      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
+      <div className="flex-row-reverse">
+        <button type="submit">
+          {translations[locale].contactForm.sendButton}
+        </button>
+      </div>
+    </form>
   );
 }
