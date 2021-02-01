@@ -13,7 +13,6 @@ export default function Home() {
           defer
         ></script>
       </Head>
-
       <main>
         <Homepage />
       </main>
