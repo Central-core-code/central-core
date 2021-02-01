@@ -1,7 +1,13 @@
+import React from "react";
 import Head from "next/head";
-import Homepage from "@components/Homepage";
+import Link from "next/link";
+import translations from "translations";
+import { ContactForm } from "@components/ContactForm/ContactForm";
+import getLocale from "../utils/getLocale";
 
 export default function Home() {
+  const locale = getLocale();
+
   return (
     <div>
       <Head>
@@ -13,9 +19,18 @@ export default function Home() {
           defer
         ></script>
       </Head>
-      <main>
-        <Homepage />
-      </main>
+      <div>
+        <ContactForm />
+        <p>to tlumaczymy</p>
+        {translations[locale].helloWorld} <br />
+        <br />
+        <br />
+        <br />
+        <Link href="#footer">
+          <a>that one now works</a>
+        </Link>
+        <h1>MAIN HEADER</h1>
+      </div>
     </div>
   );
 }
