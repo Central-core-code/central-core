@@ -10,4 +10,8 @@ module.exports = {
     defaultLocale: "pl",
   },
   target: "serverless",
+  sassOptions: {
+    includePaths: ["./src"],
+    prependData: `@import "~@styles/variable.scss";`,
+  },
 };
