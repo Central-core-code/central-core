@@ -5,10 +5,10 @@ export const LanguageSwitcher = () => {
   return (
     <>
       <Link href="/" locale="en">
-        <a>To english</a>
+        <a>EN</a>
       </Link>
       <Link href="/" locale="pl">
-        <a>To polish</a>
+        <a>PL</a>
       </Link>
     </>
   );
