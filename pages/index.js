@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import translations from "translations";
@@ -10,9 +10,10 @@ import styles from "@styles/spotlight.module.scss";
 
 export default function Home() {
   const locale = getLocale();
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const spotlight = document.querySelector(".spotlight__point");
+    const spotlight = containerRef.current;
     let spotlightSize = "transparent 160px, rgba(255, 255, 255,1) 200px)";
     window.addEventListener("mousemove", e => {
       spotlight.style.backgroundImage = `radial-gradient(circle at ${
@@ -33,7 +34,7 @@ export default function Home() {
       </Head>
       <div>
         <div className={styles.spotlight__wrap}>
-          <div className="spotlight__point">
+          <div ref={containerRef} className="spotlight__point">
             <MainHeader />
             <AboutUs />
           </div>

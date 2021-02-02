@@ -17,10 +17,10 @@ export function ContactForm() {
   const [isError, setErrorStatus] = useState(false);
 
   const {
-    input_text_message,
-    input_phone_message,
-    input_email_message,
-    input_textarea_message,
+    inputTextMessage,
+    inputPhoneMessage,
+    inputEmailMessage,
+    inputTextareaMessage,
   } = translations[locale].contactForm.messages;
 
   const handleSubmit = e => {
@@ -114,7 +114,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.name && <span>{input_text_message}</span>}
+            {errors.name && <span>{inputTextMessage}</span>}
           </label>
         </p>
         <p>
@@ -128,7 +128,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.phone && <span>{input_phone_message}</span>}
+            {errors.phone && <span>{inputPhoneMessage}</span>}
           </label>
         </p>
         <p>
@@ -142,7 +142,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.email && <span>{input_email_message}</span>}
+            {errors.email && <span>{inputEmailMessage}</span>}
           </label>
         </p>
         <p>
@@ -156,7 +156,7 @@ export function ContactForm() {
               onBlur={handleOnBlur}
             />
             <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{input_textarea_message}</span>}
+            {errors.message && <span>{inputTextareaMessage}</span>}
           </label>
         </p>
         <ReCAPTCHA

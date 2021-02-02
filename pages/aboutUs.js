@@ -1,8 +1,8 @@
 import React from "react";
 
-function AboutUs(props) {
+function AboutUs() {
   return (
-    <div id="aboutus">
+    <div id="aboutUs">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-8 text-center">

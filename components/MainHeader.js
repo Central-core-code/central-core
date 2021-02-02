@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@styles/header.module.scss";
 
-const MainHeader = () => {
+function MainHeader() {
   return (
     <div className="container">
       <div className="row justify-content-center">
@@ -15,6 +15,6 @@ const MainHeader = () => {
       </div>
     </div>
   );
-};
+}
 
 export default MainHeader;

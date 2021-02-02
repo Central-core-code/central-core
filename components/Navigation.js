@@ -8,15 +8,15 @@ import Link from "next/link";
 
 function Navigation(props) {
   const locale = getLocale();
-  const { about_us, our_projects, our_offer, contact } = translations[
+  const { aboutUs, ourProjects, ourOffer, contact } = translations[
     locale
   ].navigation;
 
   return (
     <div className="container">
       <div className="row justify-content-between align-items-center py-3">
-        <div className={`col-6`}>
-          <div className={`${styles.nav__logo}`}>
+        <div className="col-6">
+          <div className={styles.nav__logo}>
             <Image src="/logo_black.svg" width={78} height={41} />
           </div>
         </div>
@@ -28,13 +28,13 @@ function Navigation(props) {
         <div className="col-10 d-flex justify-content-end">
           <ul className={styles.nav__items}>
             <li>
-              <Link href="#aboutus">{about_us}</Link>
+              <Link href="#aboutUs">{aboutUs}</Link>
             </li>
             <li>
-              <Link href="">{our_projects}</Link>
+              <Link href="">{ourProjects}</Link>
             </li>
             <li>
-              <Link href="">{our_offer}</Link>
+              <Link href="">{ourOffer}</Link>
             </li>
             <li>
               <Link href="">{contact}</Link>
