@@ -19,7 +19,7 @@ export function ContactForm() {
 
   const locale = getLocale();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
 
     if (!isValidationFailed()) {
@@ -48,7 +48,7 @@ export function ContactForm() {
   };
 
   const assignErrors = (name, validation) => {
-    setErrors((prevState) => ({
+    setErrors(prevState => ({
       ...prevState,
       [name]: validation,
     }));
@@ -65,11 +65,11 @@ export function ContactForm() {
         process.env.EMAILJS_USER_KEY
       )
       .then(
-        (result) => {
+        result => {
           setSuccessStatus(true);
           console.log(result.text);
         },
-        (error) => {
+        error => {
           //errors message
           setErrorStatus(true);
           console.log(error.text);

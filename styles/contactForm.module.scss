@@ -9,11 +9,11 @@
     width: 100%;
     color: $white;
     background-color: $black;
-    border: 1px solid $border-grey;
+    border: 1px solid $gray;
     font-style: italic;
 
     &:focus {
-      border: 3px solid $border-grey;
+      border: 3px solid $gray;
       outline: none;
     }
   }
