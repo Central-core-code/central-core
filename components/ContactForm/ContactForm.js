@@ -17,13 +17,6 @@ export function ContactForm() {
   const [isSuccess, setSuccessStatus] = useState(false);
   const [isError, setErrorStatus] = useState(false);
 
-  const {
-    input_text_message,
-    input_phone_message,
-    input_email_message,
-    input_textarea_message,
-  } = translations[locale].contactForm.messages;
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -108,7 +101,7 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       noValidate
     >
-      <div class="form-group">
+      <div className="mb-3">
         <input
           type="email"
           name="email"
@@ -119,7 +112,7 @@ export function ContactForm() {
           placeholder="e-mail"
         />
       </div>
-      <div class="form-group">
+      <div className="mb-4 position-relative">
         <textarea
           name="message"
           id="message"
@@ -128,21 +121,21 @@ export function ContactForm() {
           onBlur={handleOnBlur}
           rows="5"
         />
-        <small id="emailHelp" class="form-text text-muted">
+        <small id="emailHelp" className="form-text text-muted float-right">
           {`${form.message.length}/200`}
         </small>
       </div>
-      <p>
-        <label htmlFor="message">
-          Message:
-          {errors.message && <span>{input_textarea_message}</span>}
-        </label>
-      </p>
-      <ReCAPTCHA sitekey={process.env.SITE_RECAPTCHA_KEY} onChange={onChange} />
-      <div className="flex-row-reverse">
-        <button type="submit">
-          {translations[locale].contactForm.sendButton}
-        </button>
+      <div className="row justify-content-between">
+        <ReCAPTCHA
+          sitekey={process.env.SITE_RECAPTCHA_KEY}
+          onChange={onChange}
+          className="col-auto"
+        />
+        <div className="col-auto">
+          <button className={styles.button} type="submit">
+            {translations[locale].contactForm.sendButton}
+          </button>
+        </div>
       </div>
     </form>
   );
