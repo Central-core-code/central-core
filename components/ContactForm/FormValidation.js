@@ -4,7 +4,7 @@ const validateEmail = (email) => {
 };
 
 const validateMessage = (msg) => {
-  return msg.length > 200;
+  return msg.length > 200 || msg.length === 0;
 };
 
 export default function formValidation(inputName, value) {
