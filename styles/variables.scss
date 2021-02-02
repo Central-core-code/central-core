@@ -1,0 +1,70 @@
+@import "../assets/fonts/themeFont";
+
+$black: #131213;
+$gray: #444444;
+
+//font
+$font-regular: "GT-Sectra-Fine-Regular";
+$font-regular-italic: "GT-Sectra-Fine-Regular-Italic";
+$font-bold: "GT-Sectra-Fine-Bold";
+$font-black: "GT-Sectra-Fine-Black";
+$font-light: "GT-Zirkon-Ultra-Light";
+
+@mixin fluid-line-height(
+  $min-line-height: 18px,
+  $max-line-height: 29px,
+  $lower-range: 700px,
+  $upper-range: 1200px
+) {
+  line-height: calc(
+    #{$min-line-height} + #{(
+        ($max-line-height / ($max-line-height * 0 + 1)) -
+          ($min-line-height / ($min-line-height * 0 + 1))
+      )} * ((100vw - #{$lower-range}) / #{(
+            ($upper-range / ($upper-range * 0 + 1)) -
+              ($lower-range / ($lower-range * 0 + 1))
+          )})
+  );
+  @media screen and (max-width: $lower-range) {
+    line-height: $min-line-height;
+  }
+
+  @media screen and (min-width: $upper-range) {
+    line-height: $max-line-height;
+  }
+}
+
+@mixin fluid-type(
+  $min-font-size: 12px,
+  $max-font-size: 21px,
+  $lower-range: 700px,
+  $upper-range: 1200px
+) {
+  font-size: calc(
+    #{$min-font-size} + #{(
+        ($max-font-size / ($max-font-size * 0 + 1)) -
+          ($min-font-size / ($min-font-size * 0 + 1))
+      )} * ((100vw - #{$lower-range}) / #{(
+            ($upper-range / ($upper-range * 0 + 1)) -
+              ($lower-range / ($lower-range * 0 + 1))
+          )})
+  );
+
+  @media screen and (max-width: $lower-range) {
+    font-size: $min-font-size;
+  }
+
+  @media screen and (min-width: $upper-range) {
+    font-size: $max-font-size;
+  }
+}
+.spotlight__point {
+  height: 100%;
+  width: 100%;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  background-image: radial-gradient(
+    circle,
+    transparent 160px,
+    rgba(255, 255, 255, 1) 200px
+  );
+}

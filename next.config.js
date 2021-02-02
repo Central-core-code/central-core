@@ -12,6 +12,6 @@ module.exports = {
   target: "serverless",
   sassOptions: {
     includePaths: ["./src"],
-    prependData: `@import "~@styles/variable.scss";`,
+    prependData: `@import "~@styles/variables.scss";`,
   },
 };

@@ -17,15 +17,15 @@ export function ContactForm() {
   const [isError, setErrorStatus] = useState(false);
 
   const {
-    input_text_message,
-    input_phone_message,
-    input_email_message,
-    input_textarea_message,
+    inputTextMessage,
+    inputPhoneMessage,
+    inputEmailMessage,
+    inputTextareaMessage,
   } = translations[locale].contactForm.messages;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    const isValidationFailed = Object.keys(errors).some((k) => {
+    const isValidationFailed = Object.keys(errors).some(k => {
       return errors[k] === true || form[k] === "";
     });
 
@@ -36,15 +36,15 @@ export function ContactForm() {
     }
   };
 
-  const onChange = (value) => {
+  const onChange = value => {
     console.log("cos tu", value);
     //validacja recatpchy
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
 
-    setForm((prevState) => ({
+    setForm(prevState => ({
       ...prevState,
       [name]: value,
     }));
@@ -55,20 +55,20 @@ export function ContactForm() {
     }
   };
 
-  const handleOnBlur = (e) => {
+  const handleOnBlur = e => {
     const { name, value } = e.target;
     const validation = formValidation(name, value);
     assignErrors(name, validation);
   };
 
   const assignErrors = (name, validation) => {
-    setErrors((prevState) => ({
+    setErrors(prevState => ({
       ...prevState,
       [name]: validation,
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
     emailjs
@@ -79,11 +79,11 @@ export function ContactForm() {
         process.env.EMAILJS_USER_KEY
       )
       .then(
-        (result) => {
+        result => {
           setSuccessStatus(true);
           console.log(result.text);
         },
-        (error) => {
+        error => {
           //errors message
           setErrorStatus(true);
           console.log(error.text);
@@ -114,7 +114,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.name && <span>{input_text_message}</span>}
+            {errors.name && <span>{inputTextMessage}</span>}
           </label>
         </p>
         <p>
@@ -128,7 +128,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.phone && <span>{input_phone_message}</span>}
+            {errors.phone && <span>{inputPhoneMessage}</span>}
           </label>
         </p>
         <p>
@@ -142,7 +142,7 @@ export function ContactForm() {
               onChange={handleChange}
               onBlur={handleOnBlur}
             />
-            {errors.email && <span>{input_email_message}</span>}
+            {errors.email && <span>{inputEmailMessage}</span>}
           </label>
         </p>
         <p>
@@ -156,7 +156,7 @@ export function ContactForm() {
               onBlur={handleOnBlur}
             />
             <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{input_textarea_message}</span>}
+            {errors.message && <span>{inputTextareaMessage}</span>}
           </label>
         </p>
         <ReCAPTCHA
