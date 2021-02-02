@@ -12,11 +12,12 @@ import { initialErrorsState, initialFormState } from "./const";
 import getLocale from "../../utils/getLocale";
 
 export function ContactForm() {
-  const locale = getLocale();
   const [form, setForm] = useState(initialFormState);
   const [errors, setErrors] = useState(initialErrorsState);
   const [isSuccess, setSuccessStatus] = useState(false);
   const [isError, setErrorStatus] = useState(false);
+
+  const locale = getLocale();
 
   const handleSubmit = (e) => {
     e.preventDefault();
