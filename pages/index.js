@@ -20,9 +20,7 @@ export default function Home() {
         <br />
         <br />
         <br />
-        <Link href="#footer">
-          <a>that one now works</a>
-        </Link>
+        <Link href="#footer">that one now works</Link>
         <h1>MAIN HEADER</h1>
         <ContactForm />
       </div>
