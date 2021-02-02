@@ -3,7 +3,8 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import styles from "@styles/navigation.module.scss";
 import translations from "../translations";
 import getLocale from "../utils/getLocale";
-import Image from "next/image";
+import Img from "react-optimized-image";
+import LogoBlack from "public/logo_black.svg";
 import Link from "next/link";
 
 function Navigation(props) {
@@ -15,7 +16,7 @@ function Navigation(props) {
       <div className="row justify-content-between align-items-center py-3">
         <div className="col-6">
           <div className={styles.nav__logo}>
-            <Image src="/logo_black.svg" width={78} height={41} />
+            <Img src={LogoBlack} width={78} height={41} />
           </div>
         </div>
         <div className={`col-6 ${styles.nav__language}`}>
