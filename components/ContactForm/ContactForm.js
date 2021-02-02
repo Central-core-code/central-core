@@ -23,9 +23,9 @@ export function ContactForm() {
     input_textarea_message,
   } = translations[locale].contactForm.messages;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
-    const isValidationFailed = Object.keys(errors).some((k) => {
+    const isValidationFailed = Object.keys(errors).some(k => {
       return errors[k] === true || form[k] === "";
     });
 
@@ -36,15 +36,15 @@ export function ContactForm() {
     }
   };
 
-  const onChange = (value) => {
+  const onChange = value => {
     console.log("cos tu", value);
     //validacja recatpchy
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
 
-    setForm((prevState) => ({
+    setForm(prevState => ({
       ...prevState,
       [name]: value,
     }));
@@ -55,20 +55,20 @@ export function ContactForm() {
     }
   };
 
-  const handleOnBlur = (e) => {
+  const handleOnBlur = e => {
     const { name, value } = e.target;
     const validation = formValidation(name, value);
     assignErrors(name, validation);
   };
 
   const assignErrors = (name, validation) => {
-    setErrors((prevState) => ({
+    setErrors(prevState => ({
       ...prevState,
       [name]: validation,
     }));
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = e => {
     e.preventDefault();
 
     emailjs
@@ -79,11 +79,11 @@ export function ContactForm() {
         process.env.EMAILJS_USER_KEY
       )
       .then(
-        (result) => {
+        result => {
           setSuccessStatus(true);
           console.log(result.text);
         },
-        (error) => {
+        error => {
           //errors message
           setErrorStatus(true);
           console.log(error.text);
