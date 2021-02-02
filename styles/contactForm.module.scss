@@ -12,11 +12,9 @@
     border: 1px solid $border-grey;
     font-style: italic;
 
-    &::-webkit-input-placeholder,
-    &:-moz-placeholder,
-    &::-moz-placeholder,
-    &:-ms-input-placeholder {
-      font-style: italic;
+    &:focus {
+      border: 3px solid $border-grey;
+      outline: none;
     }
   }
 }
@@ -32,7 +30,7 @@
 .is_error {
   input,
   textarea {
-    border: red;
+    border: 1px solid red;
   }
 
   small {

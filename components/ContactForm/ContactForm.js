@@ -18,16 +18,10 @@ export function ContactForm() {
   const [isSuccess, setSuccessStatus] = useState(false);
   const [isError, setErrorStatus] = useState(false);
 
-  console.log(errors, form);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const isValidationFailed = Object.keys(errors).some((key) => {
-      return errors[key] || form[key] === "";
-    });
-
-    if (!isValidationFailed) {
+    if (!isValidationFailed()) {
       sendEmail(e);
       setForm(initialFormState);
       setErrors(initialErrorsState);
@@ -44,6 +38,12 @@ export function ContactForm() {
       ...prevState,
       [name]: value,
     }));
+  };
+
+  const isValidationFailed = () => {
+    return Object.keys(errors).some((key) => {
+      return errors[key] || form[key] === "";
+    });
   };
 
   const assignErrors = (name, validation) => {
@@ -121,7 +121,11 @@ export function ContactForm() {
         </small>
       </div>
       <div className="float-right">
-        <button className={styles.button} disabled={isDisabled} type="submit">
+        <button
+          className={styles.button}
+          disabled={isValidationFailed()}
+          type="submit"
+        >
           {translations[locale].contactForm.sendButton}
         </button>
       </div>
