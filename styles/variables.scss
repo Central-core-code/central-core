@@ -1,7 +1,14 @@
+@import "../assets/fonts/themeFont";
+
 $black: #131213;
 $gray: #444444;
 
 //font
+$font-regular: "GT-Sectra-Fine-Regular";
+$font-regular-italic: "GT-Sectra-Fine-Regular-Italic";
+$font-bold: "GT-Sectra-Fine-Bold";
+$font-black: "GT-Sectra-Fine-Black";
+$font-light: "GT-Zirkon-Ultra-Light";
 
 @mixin fluid-line-height(
   $min-line-height: 18px,
@@ -50,4 +57,14 @@ $gray: #444444;
   @media screen and (min-width: $upper-range) {
     font-size: $max-font-size;
   }
+}
+.spotlight__point {
+  height: 100%;
+  width: 100%;
+  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  background-image: radial-gradient(
+    circle,
+    transparent 160px,
+    rgba(255, 255, 255, 1) 200px
+  );
 }

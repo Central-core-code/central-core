@@ -1,10 +1,16 @@
 import React from "react";
+import styles from "@styles/header.module.scss";
+
 const MainHeader = () => {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-12 d-flex justify-content-center">
-          <h1>to jest header</h1>
+      <div className="row justify-content-center">
+        <div className="col-10 text-center">
+          <div className={styles.header__wrap}>
+            <p className="h1">Lorem</p>
+            <h1>quis nostrud exercitation ullamco laboris </h1>
+            <p className="h1">Lorem</p>
+          </div>
         </div>
       </div>
     </div>

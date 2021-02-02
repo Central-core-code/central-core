@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import translations from "translations";
@@ -11,6 +11,15 @@ import styles from "@styles/spotlight.module.scss";
 export default function Home() {
   const locale = getLocale();
 
+  useEffect(() => {
+    const spotlight = document.querySelector(".spotlight__point");
+    let spotlightSize = "transparent 160px, rgba(255, 255, 255,1) 200px)";
+    window.addEventListener("mousemove", e => {
+      spotlight.style.backgroundImage = `radial-gradient(circle at ${
+        (e.pageX / window.innerWidth) * 100
+      }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
+    });
+  });
   return (
     <>
       <Head>
@@ -24,8 +33,10 @@ export default function Home() {
       </Head>
       <div>
         <div className={styles.spotlight__wrap}>
-          <MainHeader />
-          <AboutUs />
+          <div className="spotlight__point">
+            <MainHeader />
+            <AboutUs />
+          </div>
         </div>
         <ContactForm />
         <p>to tlumaczymy</p>
