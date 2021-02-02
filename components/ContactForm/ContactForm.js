@@ -87,8 +87,9 @@ export function ContactForm() {
 
   return (
     <form
-      className={styles.contact_form}
-      name="contact"
+      className={`${styles.contact_form} py-3`}
+      name="contactForm"
+      id="contactForm"
       onSubmit={handleSubmit}
       noValidate
     >

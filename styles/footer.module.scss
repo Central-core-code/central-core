@@ -1,6 +1,13 @@
 .footer {
-  border-top: 1px solid $border-grey;
   padding: 20px 0;
+
+  &::before {
+    border-top: 1px solid $border-grey;
+  }
+
+  &__block {
+    margin-bottom: 50px;
+  }
 
   h1,
   h2,
