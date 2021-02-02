@@ -7,13 +7,35 @@
   textarea {
     padding: 15px;
     width: 100%;
+    color: $white;
+    background-color: $black;
+    border: 1px solid $border-grey;
+    font-style: italic;
+
+    &::-webkit-input-placeholder,
+    &:-moz-placeholder,
+    &::-moz-placeholder,
+    &:-ms-input-placeholder {
+      font-style: italic;
+    }
   }
 }
 
 .button {
-  padding: 23px 75px;
+  padding: 25px 75px;
   border-radius: 5px;
   background-color: white;
   border-color: white;
   border: none;
+}
+
+.is_error {
+  input,
+  textarea {
+    border: red;
+  }
+
+  small {
+    color: red;
+  }
 }
