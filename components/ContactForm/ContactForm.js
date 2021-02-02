@@ -34,11 +34,6 @@ export function ContactForm() {
     }
   };
 
-  const onChange = (value) => {
-    console.log("cos tu", value);
-    //validacja recatpchy
-  };
-
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -125,17 +120,10 @@ export function ContactForm() {
           {`${form.message.length}/200`}
         </small>
       </div>
-      <div className="row justify-content-between">
-        <ReCAPTCHA
-          sitekey={process.env.SITE_RECAPTCHA_KEY}
-          onChange={onChange}
-          className="col-auto"
-        />
-        <div className="col-auto">
-          <button className={styles.button} type="submit">
-            {translations[locale].contactForm.sendButton}
-          </button>
-        </div>
+      <div className="float-right">
+        <button className={styles.button} disabled={isDisabled} type="submit">
+          {translations[locale].contactForm.sendButton}
+        </button>
       </div>
     </form>
   );
