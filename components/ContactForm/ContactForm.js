@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import classNames from "classnames";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 import styles from "@styles/contactForm.module.scss";
@@ -17,11 +18,13 @@ export function ContactForm() {
   const [isSuccess, setSuccessStatus] = useState(false);
   const [isError, setErrorStatus] = useState(false);
 
+  console.log(errors, form);
+
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const isValidationFailed = Object.keys(errors).some((k) => {
-      return errors[k] === true || form[k] === "";
+    const isValidationFailed = Object.keys(errors).some((key) => {
+      return errors[key] || form[key] === "";
     });
 
     if (!isValidationFailed) {
@@ -39,21 +42,13 @@ export function ContactForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
+    const isValidationFailed = formValidation(name, value);
+    assignErrors(name, isValidationFailed);
+
     setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-
-    if (errors[name]) {
-      const validation = formValidation(name, value);
-      assignErrors(name, validation);
-    }
-  };
-
-  const handleOnBlur = (e) => {
-    const { name, value } = e.target;
-    const validation = formValidation(name, value);
-    assignErrors(name, validation);
   };
 
   const assignErrors = (name, validation) => {
@@ -101,25 +96,30 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       noValidate
     >
-      <div className="mb-3">
+      <div
+        className={classNames("mb-3", { [styles.is_error]: errors["email"] })}
+      >
         <input
           type="email"
           name="email"
           id="email"
           value={form.email}
           onChange={handleChange}
-          onBlur={handleOnBlur}
           placeholder="e-mail"
         />
       </div>
-      <div className="mb-4 position-relative">
+      <div
+        className={classNames("mb-5 position-relative", {
+          [styles.is_error]: errors["message"],
+        })}
+      >
         <textarea
           name="message"
           id="message"
           value={form.message}
           onChange={handleChange}
-          onBlur={handleOnBlur}
           rows="5"
+          placeholder="message"
         />
         <small id="emailHelp" className="form-text text-muted float-right">
           {`${form.message.length}/200`}
