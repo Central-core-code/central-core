@@ -4,6 +4,9 @@ import Link from "next/link";
 import translations from "translations";
 import { ContactForm } from "@components/ContactForm/ContactForm";
 import getLocale from "../utils/getLocale";
+import MainHeader from "../components/MainHeader";
+import AboutUs from "./aboutUs";
+import styles from "@styles/spotlight.module.scss";
 
 export default function Home() {
   const locale = getLocale();
@@ -20,6 +23,10 @@ export default function Home() {
         ></script>
       </Head>
       <div>
+        <div className={styles.spotlight__wrap}>
+          <MainHeader />
+          <AboutUs />
+        </div>
         <ContactForm />
         <p>to tlumaczymy</p>
         {translations[locale].helloWorld} <br />

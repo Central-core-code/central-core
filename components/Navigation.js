@@ -11,6 +11,7 @@ function Navigation(props) {
   const { about_us, our_projects, our_offer, contact } = translations[
     locale
   ].navigation;
+
   return (
     <div className="container">
       <div className="row justify-content-between align-items-center py-3">
@@ -27,7 +28,7 @@ function Navigation(props) {
         <div className="col-10 d-flex justify-content-end">
           <ul className={styles.nav__items}>
             <li>
-              <Link href="">{about_us}</Link>
+              <Link href="#aboutus">{about_us}</Link>
             </li>
             <li>
               <Link href="">{our_projects}</Link>
