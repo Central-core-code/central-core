@@ -8,9 +8,7 @@ import Link from "next/link";
 
 function Navigation(props) {
   const locale = getLocale();
-  const { aboutUs, ourProjects, ourOffer, contact } = translations[
-    locale
-  ].navigation;
+  const { aboutUs, projects, offer, contact } = translations[locale].navigation;
 
   return (
     <div className="container">
@@ -31,10 +29,10 @@ function Navigation(props) {
               <Link href="#aboutUs">{aboutUs}</Link>
             </li>
             <li>
-              <Link href="">{ourProjects}</Link>
+              <Link href="">{projects}</Link>
             </li>
             <li>
-              <Link href="">{ourOffer}</Link>
+              <Link href="">{offer}</Link>
             </li>
             <li>
               <Link href="">{contact}</Link>
