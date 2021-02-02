@@ -1,64 +1,50 @@
 import React, { useState } from "react";
+import classNames from "classnames";
 import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
+import styles from "@styles/contactForm.module.scss";
 
 import ErrorMessage from "./ErrorMessage";
 import SuccessMessage from "./SuccessMessage";
 import translations from "../../translations";
-import formValidation from "../FormValidation";
+import formValidation from "./FormValidation";
 import { initialErrorsState, initialFormState } from "./const";
 import getLocale from "../../utils/getLocale";
 
 export function ContactForm() {
-  const locale = getLocale();
   const [form, setForm] = useState(initialFormState);
   const [errors, setErrors] = useState(initialErrorsState);
   const [isSuccess, setSuccessStatus] = useState(false);
   const [isError, setErrorStatus] = useState(false);
 
-  const {
-    inputTextMessage,
-    inputPhoneMessage,
-    inputEmailMessage,
-    inputTextareaMessage,
-  } = translations[locale].contactForm.messages;
+  const locale = getLocale();
 
   const handleSubmit = e => {
     e.preventDefault();
-    const isValidationFailed = Object.keys(errors).some(k => {
-      return errors[k] === true || form[k] === "";
-    });
 
-    if (!isValidationFailed) {
+    if (!isValidationFailed()) {
       sendEmail(e);
       setForm(initialFormState);
       setErrors(initialErrorsState);
     }
   };
 
-  const onChange = value => {
-    console.log("cos tu", value);
-    //validacja recatpchy
-  };
-
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
-    setForm(prevState => ({
+    const isValidationFailed = formValidation(name, value);
+    assignErrors(name, isValidationFailed);
+
+    setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
-
-    if (errors[name]) {
-      const validation = formValidation(name, value);
-      assignErrors(name, validation);
-    }
   };
 
-  const handleOnBlur = e => {
-    const { name, value } = e.target;
-    const validation = formValidation(name, value);
-    assignErrors(name, validation);
+  const isValidationFailed = () => {
+    return Object.keys(errors).some((key) => {
+      return errors[key] || form[key] === "";
+    });
   };
 
   const assignErrors = (name, validation) => {
@@ -68,7 +54,7 @@ export function ContactForm() {
     }));
   };
 
-  const onSubmit = e => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -100,75 +86,51 @@ export function ContactForm() {
   }
 
   return (
-    <>
-      <form name="contact" onSubmit={handleSubmit} noValidate>
-        <input type="hidden" name="form-name" value="contact" />
-        <p>
-          <label htmlFor="name">
-            Your Name:
-            <input
-              type="text"
-              name="name"
-              id="name"
-              value={form.name}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.name && <span>{inputTextMessage}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="phone">
-            Your Phone number:
-            <input
-              type="text"
-              name="phone"
-              id="phone"
-              value={form.phone}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.phone && <span>{inputPhoneMessage}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="email">
-            Your Email:
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={form.email}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            {errors.email && <span>{inputEmailMessage}</span>}
-          </label>
-        </p>
-        <p>
-          <label htmlFor="message">
-            Message:
-            <textarea
-              name="message"
-              id="message"
-              value={form.message}
-              onChange={handleChange}
-              onBlur={handleOnBlur}
-            />
-            <span>{`${form.message.length}/200`}</span>
-            {errors.message && <span>{inputTextareaMessage}</span>}
-          </label>
-        </p>
-        <ReCAPTCHA
-          sitekey={process.env.SITE_RECAPTCHA_KEY}
-          onChange={onChange}
+    <form
+      className={`${styles.contact_form} py-3`}
+      name="contactForm"
+      id="contactForm"
+      onSubmit={handleSubmit}
+      noValidate
+    >
+      <div
+        className={classNames("mb-3", { [styles.is_error]: errors["email"] })}
+      >
+        <input
+          type="email"
+          name="email"
+          id="email"
+          value={form.email}
+          onChange={handleChange}
+          placeholder="e-mail"
         />
-        <p>
-          <button type="submit">
-            {translations[locale].contactForm.sendButton}
-          </button>
-        </p>
-      </form>
-    </>
+      </div>
+      <div
+        className={classNames("mb-5 position-relative", {
+          [styles.is_error]: errors["message"],
+        })}
+      >
+        <textarea
+          name="message"
+          id="message"
+          value={form.message}
+          onChange={handleChange}
+          rows="5"
+          placeholder="message"
+        />
+        <small id="emailHelp" className="form-text text-muted float-right">
+          {`${form.message.length}/200`}
+        </small>
+      </div>
+      <div className="text-right">
+        <button
+          className={styles.button}
+          disabled={isValidationFailed()}
+          type="submit"
+        >
+          {translations[locale].contactForm.sendButton}
+        </button>
+      </div>
+    </form>
   );
 }

@@ -1,0 +1,39 @@
+.contact_form {
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+
+  input,
+  textarea {
+    padding: 15px;
+    width: 100%;
+    color: $white;
+    background-color: $black;
+    border: 1px solid $gray;
+    font-style: italic;
+
+    &:focus {
+      border: 3px solid $gray;
+      outline: none;
+    }
+  }
+}
+
+.button {
+  padding: 25px 75px;
+  border-radius: 5px;
+  background-color: white;
+  border-color: white;
+  border: none;
+}
+
+.is_error {
+  input,
+  textarea {
+    border: 1px solid red;
+  }
+
+  small {
+    color: red !important;
+  }
+}
