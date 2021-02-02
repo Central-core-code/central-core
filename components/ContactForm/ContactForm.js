@@ -121,7 +121,7 @@ export function ContactForm() {
           {`${form.message.length}/200`}
         </small>
       </div>
-      <div>
+      <div className="text-right">
         <button
           className={styles.button}
           disabled={isValidationFailed()}
