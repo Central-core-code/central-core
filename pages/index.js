@@ -34,7 +34,7 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
-        {/* <Carousel /> */}
+        <Carousel />
         <ContactForm />
       </div>
     </>
