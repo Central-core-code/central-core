@@ -3,15 +3,12 @@ import Head from "next/head";
 import Link from "next/link";
 import translations from "translations";
 import { ContactForm } from "@components/ContactForm/ContactForm";
-import getLocale from "../utils/getLocale";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "./aboutUs";
 import styles from "@styles/spotlight.module.scss";
+import Carousel from "../components/Carousel/Carousel";
 
 export default function Home() {
-  const locale = getLocale();
-  const containerRef = useRef(null);
-
   useEffect(() => {
     const spotlight = containerRef.current;
     let spotlightSize = "transparent 160px, rgba(255, 255, 255,1) 200px)";
@@ -21,6 +18,9 @@ export default function Home() {
       }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
     });
   });
+
+  const containerRef = useRef(null);
+
   return (
     <>
       <Head>
@@ -34,6 +34,7 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
+        {/* <Carousel /> */}
         <ContactForm />
       </div>
     </>
