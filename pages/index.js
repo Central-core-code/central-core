@@ -33,9 +33,9 @@ export default function Home() {
           <div ref={containerRef} className="spotlight__point">
             <MainHeader />
             <AboutUs />
-            <OurTechnology />
           </div>
         </div>
+        <OurTechnology />
         <ContactForm />
       </div>
     </>
