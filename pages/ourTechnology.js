@@ -2,6 +2,7 @@ import React from "react";
 import getLocale from "../utils/getLocale";
 import OurTechnologyBlock from "../components/OurTechnologyBlock";
 import translations from "../translations";
+import styles from "@styles/ourTechnology.module.scss";
 
 function ourTechnology() {
   const locale = getLocale();
@@ -12,7 +13,7 @@ function ourTechnology() {
     nextJsTechnologyDescription,
   } = translations[locale].ourTechnologyBlock;
   return (
-    <div id="ourTechnology">
+    <div id="ourTechnology" className={styles.technology__wrap}>
       <div className="container">
         <div className="row">
           <div className="col-4 offset-2">
