@@ -12,7 +12,7 @@ function Navigation(props) {
   const { aboutUs, projects, offer, contact } = translations[locale].navigation;
 
   return (
-    <div className="container">
+    <div className={`container ${styles.nav__wrap}`}>
       <div className="row justify-content-between align-items-center py-3">
         <div className="col-6">
           <div className={styles.nav__logo}>
