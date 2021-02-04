@@ -16,7 +16,9 @@ h1,
   @include fluid-type(14px, 68px);
   @include fluid-line-height(20px, 75px);
   margin-bottom: 20px;
-  font-family: $font-regular-italic;
+  font-family: $GT-Sectra-Fine;
+  font-weight: 600;
+  font-style: italic;
 }
 h2,
 .h2 {
@@ -25,7 +27,9 @@ h3,
 .h3 {
   @include fluid-type(14px, 32px);
   @include fluid-line-height(20px, 39px);
-  font-family: $font-regular-italic;
+  font-family: $GT-Sectra-Fine;
+  font-weight: 500;
+  font-style: italic;
 }
 p {
   @include fluid-type(14px, 18px);

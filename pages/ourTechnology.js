@@ -17,10 +17,10 @@ function ourTechnology() {
       <div className="container">
         <div className="row">
           <div className="col-4 offset-2">
-            <h2>Upholding technology as a force for good</h2>
+            <h3>Upholding technology as a force for good</h3>
           </div>
           <div className="col-4">
-            <p>
+            <p className={styles.technology__main_description}>
               We look for high-impact interventions, where focusing on helping a
               specific group of people—journalists, civil society, or activists,
               for example—makes the internet and society stronger and safer for

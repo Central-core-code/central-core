@@ -1,23 +1,36 @@
+// GT-Sectra-Fine
+
 @font-face {
-  font-family: "GT-Sectra-Fine-Regular";
+  font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Regular-Trial.otf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: "GT-Sectra-Fine-Regular-Italic";
+  font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Regular-Italic-Trial.otf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
 }
 @font-face {
-  font-family: "GT-Sectra-Fine-Bold";
+  font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Bold-Trial.otf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
 }
 @font-face {
-  font-family: "GT-Sectra-Fine-Black";
+  font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Black-Trial.otf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
 }
 @font-face {
   font-family: "GT-Zirkon-Ultra-Light";
   src: url("./GT-Zirkon-Ultra-Light-Trial.otf") format("truetype");
 }
+
+// SF-Compact-Text
+
 @font-face {
   font-family: "SF-Compact-Text";
   src: url("./SF-Compact/SF-Compact-Text-Light.otf") format("truetype");
