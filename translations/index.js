@@ -11,13 +11,13 @@ export default {
       contact: "Contact",
     },
     ourTechnologyBlock: {
-      jsTechnologyDescription:
+      jsDesc:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      phpTechnologyDescription:
+      phpDesc:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      reactTechnologyDescription:
+      reactDesc:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      nextJsTechnologyDescription:
+      nextJsDesc:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
   },
@@ -33,13 +33,13 @@ export default {
       contact: "Kontakt",
     },
     ourTechnologyBlock: {
-      jsTechnologyDescription:
+      jsDesc:
         "Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do",
-      phpTechnologyDescription:
+      phpDesc:
         "opis dla php po polsuthe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      reactTechnologyDescription:
+      reactDesc:
         "cos tam o react of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      nextJsTechnologyDescription:
+      nextJsDesc:
         "a tu ze nexJS jest w PYTE typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
   },

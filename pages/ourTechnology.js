@@ -6,12 +6,9 @@ import styles from "@styles/ourTechnology.module.scss";
 
 function ourTechnology() {
   const locale = getLocale();
-  const {
-    jsTechnologyDescription,
-    phpTechnologyDescription,
-    reactTechnologyDescription,
-    nextJsTechnologyDescription,
-  } = translations[locale].ourTechnologyBlock;
+  const { jsDesc, phpDesc, reactDesc, nextJsDesc } = translations[
+    locale
+  ].ourTechnologyBlock;
   return (
     <div id="ourTechnology" className={styles.technology__wrap}>
       <div className="container">
@@ -30,26 +27,10 @@ function ourTechnology() {
           </div>
         </div>
 
-        <OurTechnologyBlock
-          title={"JS"}
-          content={jsTechnologyDescription}
-          offset={"1"}
-        />
-        <OurTechnologyBlock
-          title={"PHP"}
-          content={phpTechnologyDescription}
-          offset={"5"}
-        />
-        <OurTechnologyBlock
-          title={"REACT"}
-          content={reactTechnologyDescription}
-          offset={"2"}
-        />
-        <OurTechnologyBlock
-          title={"NextJS"}
-          content={nextJsTechnologyDescription}
-          offset={"7"}
-        />
+        <OurTechnologyBlock title="JS" content={jsDesc} offset="1" />
+        <OurTechnologyBlock title="PHP" content={phpDesc} offset="5" />
+        <OurTechnologyBlock title="REACT" content={reactDesc} offset="2" />
+        <OurTechnologyBlock title="NextJS" content={nextJsDesc} offset="7" />
       </div>
     </div>
   );
