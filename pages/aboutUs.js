@@ -7,10 +7,10 @@ function AboutUs() {
         <div className="row justify-content-center">
           <div className="col-8 text-center">
             <p>ABOUT US</p>
-            <h3>
+            <h2 className="h3">
               Sed ut perspiciatis unde omnis iste natus error sit voluptatem
               accusantium doloremque
-            </h3>
+            </h2>
             <p>
               At vero eos et accusamus et iusto odio dignissimos ducimus qui
               blanditiis praesentium voluptatum deleniti atque corrupti quos
