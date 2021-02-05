@@ -16,7 +16,7 @@ function Navigation(props) {
       <div className="row justify-content-between align-items-center py-3">
         <div className="col-6">
           <div className={styles.nav__logo}>
-            <Img src={LogoBlack} width={78} height={41} />
+            <Img src={LogoBlack} width={78} height={41} alt="logo" />
           </div>
         </div>
         <div className={`col-6 ${styles.nav__language}`}>
