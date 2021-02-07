@@ -44,7 +44,7 @@ const settings = {
 
 function Carousel() {
   return (
-    <div class="py-4">
+    <div className={`py-4 ${styles.slider__ratio}`}>
       <Slider className={styles.slider} {...settings}>
         <Slide />
         <Slide />
