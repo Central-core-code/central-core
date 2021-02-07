@@ -6,6 +6,7 @@ import { ContactForm } from "@components/ContactForm/ContactForm";
 import getLocale from "../utils/getLocale";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "./aboutUs";
+import OurTechnology from "./ourTechnology";
 import styles from "@styles/spotlight.module.scss";
 
 export default function Home() {
@@ -34,6 +35,7 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
+        <OurTechnology />
         <ContactForm />
       </div>
     </>

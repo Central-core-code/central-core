@@ -2,6 +2,7 @@
   height: 100px;
   width: 100%;
   color: $black;
+
   &__wrap {
     position: fixed;
     background-color: $white;
@@ -14,6 +15,7 @@
   &__header {
     // color: white;
   }
+
   &__logo {
     display: flex;
   }
@@ -25,6 +27,9 @@
       @include fluid-type(10px, 12px);
       @include fluid-line-height(12px, 14px);
     }
+  }
+  &__language_select {
+    text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
   }
   &__items_wrap {
     justify-content: center;
