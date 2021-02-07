@@ -4,6 +4,7 @@ import { ContactForm } from "@components/ContactForm/ContactForm";
 import getLocale from "../utils/getLocale";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "./aboutUs";
+import OurTechnology from "./ourTechnology";
 import styles from "@styles/spotlight.module.scss";
 import Offers from "@components/Offers/Offers";
 
@@ -14,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const spotlight = containerRef.current;
     let spotlightSize = "transparent 160px, rgba(255, 255, 255,1) 200px)";
-    window.addEventListener("mousemove", (e) => {
+    window.addEventListener("mousemove", e => {
       spotlight.style.backgroundImage = `radial-gradient(circle at ${
         (e.pageX / window.innerWidth) * 100
       }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
@@ -33,6 +34,7 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
+        <OurTechnology />
         <Offers />
         <ContactForm />
       </div>
