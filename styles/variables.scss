@@ -70,3 +70,27 @@ $font-SF-Compact: "SF-Compact-Text";
     rgba(255, 255, 255, 1) 200px
   );
 }
+
+// /embed
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    object-fit: cover;
+  }
+}
+
+.embed-responsive-1by1 {
+  &::before {
+    padding-top: percentage(1 / 1);
+  }
+}
+.embed-responsive-1by2 {
+  &::before {
+    padding-top: percentage(2/ 1);
+  }
+}
