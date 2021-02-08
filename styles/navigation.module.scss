@@ -3,6 +3,22 @@
   width: 100%;
   color: $black;
 
+  &__wrap {
+    position: fixed;
+    background-color: $white;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: 0;
+    transition: all 0.5s;
+  }
+  &__scroll_down {
+    top: -73px;
+  }
+  &__header {
+    // color: white;
+  }
+
   &__logo {
     display: flex;
   }

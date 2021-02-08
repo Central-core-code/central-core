@@ -27,7 +27,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"></meta>
       </Head>
-      <div>
+      <div className="nav__desktop">
         <div className={styles.spotlight__wrap}>
           <div ref={containerRef} className="spotlight__point">
             <MainHeader />
