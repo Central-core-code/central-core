@@ -9,6 +9,8 @@ import Carousel from "../components/Carousel/Carousel";
 import Offers from "@components/Offers/Offers";
 
 export default function Home() {
+  const containerRef = useRef(null);
+
   useEffect(() => {
     const spotlight = containerRef.current;
     let spotlightSize = "transparent 160px, rgba(255, 255, 255,1) 200px)";
@@ -18,16 +20,15 @@ export default function Home() {
       }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
     });
   });
-
-  const containerRef = useRef(null);
-
+  
   return (
     <>
       <Head>
         <title>Central corp</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"></meta>
       </Head>
-      <div>
+      <div className="nav__desktop">
         <div className={styles.spotlight__wrap}>
           <div ref={containerRef} className="spotlight__point">
             <MainHeader />
