@@ -20,9 +20,11 @@ h1,
   font-weight: 600;
   font-style: italic;
 }
+
 h2,
 .h2 {
 }
+
 h3,
 .h3 {
   @include fluid-type(14px, 32px);
@@ -31,6 +33,7 @@ h3,
   font-weight: 500;
   font-style: italic;
 }
+
 p {
   @include fluid-type(14px, 18px);
   @include fluid-line-height(20px, 22px);
@@ -50,6 +53,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
 .load-wrap {
   animation: load 2s ease-in-out, load1 2.5s ease;
   color: black;

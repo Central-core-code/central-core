@@ -12,14 +12,14 @@ function Footer() {
     <footer className={`container ${styles.footer}`} id="footer" name="footer">
       <div className={`row justify-content-between ${styles.footer__block}`}>
         <div className="col-auto">
-          <Img src={logoBlack} width={78} height={41} />
+          <Img src={logoBlack} width={78} height={41} alt="logo" />
         </div>
         <div className="col-auto">
           <Link href="#contactForm">
-            <Img src={envelopeLight} width={30} height={20} />
+            <Img src={envelopeLight} width={30} height={20} alt="envelope footer icon" />
           </Link>
           <Link href="#contactForm">
-            <Img src={envelopeLight} width={30} height={20} />
+            <Img src={envelopeLight} width={30} height={20} alt="envelope footer icon" />
           </Link>
         </div>
       </div>
