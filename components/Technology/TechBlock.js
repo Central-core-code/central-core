@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "@styles/ourTechnology.module.scss";
+import styles from "@styles/technology.module.scss";
 
-function OurTechnologyBlock(props) {
+function TechBlock(props) {
   return (
     <div className={`row ${styles.technology__row}`}>
       <div className={`col-sm-4 offset-sm-${props.offset}`}>
@@ -12,4 +12,4 @@ function OurTechnologyBlock(props) {
   );
 }
 
-export default OurTechnologyBlock;
+export default TechBlock;

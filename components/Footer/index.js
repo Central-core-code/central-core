@@ -16,10 +16,20 @@ function Footer() {
         </div>
         <div className="col-auto">
           <Link href="#contactForm">
-            <Img src={envelopeLight} width={30} height={20} alt="envelope footer icon" />
+            <Img
+              src={envelopeLight}
+              width={30}
+              height={20}
+              alt="envelope footer icon"
+            />
           </Link>
           <Link href="#contactForm">
-            <Img src={envelopeLight} width={30} height={20} alt="envelope footer icon" />
+            <Img
+              src={envelopeLight}
+              width={30}
+              height={20}
+              alt="envelope footer icon"
+            />
           </Link>
         </div>
       </div>

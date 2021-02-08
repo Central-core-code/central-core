@@ -11,7 +11,7 @@ import formValidation from "./FormValidation";
 import { initialErrorsState, initialFormState } from "./const";
 import getLocale from "../../utils/getLocale";
 
-export function ContactForm() {
+function ContactForm() {
   const [form, setForm] = useState(initialFormState);
   const [errors, setErrors] = useState(initialErrorsState);
   const [isSuccess, setSuccessStatus] = useState(false);
@@ -136,3 +136,5 @@ export function ContactForm() {
     </form>
   );
 }
+
+export default ContactForm;
