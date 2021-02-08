@@ -5,7 +5,8 @@ import translations from "../translations";
 import getLocale from "../utils/getLocale";
 import Img from "react-optimized-image";
 import LogoBlack from "public/logo_black.svg";
-import Link from "next/link";
+// import Link from "next/link";
+import { Link } from "react-scroll";
 
 function Navigation(props) {
   const locale = getLocale();
@@ -43,10 +44,28 @@ function Navigation(props) {
           <div className="col-10 d-flex justify-content-end">
             <ul className={styles.nav__items}>
               <li>
-                <Link href="#aboutUs">{aboutUs}</Link>
+                <Link
+                  to="aboutUs"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  activeClass="is-active"
+                >
+                  {aboutUs}
+                </Link>
               </li>
               <li>
-                <Link href="">{projects}</Link>
+                <Link
+                  to="ourTechnology"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  activeClass="is-active"
+                >
+                  {projects}
+                </Link>
               </li>
               <li>
                 <Link href="">{offer}</Link>
