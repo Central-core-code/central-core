@@ -16,13 +16,14 @@ function Navigation(props) {
   useEffect(() => {
     const navContainer = containerRef.current;
     window.onscroll = function (e) {
-      const nav = this.oldScroll < this.scrollY;
+      const nav = this.oldScroll > 100 < this.scrollY;
       if (nav) {
         navContainer.classList.add(styles.nav__scroll_down);
       } else {
         navContainer.classList.remove(styles.nav__scroll_down);
       }
       this.oldScroll = this.scrollY;
+      // console.log("sprawdzam", this.oldScroll + 100);
     };
   });
 
@@ -50,7 +51,8 @@ function Navigation(props) {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  activeClass="is-active"
+                  offset={-100}
+                  activeClass={styles.is_active}
                 >
                   {aboutUs}
                 </Link>
@@ -62,16 +64,37 @@ function Navigation(props) {
                   smooth={true}
                   offset={50}
                   duration={500}
-                  activeClass="is-active"
+                  activeClass={styles.is_active}
+                  offset={-100}
+                >
+                  {offer}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="offer"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  activeClass={styles.is_active}
+                  offset={-100}
                 >
                   {projects}
                 </Link>
               </li>
               <li>
-                <Link href="">{offer}</Link>
-              </li>
-              <li>
-                <Link href="">{contact}</Link>
+                <Link
+                  to="contactForm"
+                  spy={true}
+                  smooth={true}
+                  offset={50}
+                  duration={500}
+                  activeClass={styles.is_active}
+                  offset={-100}
+                >
+                  {contact}
+                </Link>
               </li>
             </ul>
           </div>

@@ -55,7 +55,9 @@
       a {
         position: relative;
         &:hover,
-        &.is-active {
+        &.is_active {
+          text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
+
           &::after {
             position: absolute;
             top: 50%;
