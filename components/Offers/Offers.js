@@ -4,7 +4,7 @@ import Offer from "./Offer";
 
 function Offers() {
   return (
-    <div className="container text-center my-5">
+    <div className="container text-center my-5" name="scrollBg">
       <h2 className="h3 my-4">Offers</h2>
       <h3 className="h2 my-4 pb-5">
         Sed ut perspicatinus ode ominis iste natus error sit voluptatem

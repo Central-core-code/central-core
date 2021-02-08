@@ -88,10 +88,10 @@ export function ContactForm() {
   return (
     <form
       className={`${styles.contact_form} py-3`}
-      name="contactForm"
       id="contactForm"
       onSubmit={handleSubmit}
       noValidate
+      name="scrollBg"
     >
       <div
         className={classNames("mb-3", { [styles.is_error]: errors["email"] })}

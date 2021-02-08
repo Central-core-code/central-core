@@ -10,7 +10,7 @@ function ourTechnology() {
     locale
   ].ourTechnologyBlock;
   return (
-    <div id="ourTechnology" className={styles.technology__wrap}>
+    <div id="ourTechnology" className={styles.technology__wrap} name="scrollBg">
       <div className="container">
         <div className="row">
           <div className="col-4 offset-2">
