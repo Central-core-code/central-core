@@ -5,9 +5,18 @@ import translations from "../translations";
 import getLocale from "../utils/getLocale";
 import Img from "react-optimized-image";
 import LogoBlack from "public/logo_black.svg";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
-function Navigation(props) {
+const linkProps = {
+  spy: true,
+  smooth: true,
+  offset: 50,
+  duration: 500,
+  activeClass: styles.is_active,
+  offset: -100,
+};
+
+function Navigation() {
   const locale = getLocale();
   const containerRef = useRef(null);
 
@@ -15,13 +24,14 @@ function Navigation(props) {
   useEffect(() => {
     const navContainer = containerRef.current;
     window.onscroll = function (e) {
-      const nav = this.oldScroll < this.scrollY;
+      const nav = this.oldScroll > 100 < this.scrollY;
       if (nav) {
         navContainer.classList.add(styles.nav__scroll_down);
       } else {
         navContainer.classList.remove(styles.nav__scroll_down);
       }
       this.oldScroll = this.scrollY;
+      // console.log("sprawdzam", this.oldScroll + 100);
     };
   });
 
@@ -43,16 +53,24 @@ function Navigation(props) {
           <div className="col-10 d-flex justify-content-end">
             <ul className={styles.nav__items}>
               <li>
-                <Link href="#aboutUs">{aboutUs}</Link>
+                <Link to="aboutUs" {...linkProps}>
+                  {aboutUs}
+                </Link>
               </li>
               <li>
-                <Link href="">{projects}</Link>
+                <Link to="ourTechnology" {...linkProps}>
+                  {offer}
+                </Link>
               </li>
               <li>
-                <Link href="">{offer}</Link>
+                <Link to="offer" {...linkProps}>
+                  {projects}
+                </Link>
               </li>
               <li>
-                <Link href="">{contact}</Link>
+                <Link to="contactForm" {...linkProps}>
+                  {contact}
+                </Link>
               </li>
             </ul>
           </div>
