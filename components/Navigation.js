@@ -5,7 +5,6 @@ import translations from "../translations";
 import getLocale from "../utils/getLocale";
 import Img from "react-optimized-image";
 import LogoBlack from "public/logo_black.svg";
-// import Link from "next/link";
 import { Link } from "react-scroll";
 
 const linkProps = {
