@@ -8,7 +8,16 @@ import LogoBlack from "public/logo_black.svg";
 // import Link from "next/link";
 import { Link } from "react-scroll";
 
-function Navigation(props) {
+const linkProps = {
+  spy: true,
+  smooth: true,
+  offset: 50,
+  duration: 500,
+  activeClass: styles.is_active,
+  offset: -100,
+};
+
+function Navigation() {
   const locale = getLocale();
   const containerRef = useRef(null);
 
@@ -45,54 +54,22 @@ function Navigation(props) {
           <div className="col-10 d-flex justify-content-end">
             <ul className={styles.nav__items}>
               <li>
-                <Link
-                  to="aboutUs"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  offset={-100}
-                  activeClass={styles.is_active}
-                >
+                <Link to="aboutUs" {...linkProps}>
                   {aboutUs}
                 </Link>
               </li>
               <li>
-                <Link
-                  to="ourTechnology"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  activeClass={styles.is_active}
-                  offset={-100}
-                >
+                <Link to="ourTechnology" {...linkProps}>
                   {offer}
                 </Link>
               </li>
               <li>
-                <Link
-                  to="offer"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  activeClass={styles.is_active}
-                  offset={-100}
-                >
+                <Link to="offer" {...linkProps}>
                   {projects}
                 </Link>
               </li>
               <li>
-                <Link
-                  to="contactForm"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                  activeClass={styles.is_active}
-                  offset={-100}
-                >
+                <Link to="contactForm" {...linkProps}>
                   {contact}
                 </Link>
               </li>
