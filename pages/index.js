@@ -1,16 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import Link from "next/link";
-import translations from "translations";
 import { ContactForm } from "@components/ContactForm/ContactForm";
-import getLocale from "../utils/getLocale";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "./aboutUs";
 import OurTechnology from "./ourTechnology";
 import styles from "@styles/spotlight.module.scss";
+import Offers from "@components/Offers/Offers";
 
 export default function Home() {
-  const locale = getLocale();
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -22,11 +19,13 @@ export default function Home() {
       }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
     });
   });
+
   return (
     <>
       <Head>
         <title>Central corp</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"></meta>
       </Head>
       <div className="nav__desktop">
         <div className={styles.spotlight__wrap}>
@@ -36,6 +35,7 @@ export default function Home() {
           </div>
         </div>
         <OurTechnology />
+        <Offers />
         <ContactForm />
       </div>
     </>

@@ -38,6 +38,7 @@ function Navigation(props) {
             <LanguageSwitcher />
           </div>
         </div>
+
         <div className={`row ${styles.nav__items_wrap}`}>
           <div className="col-10 d-flex justify-content-end">
             <ul className={styles.nav__items}>

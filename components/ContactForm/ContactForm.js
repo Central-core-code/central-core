@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
 import styles from "@styles/contactForm.module.scss";
 
@@ -19,7 +19,7 @@ export function ContactForm() {
 
   const locale = getLocale();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!isValidationFailed()) {
@@ -48,7 +48,7 @@ export function ContactForm() {
   };
 
   const assignErrors = (name, validation) => {
-    setErrors(prevState => ({
+    setErrors((prevState) => ({
       ...prevState,
       [name]: validation,
     }));
@@ -65,11 +65,11 @@ export function ContactForm() {
         process.env.EMAILJS_USER_KEY
       )
       .then(
-        result => {
+        (result) => {
           setSuccessStatus(true);
           console.log(result.text);
         },
-        error => {
+        (error) => {
           //errors message
           setErrorStatus(true);
           console.log(error.text);
@@ -96,6 +96,7 @@ export function ContactForm() {
       <div
         className={classNames("mb-3", { [styles.is_error]: errors["email"] })}
       >
+        <label htmlFor="email">Email</label>
         <input
           type="email"
           name="email"
@@ -110,6 +111,7 @@ export function ContactForm() {
           [styles.is_error]: errors["message"],
         })}
       >
+        <label htmlFor="message">Message</label>
         <textarea
           name="message"
           id="message"
