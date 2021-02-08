@@ -5,6 +5,7 @@ import MainHeader from "../components/MainHeader";
 import AboutUs from "./aboutUs";
 import OurTechnology from "./ourTechnology";
 import styles from "@styles/spotlight.module.scss";
+import Carousel from "../components/Carousel/Carousel";
 import Offers from "@components/Offers/Offers";
 
 export default function Home() {
@@ -19,7 +20,7 @@ export default function Home() {
       }% ${(e.pageY / window.innerHeight) * 100}%, ${spotlightSize}`;
     });
   });
-
+  
   return (
     <>
       <Head>
@@ -35,6 +36,7 @@ export default function Home() {
           </div>
         </div>
         <OurTechnology />
+        <Carousel />
         <Offers />
         <ContactForm />
       </div>
