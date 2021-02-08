@@ -1,14 +1,15 @@
 import React from "react";
-import getLocale from "../utils/getLocale";
-import OurTechnologyBlock from "../components/OurTechnologyBlock";
-import translations from "../translations";
-import styles from "@styles/ourTechnology.module.scss";
+import getLocale from "../../utils/getLocale";
+import TechBlock from "./TechBlock";
+import translations from "../../translations";
+import styles from "@styles/technology.module.scss";
 
-function ourTechnology() {
+function Technology() {
   const locale = getLocale();
   const { jsDesc, phpDesc, reactDesc, nextJsDesc } = translations[
     locale
-  ].ourTechnologyBlock;
+  ].technologyBlock;
+
   return (
     <div id="ourTechnology" className={styles.technology__wrap}>
       <div className="container">
@@ -27,13 +28,13 @@ function ourTechnology() {
           </div>
         </div>
 
-        <OurTechnologyBlock title="JS" content={jsDesc} offset="1" />
-        <OurTechnologyBlock title="PHP" content={phpDesc} offset="5" />
-        <OurTechnologyBlock title="REACT" content={reactDesc} offset="2" />
-        <OurTechnologyBlock title="NextJS" content={nextJsDesc} offset="7" />
+        <TechBlock title="JS" content={jsDesc} offset="1" />
+        <TechBlock title="PHP" content={phpDesc} offset="5" />
+        <TechBlock title="REACT" content={reactDesc} offset="2" />
+        <TechBlock title="NextJS" content={nextJsDesc} offset="7" />
       </div>
     </div>
   );
 }
 
-export default ourTechnology;
+export default Technology;
