@@ -1,6 +1,5 @@
 export default {
   en: {
-    helloWorld: "helloWorld",
     contactForm: {
       sendButton: "Send",
     },
@@ -10,19 +9,18 @@ export default {
       offer: "Offer",
       contact: "Contact",
     },
-    technologyBlock: {
-      jsDesc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      phpDesc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      reactDesc:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      nextJsDesc:
+    technologyDesc: {
+      webApp:
+        "Web apps provides opportunities for businesses and brands to connect as well as engage with people. All apps are created with new technologies",
+      ecommerce:
+        "Responsive and customized e-commerce websites help in creating awesome shopping experience. It provides an online engagement for businesses and increase the customer flow to the website.",
+      seo:
+        "Each page created by us is fully programmatically optimized for SEO so that your website is as high as possible in the google search engine",
+      cms:
         "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
   },
   pl: {
-    helloWorld: "Witaj swiecie",
     contactForm: {
       sendButton: "Wyślij",
     },
@@ -32,14 +30,14 @@ export default {
       offer: "Oferta",
       contact: "Kontakt",
     },
-    technologyBlock: {
-      jsDesc:
+    technologyDesc: {
+      webApp:
         "Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do",
-      phpDesc:
+      ecommerce:
         "opis dla php po polsuthe printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      reactDesc:
-        "cos tam o react of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      nextJsDesc:
+      seo:
+        "Kazda strona stworzona przez nas jest w pelni zoptymalizowana programistycznie pod kątem SEO aby twoja strona byla jak najwyej w wyszukiwarce",
+      cms:
         "a tu ze nexJS jest w PYTE typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
     },
   },

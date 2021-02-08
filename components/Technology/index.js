@@ -6,9 +6,7 @@ import styles from "@styles/technology.module.scss";
 
 function Technology() {
   const locale = getLocale();
-  const { jsDesc, phpDesc, reactDesc, nextJsDesc } = translations[
-    locale
-  ].technologyBlock;
+  const { webApp, ecommerce, seo, cms } = translations[locale].technologyDesc;
 
   return (
     <div id="ourTechnology" className={styles.technology__wrap}>
@@ -28,10 +26,10 @@ function Technology() {
           </div>
         </div>
 
-        <TechBlock title="JS" content={jsDesc} offset="1" />
-        <TechBlock title="PHP" content={phpDesc} offset="5" />
-        <TechBlock title="REACT" content={reactDesc} offset="2" />
-        <TechBlock title="NextJS" content={nextJsDesc} offset="7" />
+        <TechBlock title="Web Dev" content={webApp} offset="1" />
+        <TechBlock title="Ecommerce" content={ecommerce} offset="5" />
+        <TechBlock title="SEO" content={seo} offset="2" />
+        <TechBlock title="CMS" content={cms} offset="7" />
       </div>
     </div>
   );
