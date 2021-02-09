@@ -12,8 +12,8 @@ function Carousel() {
   return (
     <div className="py-4" id="projects">
       <Slider className={styles.slider} {...settings}>
-        {slides.map((slide) => (
-          <Slide slide={slide} />
+        {slides.map((slide, i) => (
+          <Slide key={i} slide={slide} />
         ))}
       </Slider>
     </div>
