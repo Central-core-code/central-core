@@ -6,8 +6,7 @@
   &__wrap {
     position: fixed;
     background-color: $white;
-    left: 50%;
-    transform: translateX(-50%);
+
     z-index: 1;
     top: 0;
     transition: all 0.5s;
@@ -53,8 +52,12 @@
     li {
       margin-left: 40px;
       a {
+        cursor: pointer;
         position: relative;
-        &:hover {
+        &:hover,
+        &.is_active {
+          text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
+
           &::after {
             position: absolute;
             top: 50%;

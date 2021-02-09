@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
-import Footer from "./Footer/Footer";
+import Footer from "./Footer";
 import styles from "@styles/layout.module.scss";
 
 function Layout({ children }) {

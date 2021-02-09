@@ -1,5 +1,4 @@
 import React from "react";
-
 import Offer from "./Offer";
 
 function Offers() {

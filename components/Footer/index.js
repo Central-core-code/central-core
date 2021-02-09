@@ -9,7 +9,11 @@ import envelopeLight from "public/icons/envelope-light.svg";
 
 function Footer() {
   return (
-    <footer className={`container ${styles.footer}`} id="footer" name="footer">
+    <footer
+      className={`py-3 container ${styles.footer}`}
+      id="footer"
+      name="footer"
+    >
       <div className={`row justify-content-between ${styles.footer__block}`}>
         <div className="col-auto">
           <Img src={logoBlack} width={78} height={41} alt="logo" />

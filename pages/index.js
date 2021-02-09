@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import Head from "next/head";
-import { ContactForm } from "@components/ContactForm/ContactForm";
+import ContactForm from "@components/ContactForm";
 import MainHeader from "../components/MainHeader";
-import AboutUs from "./aboutUs";
-import OurTechnology from "./ourTechnology";
+import AboutUs from "../components/AboutUs";
+import Technology from "../components/Technology";
 import styles from "@styles/spotlight.module.scss";
-import Offers from "@components/Offers/Offers";
+import Carousel from "../components/Carousel";
+import Offers from "@components/Offers";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -37,7 +38,8 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
-        <OurTechnology />
+        <Technology />
+        <Carousel />
         <Offers />
         <ContactForm />
       </div>

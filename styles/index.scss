@@ -2,7 +2,6 @@
 
 html,
 body {
-  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: $font-SF-Compact;
@@ -37,6 +36,7 @@ h3,
 p {
   @include fluid-type(14px, 18px);
   @include fluid-line-height(20px, 22px);
+  letter-spacing: 1.5px;
 }
 
 a {
