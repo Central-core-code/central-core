@@ -1,9 +1,8 @@
-import skyTower from "public/projects/skyTower.png";
-import abovosolutions from "public/projects/abovosolutions.png";
+import printHouse from "public/projects/printHouse.png";
+import staszica16 from "public/projects/staszica16.png";
 import newArtDesign from "public/projects/newArtDesign.png";
 import pizzaNowar from "public/projects/pizzaNowar.png";
-import staszica16 from "public/projects/staszica16.png";
-import printHouse from "public/projects/printHouse.png";
+import skyTower from "public/projects/skyTower.png";
 
 export const slides = [
   {
@@ -15,15 +14,7 @@ export const slides = [
     },
     link: "https://skytowerapartment.com/",
   },
-  {
-    title: "Abovosolution",
-    img: abovosolutions,
-    alt: {
-      en: "page Abovosolution work search",
-      pl: "strona Abovosolution szukanie pracy",
-    },
-    link: "https://praca.abovosolutions.eu/",
-  },
+
   {
     title: "New Art Design",
     img: newArtDesign,
