@@ -1,18 +1,19 @@
 import React from "react";
-import skyTower from "public/projects/skyTower.png";
-import Img from "react-optimized-image";
 
 import styles from "@styles/slider.module.scss";
+import getLocale from "../../utils/getLocale";
 
-function Slide() {
+function Slide({ slide: { alt, img, link } }) {
   return (
     <div className="mx-3">
       <div className={`${styles.slide} embed-responsive embed-responsive-1by1`}>
-        <Img
-          src={skyTower}
-          className="embed-responsive-item"
-          alt="our project sky tower book"
-        />
+        <a href={link}>
+          <img
+            src={img}
+            className="embed-responsive-item"
+            alt={alt[getLocale()]}
+          />
+        </a>
       </div>
     </div>
   );
