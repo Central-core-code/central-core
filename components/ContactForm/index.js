@@ -19,7 +19,7 @@ function ContactForm() {
 
   const locale = getLocale();
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!isValidationFailed()) {
@@ -29,32 +29,32 @@ function ContactForm() {
     }
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
 
     const isValidationFailed = formValidation(name, value);
     assignErrors(name, isValidationFailed);
 
-    setForm(prevState => ({
+    setForm((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
 
   const isValidationFailed = () => {
-    return Object.keys(errors).some(key => {
+    return Object.keys(errors).some((key) => {
       return errors[key] || form[key] === "";
     });
   };
 
   const assignErrors = (name, validation) => {
-    setErrors(prevState => ({
+    setErrors((prevState) => ({
       ...prevState,
       [name]: validation,
     }));
   };
 
-  const sendEmail = e => {
+  const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
@@ -65,11 +65,11 @@ function ContactForm() {
         process.env.EMAILJS_USER_KEY
       )
       .then(
-        result => {
+        (result) => {
           setSuccessStatus(true);
           console.log(result.text);
         },
-        error => {
+        (error) => {
           //errors message
           setErrorStatus(true);
           console.log(error.text);
