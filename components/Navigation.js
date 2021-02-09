@@ -63,7 +63,7 @@ function Navigation() {
                 </Link>
               </li>
               <li>
-                <Link to="offer" {...linkProps}>
+                <Link to="projects" {...linkProps}>
                   {projects}
                 </Link>
               </li>
