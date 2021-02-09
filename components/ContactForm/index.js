@@ -86,7 +86,7 @@ function ContactForm() {
   }
 
   return (
-    <div id="contactForm" className={styles.contact_wrap}>
+    <div id="contactForm" className={styles.contact_wrap} name="scrollBg">
       <div className="container">
         <div
           className={`row justify-content-center ${styles.contact_wrap__row}`}

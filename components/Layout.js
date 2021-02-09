@@ -10,6 +10,7 @@ function Layout({ children }) {
   useEffect(() => {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
+      console.log(sections);
       const offsetArr = [];
       sections.forEach((section) => {
         const offset = section.offsetTop;
