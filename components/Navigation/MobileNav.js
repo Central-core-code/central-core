@@ -22,7 +22,7 @@ function MobileNav() {
   const [isNavOpen, setNavOpen] = useState(false);
   const { aboutUs, projects, offer, contact } = translations[locale].navigation;
 
-  const handleShowMenu = () => {
+  const handleMenu = () => {
     setNavOpen(!isNavOpen);
   };
   return (
@@ -33,7 +33,7 @@ function MobileNav() {
             <Img src={LogoBlack} width={78} height={41} alt="logo" />
           </div>
           <div className="col-6 text-right">
-            <div onClick={handleShowMenu} className="nav__hamburger">
+            <div onClick={handleMenu} className="nav__hamburger">
               <span></span>
               <span></span>
               <span></span>
@@ -43,26 +43,26 @@ function MobileNav() {
         <div className="row">
           <ul className="nav__items">
             <li>
-              <Link to="aboutUs" {...linkProps}>
+              <Link onClick={handleMenu} to="aboutUs" {...linkProps}>
                 {aboutUs}
               </Link>
             </li>
             <li>
-              <Link to="ourTechnology" {...linkProps}>
+              <Link onClick={handleMenu} to="ourTechnology" {...linkProps}>
                 {offer}
               </Link>
             </li>
             <li>
-              <Link to="projects" {...linkProps}>
+              <Link onClick={handleMenu} to="projects" {...linkProps}>
                 {projects}
               </Link>
             </li>
             <li>
-              <Link to="contactForm" {...linkProps}>
+              <Link onClick={handleMenu} to="contactForm" {...linkProps}>
                 {contact}
               </Link>
             </li>
-            <li>
+            <li onClick={handleMenu}>
               <LanguageSwitcher />
             </li>
           </ul>
