@@ -4,7 +4,7 @@ import Footer from "./Footer";
 
 function Layout({ children }) {
   return (
-    <div className="content">
+    <div className={`content ${bgColor}`}>
       <Navigation />
       {children}
       <Footer />

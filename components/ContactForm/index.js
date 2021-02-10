@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import classNames from "classnames";
 // import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "emailjs-com";
-import styles from "@styles/contactForm.module.scss";
 
 import ErrorMessage from "./ErrorMessage";
 import SuccessMessage from "./SuccessMessage";
@@ -86,11 +85,9 @@ function ContactForm() {
   }
 
   return (
-    <div id="contactForm" className={styles.contact_wrap}>
+    <div id="contactForm" className="contact_wrap" name="scrollBg">
       <div className="container">
-        <div
-          className={`row justify-content-center ${styles.contact_wrap__row}`}
-        >
+        <div className="row justify-content-center contact_wrap__row">
           <div className="col-4">
             <h3>Let's work together</h3>
           </div>
@@ -102,14 +99,14 @@ function ContactForm() {
           </div>
           <div className="col-sm-8">
             <form
-              className={`${styles.contact_form}`}
+              className="contact_form"
               name="contactForm"
               onSubmit={handleSubmit}
               noValidate
             >
               <div
                 className={classNames("field position-relative mb-3", {
-                  [styles.is_error]: errors["email"],
+                  is_error: errors["email"],
                 })}
               >
                 <input
@@ -124,7 +121,7 @@ function ContactForm() {
               </div>
               <div
                 className={classNames("field mb-5 position-relative", {
-                  [styles.is_error]: errors["message"],
+                  is_error: errors["message"],
                 })}
               >
                 <textarea
@@ -146,7 +143,7 @@ function ContactForm() {
 
               <div className="text-right">
                 <button
-                  className={styles.button}
+                  className="button"
                   disabled={isValidationFailed()}
                   type="submit"
                 >

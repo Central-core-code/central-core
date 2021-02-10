@@ -4,7 +4,6 @@ import ContactForm from "@components/ContactForm";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "../components/AboutUs";
 import Technology from "../components/Technology";
-import styles from "@styles/spotlight.module.scss";
 import Carousel from "../components/Carousel";
 import Offers from "@components/Offers";
 
@@ -31,8 +30,8 @@ export default function Home() {
           content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"
         ></meta>
       </Head>
-      <div className="nav__desktop">
-        <div className={styles.spotlight__wrap}>
+      <div className="nav__desktop" name="scrollBg">
+        <div className="spotlight__wrap">
           <div ref={containerRef} className="spotlight__point">
             <MainHeader />
             <AboutUs />
