@@ -1,13 +1,23 @@
 @import "./variables";
-
+@import "./navigation.scss";
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: $font-SF-Compact;
   font-weight: normal;
-  transition: all 0.2s;
   color: $black;
+  background: $white;
+  // transition: background 0.8s, color 0.8s;
+  .black {
+    transition: background 0.8s, color 0.8s;
+
+    background-color: black !important;
+    color: $white;
+  }
+}
+.white {
+  background-color: white !important;
 }
 
 h1,

@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import styles from "@styles/navigation.module.scss";
 
 import getLocale from "../utils/getLocale";
 
@@ -10,11 +9,11 @@ export const LanguageSwitcher = () => {
 
   return (
     <>
-      <Link href='/' locale='en'>
-        <a className={isEn ? styles.nav__language_select : ""}>EN</a>
+      <Link href="/" locale="en">
+        <a className={isEn ? "nav__language_select" : ""}>EN</a>
       </Link>
-      <Link href='/' locale='pl'>
-        <a className={!isEn ? styles.nav__language_select : ""}>PL</a>
+      <Link href="/" locale="pl">
+        <a className={!isEn ? "nav__language_select" : ""}>PL</a>
       </Link>
     </>
   );

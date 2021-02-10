@@ -5,7 +5,7 @@
 
   &__wrap {
     position: fixed;
-    background-color: $white;
+    background-color: inherit;
 
     z-index: 1;
     top: 0;
@@ -40,7 +40,7 @@
       content: "";
       width: calc(100% - 30px);
       height: 1px;
-      background-color: $gray;
+      background-color: currentColor;
       display: block;
     }
   }
@@ -66,11 +66,14 @@
             content: "";
             width: 50px;
             height: 1px;
-            background-color: $black;
+            background-color: currentColor;
             display: block;
           }
         }
       }
+    }
+    &.is-mobile {
+      display: block;
     }
   }
 }

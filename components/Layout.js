@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navigation from "./Navigation";
+import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer";
 import styles from "@styles/layout.module.scss";
 
@@ -11,7 +11,7 @@ function Layout({ children }) {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
-      sections.forEach((section) => {
+      sections.forEach(section => {
         const offset = section.offsetTop;
         offsetArr.push(offset);
       });
@@ -36,7 +36,7 @@ function Layout({ children }) {
   const bgColor = determineBgColor(scrollHeight, sectionOffset);
 
   return (
-    <div className={`content ${styles[bgColor]}`}>
+    <div className={`content ${bgColor}`}>
       <Navigation />
       {children}
       <Footer />
