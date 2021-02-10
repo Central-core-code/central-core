@@ -2,7 +2,6 @@ import React from "react";
 import getLocale from "../../utils/getLocale";
 import TechBlock from "./TechBlock";
 import translations from "../../translations";
-import styles from "@styles/technology.module.scss";
 
 function Technology() {
   const locale = getLocale();
@@ -11,14 +10,14 @@ function Technology() {
   ].technologyDesc;
 
   return (
-    <div id="ourTechnology" className={styles.technology__wrap}>
+    <div id="ourTechnology" className="technology__wrap" name="scrollBg">
       <div className="container">
         <div className="row">
           <div className="col-4 offset-2">
             <h3>{header}</h3>
           </div>
           <div className="col-4">
-            <p className={styles.technology__main_description}>{desc}</p>
+            <p className="technology__main_description">{desc}</p>
           </div>
         </div>
 

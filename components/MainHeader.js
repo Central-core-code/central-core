@@ -1,5 +1,4 @@
 import React from "react";
-import styles from "@styles/header.module.scss";
 import getLocale from "../utils/getLocale";
 import translations from "translations";
 
@@ -10,7 +9,7 @@ function MainHeader() {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-10 text-center">
-          <div className={styles.header__wrap}>
+          <div className="header__wrap">
             <p className="h1">{header1}</p>
             <h1>{header2}</h1>
             <p className="h1">{header3}</p>

@@ -1,12 +1,11 @@
 import React from "react";
-import styles from "@styles/technology.module.scss";
 
 function TechBlock(props) {
   return (
-    <div className={`row ${styles.technology__row}`}>
+    <div className="row technology__row">
       <div className={`col-sm-4 offset-sm-${props.offset}`}>
-        <h2 className={styles.technology__title}>{props.title}</h2>
-        <p className={styles.technology__description}>{props.content}</p>
+        <h2 className="technology__title">{props.title}</h2>
+        <p className="technology__description">{props.content}</p>
       </div>
     </div>
   );

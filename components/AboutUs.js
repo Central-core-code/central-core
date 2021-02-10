@@ -11,7 +11,7 @@ function AboutUs() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-8 text-center">
-            <p>{title}</p>
+            <p className="font-bold">{title}</p>
             <h2 className="h3">{header}</h2>
             <p>{desc}</p>
           </div>
