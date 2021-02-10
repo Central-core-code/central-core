@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 
 import translations from "../../translations";
@@ -18,43 +18,53 @@ const linkProps = {
 
 function MobileNav() {
   const locale = getLocale();
-  const containerRef = useRef(null);
 
+  const [isNavOpen, setNavOpen] = useState(false);
   const { aboutUs, projects, offer, contact } = translations[locale].navigation;
 
+  const handleShowMenu = () => {
+    setNavOpen(!isNavOpen);
+  };
   return (
-    <div className="container-fluid">
+    <div className={`is-mobile ${isNavOpen ? "is-open" : ""}`}>
       <div className="container">
-        <div className="row">
+        <div className="row nav__mobile-wrap">
           <div className="col-6">
             <Img src={LogoBlack} width={78} height={41} alt="logo" />
           </div>
-          <div className="col-6 text-right">hamburger </div>
+          <div className="col-6 text-right">
+            <div onClick={handleShowMenu} className="nav__hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
         <div className="row">
-          <ul>
-            <ul className="nav__items is-mobile">
-              <li>
-                <Link to="aboutUs" {...linkProps}>
-                  {aboutUs}
-                </Link>
-              </li>
-              <li>
-                <Link to="ourTechnology" {...linkProps}>
-                  {offer}
-                </Link>
-              </li>
-              <li>
-                <Link to="projects" {...linkProps}>
-                  {projects}
-                </Link>
-              </li>
-              <li>
-                <Link to="contactForm" {...linkProps}>
-                  {contact}
-                </Link>
-              </li>
-            </ul>
+          <ul className="nav__items">
+            <li>
+              <Link to="aboutUs" {...linkProps}>
+                {aboutUs}
+              </Link>
+            </li>
+            <li>
+              <Link to="ourTechnology" {...linkProps}>
+                {offer}
+              </Link>
+            </li>
+            <li>
+              <Link to="projects" {...linkProps}>
+                {projects}
+              </Link>
+            </li>
+            <li>
+              <Link to="contactForm" {...linkProps}>
+                {contact}
+              </Link>
+            </li>
+            <li>
+              <LanguageSwitcher />
+            </li>
           </ul>
         </div>
       </div>
