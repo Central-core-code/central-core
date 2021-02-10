@@ -57,7 +57,7 @@ function Navigation() {
                 </Link>
               </li>
               <li>
-                <Link to="ourTechnology" {...linkProps}>
+                <Link to="offers" {...linkProps}>
                   {offer}
                 </Link>
               </li>
