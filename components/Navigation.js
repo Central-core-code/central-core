@@ -31,7 +31,6 @@ function Navigation() {
         navContainer.classList.remove(styles.nav__scroll_down);
       }
       this.oldScroll = this.scrollY;
-      // console.log("sprawdzam", this.oldScroll + 100);
     };
   });
 

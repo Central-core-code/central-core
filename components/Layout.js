@@ -9,7 +9,6 @@ function Layout({ children }) {
   useEffect(() => {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
-      console.log(sections);
       const offsetArr = [];
       sections.forEach((section) => {
         const offset = section.offsetTop;
@@ -47,7 +46,6 @@ function Layout({ children }) {
 export default Layout;
 
 function determineBgColor(height, sections) {
-  console.log(height, sections);
   if (between(height, 0, sections[1])) {
     return "white";
   } else if (between(height, sections[1], sections[2])) {
