@@ -3,9 +3,9 @@ import Head from "next/head";
 import ContactForm from "@components/ContactForm";
 import MainHeader from "../components/MainHeader";
 import AboutUs from "../components/AboutUs";
-import Technology from "../components/Technology";
+import Offers from "../components/Offers";
 import Carousel from "../components/Carousel";
-import Offers from "@components/Offers";
+import Technologies from "@components/Technologies";
 
 export default function Home() {
   const containerRef = useRef(null);
@@ -37,9 +37,9 @@ export default function Home() {
             <AboutUs />
           </div>
         </div>
-        <Technology />
-        <Carousel />
         <Offers />
+        <Technologies />
+        <Carousel />
         <ContactForm />
       </div>
     </>
