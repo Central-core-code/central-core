@@ -32,13 +32,14 @@ function Navigation() {
         navContainer.classList.remove("nav__scroll_down");
       }
       this.oldScroll = this.scrollY;
-      // console.log("sprawdzam", this.oldScroll + 100);
     };
   });
 
   return (
     <>
-      {/* <div ref={containerRef} className="container-fluid nav__wrap">
+      <div
+        ref={containerRef}
+        className="container-fluid nav__wrap d-none d-md-block">
         <div className="container">
           <div className="row justify-content-between align-items-center py-3">
             <div className="col-6">
@@ -78,9 +79,8 @@ function Navigation() {
             </div>
           </div>
         </div>
-      </div> */}
-
-      <div>
+      </div>
+      <div className="d-md-none">
         <MobileNav />
       </div>
     </>
