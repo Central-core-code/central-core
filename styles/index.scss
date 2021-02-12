@@ -72,11 +72,6 @@ a {
   box-sizing: border-box;
 }
 
-.nav {
-  &__desktop {
-    padding-top: 140px;
-  }
-}
 .load-wrap {
   animation: load 2s ease-in-out, load1 2.5s ease;
   color: black;

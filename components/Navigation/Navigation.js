@@ -39,7 +39,7 @@ function Navigation() {
     <>
       <div
         ref={containerRef}
-        className="container-fluid nav__wrap d-none d-md-block">
+        className="container-fluid nav__wrap d-none d-lg-block">
         <div className="container">
           <div className="row justify-content-between align-items-center py-3">
             <div className="col-6">
@@ -80,7 +80,7 @@ function Navigation() {
           </div>
         </div>
       </div>
-      <div className="d-md-none">
+      <div className="d-lg-none">
         <MobileNav />
       </div>
     </>
