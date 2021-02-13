@@ -17,15 +17,18 @@ body {
   font-weight: normal;
   color: $black;
   background-color: $white;
-  transition: background-color 0.8s, color 0.8s;
+  transition: background-color 0.3s, color 0.3s;
 
   .black {
+    transition: background-color 0.3s, color 0.3s;
+
     background-color: $black !important;
     color: $white;
   }
 }
 .white {
   background-color: $white !important;
+  transition: background-color 0.8s, color 0.8s;
 }
 
 h1,
