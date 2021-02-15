@@ -19,7 +19,6 @@ function Layout({ children }) {
     }
 
     function handleScroll() {
-      console.log(1);
       setScrolLHeight(window.pageYOffset);
     }
 
@@ -33,7 +32,6 @@ function Layout({ children }) {
     };
   }, []);
 
-  console.log(scrollHeight, sectionOffset);
   const bgColor = determineBgColor(scrollHeight, sectionOffset);
 
   return (
