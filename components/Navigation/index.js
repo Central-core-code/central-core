@@ -21,7 +21,7 @@ function Navigation() {
   const locale = getLocale();
   const containerRef = useRef(null);
   const { aboutUs, projects, offer, contact } = translations[locale].navigation;
-  const isMobile = useWindowWidth() > 1032;
+  const isMobile = useWindowWidth();
   useEffect(() => {
     const navContainer = containerRef.current;
     const intWidth = window.innerWidth < 1032;
@@ -39,21 +39,17 @@ function Navigation() {
   });
 
   function useWindowWidth() {
-    const [windowSize, setWindowSize] = useState({
-      width: undefined,
-    });
+    const [width, setWindowSize] = useState(undefined);
 
     useEffect(() => {
       function handleResize() {
-        setWindowSize({
-          width: window.innerWidth,
-        });
+        setWindowSize(window.innerWidth);
       }
       window.addEventListener("resize", handleResize);
       handleResize();
       return () => window.removeEventListener("resize", handleResize);
     }, []);
-    return windowSize.width;
+    return width > 1032;
   }
 
   return (
