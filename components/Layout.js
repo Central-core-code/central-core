@@ -36,7 +36,7 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
-      <Navigation />
+      <Navigation bgColor={bgColor} />
       {children}
       <Footer />
     </div>
