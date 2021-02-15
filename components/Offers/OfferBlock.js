@@ -1,11 +1,11 @@
 import React from "react";
 
-function OfferBlock(props) {
+function OfferBlock({ offset, title, content, slide = "left" }) {
   return (
-    <div className="row offers__row">
-      <div className={`col-sm-4 offset-sm-${props.offset}`}>
-        <h2 className="offers__title">{props.title}</h2>
-        <p className="offers__description">{props.content}</p>
+    <div className="row offers__row" data-aos={`slide-${slide}`}>
+      <div className={`col-sm-4 offset-sm-${offset}`}>
+        <h2 className="offers__title">{title}</h2>
+        <p className="offers__description">{content}</p>
       </div>
     </div>
   );

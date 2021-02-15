@@ -21,10 +21,15 @@ function Offers() {
           </div>
         </div>
 
-        <OfferBlock title="Web Dev" content={webApp} offset="1" />
-        <OfferBlock title="Ecommerce" content={ecommerce} offset="5" />
-        <OfferBlock title="SEO" content={seo} offset="2" />
-        <OfferBlock title="CMS" content={cms} offset="7" />
+        <OfferBlock title="Web Dev" content={webApp} offset="1" slide="left" />
+        <OfferBlock
+          title="Ecommerce"
+          content={ecommerce}
+          offset="5"
+          slide="right"
+        />
+        <OfferBlock title="SEO" content={seo} offset="2" slide="left" />
+        <OfferBlock title="CMS" content={cms} offset="7" slide="right" />
       </div>
     </div>
   );
