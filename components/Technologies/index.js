@@ -26,18 +26,22 @@ function Technologies() {
           description={wordpress}
           img={triangle}
           alt="triangle"
+          aos="zoom-in"
         />
         <TechBlock
           title="JAVASCRIPT"
           description={js}
           img={block}
           alt="square"
+          aos="zoom-in"
         />
         <TechBlock
           title="UX/UI"
           description={ux}
           img={triangle}
           alt="triangle"
+          aos="zoom-in"
+
         />
       </div>
     </div>
