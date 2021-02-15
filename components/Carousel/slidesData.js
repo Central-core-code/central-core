@@ -1,8 +1,8 @@
-import printHouse from "public/projects/printHouse.png";
-import staszica16 from "public/projects/staszica16.png";
-import newArtDesign from "public/projects/newArtDesign.png";
-import pizzaNowar from "public/projects/pizzaNowar.png";
-import skyTower from "public/projects/skyTower.png";
+import printHouse from "public/projects/printHouse.jpg";
+import staszica16 from "public/projects/staszica16.jpg";
+import newArtDesign from "public/projects/newArtDesign.jpg";
+import pizzaNowar from "public/projects/pizzaNowar.jpg";
+import skyTower from "public/projects/skyTower.jpg";
 
 export const slides = [
   {
