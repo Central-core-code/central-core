@@ -16,3 +16,16 @@
     color: $black;
   }
 }
+
+.black {
+  .footer {
+    h1,
+    h2,
+    h3,
+    p,
+    div,
+    span {
+      color: $white;
+    }
+  }
+}

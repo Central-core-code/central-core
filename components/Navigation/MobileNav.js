@@ -18,13 +18,13 @@ const linkProps = {
 
 function MobileNav() {
   const locale = getLocale();
-
   const [isNavOpen, setNavOpen] = useState(false);
   const { aboutUs, projects, offer, contact } = translations[locale].navigation;
 
   const handleMenu = () => {
-    setNavOpen(!isNavOpen);
+    setNavOpen(prevState => !prevState);
   };
+
   return (
     <div className={`is-mobile ${isNavOpen ? "is-open" : ""}`}>
       <div className="container">
