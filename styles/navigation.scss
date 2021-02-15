@@ -1,0 +1,213 @@
+.nav {
+  height: 100px;
+  width: 100%;
+  color: $black;
+  &__desktop {
+    padding-top: 140px;
+    @media (max-width: $screen-sm-max) {
+      padding-top: 80px;
+    }
+  }
+  &__wrap {
+    position: fixed;
+    background-color: inherit;
+    z-index: 1;
+    top: 0;
+    transition: top 0.5s ease;
+  }
+  &__scroll_down {
+    top: -73px;
+  }
+
+  &__logo {
+    display: flex;
+  }
+  &__language {
+    display: flex;
+    justify-content: flex-end;
+    a {
+      margin-left: 20px;
+      @include fluid-type(10px, 12px);
+      @include fluid-line-height(12px, 14px);
+    }
+  }
+  &__language_select {
+    text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
+  }
+  &__items_wrap {
+    justify-content: center;
+    &::before,
+    &::after {
+      content: "";
+      width: calc(100% - 30px);
+      height: 1px;
+      background-color: currentColor;
+      display: block;
+    }
+  }
+  &__items {
+    list-style: none;
+    display: flex;
+    margin-bottom: 0;
+    padding: 20px 0;
+    li {
+      margin-left: 40px;
+      a {
+        cursor: pointer;
+        position: relative;
+        &:hover,
+        &.is_active {
+          text-shadow: 0 0 0.01px currentColor, 0 0 0.01px currentColor;
+
+          &::after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            content: "";
+            width: 50px;
+            height: 1px;
+            background-color: currentColor;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+.is-mobile {
+  width: 100%;
+  background-color: $white;
+  position: fixed;
+  z-index: 9;
+  max-height: 83px;
+  transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
+  height: 100vh;
+
+  &.is-open {
+    max-height: 10000px;
+    transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
+
+    .nav {
+      &__items {
+        visibility: visible;
+        opacity: 1;
+        max-height: 10000px;
+        background-color: $white;
+        transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
+        li {
+          margin-top: 0;
+          transition: margin-top 0.5s ease-in-out;
+        }
+      }
+      &__hamburger {
+        & > span {
+          &:nth-child(1) {
+            transform: rotate(45deg);
+          }
+          &:nth-child(2) {
+            opacity: 0;
+          }
+          &:nth-child(3) {
+            transform: rotate(-45deg);
+            top: 5px;
+          }
+        }
+      }
+    }
+  }
+  .nav {
+    &__items {
+      display: block;
+      position: absolute;
+      max-height: 1000px;
+      transition: max-height 1s 0s, opacity 0.2s 0.5s;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      background-color: inherit;
+      max-height: 0;
+      visibility: hidden;
+      opacity: 0;
+      li {
+        margin-left: 0%;
+        margin-top: 30px;
+        padding: 20px 0;
+        transition: margin-top 0.5s ease-in-out;
+        &:last-child {
+          a {
+            padding: 10px;
+          }
+        }
+
+        a {
+          font-size: 19px;
+          &:hover,
+          &.is_active {
+            &::after {
+              width: 40px;
+              height: 2px;
+            }
+          }
+        }
+      }
+    }
+    &__mobile-wrap {
+      padding: 20px 0;
+      align-items: center;
+      border-bottom: 1px solid currentColor;
+      position: relative;
+      background-color: $white;
+    }
+    &__hamburger {
+      cursor: pointer;
+      height: 30px;
+      padding: 0;
+      width: 22px;
+      display: inline-block;
+      position: absolute;
+      right: 15px;
+      top: -6px;
+
+      & > span {
+        display: block;
+        height: 2px;
+        width: 22px;
+        background: black;
+        border-radius: 0;
+        left: 0;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+        position: absolute;
+        &:nth-child(0) {
+          top: 0;
+        }
+        &:nth-child(1) {
+          top: 5px;
+        }
+        &:nth-child(2) {
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.black {
+  .nav__mobile-wrap {
+    background-color: $black;
+  }
+  .nav__hamburger > span {
+    background-color: $white;
+  }
+  .is-mobile {
+    background-color: $black;
+    &.is-open {
+      .nav__items {
+        background-color: $black;
+      }
+    }
+  }
+}

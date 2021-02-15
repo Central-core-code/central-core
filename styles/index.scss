@@ -1,4 +1,6 @@
 @import "./variables";
+
+@import "./navigation.scss";
 @import "./contactForm.scss";
 @import "./footer.scss";
 @import "./layout.scss";
@@ -14,8 +16,20 @@ body {
   margin: 0;
   font-family: $font-SF-Compact;
   font-weight: normal;
-  transition: all 0.2s;
   color: $black;
+  background-color: $white;
+  transition: background-color 0.3s, color 0.3s;
+
+  .black {
+    transition: background-color 0.3s, color 0.3s;
+
+    background-color: $black !important;
+    color: $white;
+  }
+}
+.white {
+  background-color: $white !important;
+  transition: background-color 0.8s, color 0.8s;
 }
 
 h1,
@@ -62,11 +76,6 @@ a {
   box-sizing: border-box;
 }
 
-.nav {
-  &__desktop {
-    padding-top: 140px;
-  }
-}
 .load-wrap {
   animation: load 2s ease-in-out, load1 2.5s ease;
   color: black;

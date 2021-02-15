@@ -105,3 +105,11 @@ $font-SF-Compact: "SF-Compact-Text";
     padding-top: percentage(2/ 1);
   }
 }
+
+$screen-xs-min: 360px;
+$screen-xs-max: 767px;
+$screen-sm-min: 768px;
+$screen-sm-max: 991px;
+$screen-md-min: 992px;
+$screen-md-max: 1199px;
+$screen-lg-min: 1200px;
