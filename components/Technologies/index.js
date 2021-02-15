@@ -41,7 +41,6 @@ function Technologies() {
           img={triangle}
           alt="triangle"
           aos="zoom-in"
-
         />
       </div>
     </div>
