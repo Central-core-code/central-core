@@ -26,27 +26,9 @@ function Technologies() {
         </div>
       </div>
       <div className="row">
-        <TechBlock
-          title="WORDPRESS"
-          description={wordpress}
-          img={triangle}
-          alt="triangle"
-          aos="zoom-in"
-        />
-        <TechBlock
-          title="JAVASCRIPT"
-          description={js}
-          img={block}
-          alt="square"
-          aos="zoom-in"
-        />
-        <TechBlock
-          title="UX/UI"
-          description={ux}
-          img={triangle}
-          alt="triangle"
-          aos="zoom-in"
-        />
+        <TechBlock title="WORDPRESS" description={wordpress} alt="triangle" />
+        <TechBlock title="JAVASCRIPT" description={js} alt="square" />
+        <TechBlock title="UX/UI" description={ux} alt="triangle" />
       </div>
     </div>
   );
