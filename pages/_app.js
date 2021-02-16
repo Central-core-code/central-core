@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    AOS.init({ duration: 1000, disable: "phone" });
+    AOS.init({ duration: 1000, disable: "mobile" });
   }, []);
 
   return (

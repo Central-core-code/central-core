@@ -9,8 +9,13 @@ import translations from "translations";
 function Technologies() {
   const locale = getLocale();
   const { js, wordpress, ux } = translations[locale].technologies;
+
   return (
-    <div className="container text-center my-5" id="projects" name="scrollBg">
+    <div
+      className="container text-center padding-y"
+      id="projects"
+      name="scrollBg"
+    >
       <div className="row">
         <div className="col-8 mx-auto">
           <p className="font-bold m-0">OUR TECHNOLOGIES</p>
