@@ -7,7 +7,12 @@ import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    AOS.init({ duration: 1000, disable: "mobile" });
+    AOS.init({
+      duration: 1000,
+      disable: function () {
+        return window.innerWidth < 1032;
+      },
+    });
   }, []);
 
   return (
