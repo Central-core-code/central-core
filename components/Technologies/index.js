@@ -1,8 +1,7 @@
 import React from "react";
 import TechBlock from "./TechBlock";
 
-import triangle from "public/icons/triangle.svg";
-import block from "public/icons/block.svg";
+import envelope from "public/icons/envelope-dark.svg";
 import getLocale from "../../utils/getLocale";
 import translations from "translations";
 
@@ -26,9 +25,24 @@ function Technologies() {
         </div>
       </div>
       <div className="row">
-        <TechBlock title="WORDPRESS" description={wordpress} alt="triangle" />
-        <TechBlock title="JAVASCRIPT" description={js} alt="square" />
-        <TechBlock title="UX/UI" description={ux} alt="triangle" />
+        <TechBlock
+          title="WORDPRESS"
+          description={wordpress}
+          img={envelope}
+          alt="triangle"
+        />
+        <TechBlock
+          title="JAVASCRIPT"
+          description={js}
+          img={envelope}
+          alt="square"
+        />
+        <TechBlock
+          title="UX/UI"
+          description={ux}
+          img={envelope}
+          alt="triangle"
+        />
       </div>
     </div>
   );
