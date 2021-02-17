@@ -10,7 +10,10 @@ function Offers() {
   ].offers;
 
   return (
-    <div className="offers__wrap" id="offers" name="scrollBg">
+    <div
+      className="offers__wrap spotlight__wrap-offers"
+      id="offers"
+      name="scrollBg">
       <div className="container">
         <div className="row">
           <div className="col-4 offset-2">

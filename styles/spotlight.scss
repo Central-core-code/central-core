@@ -8,4 +8,13 @@
     overflow: hidden;
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
   }
+  &__wrap-offers {
+    background-image: url("../assets/img/bck_color.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 }

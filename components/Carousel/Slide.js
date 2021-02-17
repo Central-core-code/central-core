@@ -5,7 +5,7 @@ import getLocale from "../../utils/getLocale";
 function Slide({ slide: { alt, img, link } }) {
   return (
     <div className="mx-3">
-      <div className="slide embed-responsive embed-responsive-1by1">
+      <div className="slide embed-responsive embed-responsive-1by1-25">
         <a href={link}>
           <img
             src={img}
