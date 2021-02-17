@@ -6,21 +6,27 @@
   }
   &__contact-triger {
     position: absolute;
-    right: 10%;
+    right: 20px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     cursor: pointer;
+    @media (min-width: $screen-sm-max) {
+      right: 10%;
+    }
     span {
       position: relative;
       &::after {
         position: absolute;
         top: 30px;
-        right: -8px;
+        right: -10px;
         content: "";
         height: 2px;
         width: 41px;
         background-color: currentColor;
         transform: rotate(-90deg);
+        @media (min-width: $screen-sm-max) {
+          right: -8px;
+        }
       }
     }
   }
