@@ -3,6 +3,7 @@ import getLocale from "../../utils/getLocale";
 import OfferBlock from "./OfferBlock";
 import translations from "../../translations";
 import { Link } from "react-scroll";
+import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
@@ -10,20 +11,12 @@ function Offers() {
     locale
   ].offers;
 
-  const linkProps = {
-    spy: true,
-    smooth: true,
-    offset: 50,
-    duration: 500,
-    offset: -100,
-  };
-
   return (
     <div
       className="offers__wrap spotlight__wrap-offers"
       id="offers"
       name="scrollBg">
-      <Link to="contactForm" {...linkProps}>
+      <Link to="contactForm" {...linkPropsNoActive}>
         <p className="offers__contact-triger">
           contact us<span></span>
         </p>
