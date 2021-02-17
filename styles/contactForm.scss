@@ -10,8 +10,8 @@
     textarea {
       padding: 15px;
       width: 100%;
-      color: $white;
-      background-color: $black;
+      color: $black;
+      background-color: transparent;
       border: 1px solid $gray;
       font-style: italic;
       transition: all 0.2s ease;
@@ -33,7 +33,7 @@
       position: absolute;
       left: 0;
       font-style: italic;
-      color: $white;
+      color: $black;
       font-size: 14px;
       line-height: 22px;
       margin: 0;
@@ -86,5 +86,15 @@
 
   small {
     color: red !important;
+  }
+}
+
+.black {
+  input,
+  textarea {
+    color: $white;
+  }
+  .contact_wrap .contact_form label {
+    color: $white;
   }
 }

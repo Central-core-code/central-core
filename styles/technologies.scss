@@ -1,10 +1,18 @@
 .tech {
   padding-top: 85px;
   padding-bottom: 190px;
-
+  position: relative;
+  &:before {
+    content: "";
+    width: 83.333333%;
+    height: 1px;
+    background-color: currentColor;
+    display: block;
+    left: 8.335%;
+    position: absolute;
+  }
   &__title {
-    padding-top: 18px;
-    padding-bottom: 28px;
+    padding-top: 45px;
   }
 
   &__description {

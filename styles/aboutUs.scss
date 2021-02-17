@@ -1,0 +1,11 @@
+.about {
+  padding-bottom: 80px;
+  padding-top: 45px;
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+  &__headline {
+    margin-bottom: 45px;
+  }
+}
