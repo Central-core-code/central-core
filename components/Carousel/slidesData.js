@@ -63,7 +63,6 @@ export const settings = {
   speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 1,
-  pauseOnHover: true,
   swipeToSlide: true,
   arrows: false,
   responsive: [

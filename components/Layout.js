@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
+import throttle from "lodash/throttle";
 
 function Layout({ children }) {
   const [scrollHeight, setScrolLHeight] = useState(0);
@@ -15,7 +16,6 @@ function Layout({ children }) {
         offsetArr.push(offset);
       });
       setSectionOffset(offsetArr);
-      return offsetArr;
     }
 
     function handleScroll() {
@@ -23,8 +23,8 @@ function Layout({ children }) {
     }
 
     getSectionsOffset();
-    window.addEventListener("resize", getSectionsOffset);
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", throttle(getSectionsOffset, 100));
+    window.addEventListener("scroll", throttle(handleScroll, 100));
 
     return () => {
       window.removeEventListener("resize", getSectionsOffset);
@@ -46,11 +46,11 @@ function Layout({ children }) {
 export default Layout;
 
 function determineBgColor(height, sections) {
-  if (between(height, 0, sections[1])) {
+  if (between(height, 0, sections[0])) {
     return "white";
-  } else if (between(height, sections[1], sections[2])) {
+  } else if (between(height, sections[0], sections[1])) {
     return "black";
-  } else if (between(height, sections[2], sections[3])) {
+  } else if (between(height, sections[1], sections[2])) {
     return "white";
   } else {
     return "black";

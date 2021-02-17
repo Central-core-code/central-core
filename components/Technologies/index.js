@@ -1,14 +1,14 @@
 import React from "react";
 import TechBlock from "./TechBlock";
 
-import triangle from "public/icons/triangle.svg";
-import block from "public/icons/block.svg";
+import envelope from "public/icons/envelope-dark.svg";
 import getLocale from "../../utils/getLocale";
 import translations from "translations";
 
 function Technologies() {
   const locale = getLocale();
   const { js, wordpress, ux } = translations[locale].technologies;
+
   return (
     <div className="container text-center tech" id="projects" name="scrollBg">
       <div className="row">
@@ -24,24 +24,20 @@ function Technologies() {
         <TechBlock
           title="WORDPRESS"
           description={wordpress}
-          img={triangle}
+          img={envelope}
           alt="triangle"
-          aos="zoom-in"
         />
         <TechBlock
           title="JAVASCRIPT"
           description={js}
-          img={block}
+          img={envelope}
           alt="square"
-          aos="zoom-in"
         />
         <TechBlock
           title="UX/UI"
           description={ux}
-          img={triangle}
+          img={envelope}
           alt="triangle"
-          aos="zoom-in"
-
         />
       </div>
     </div>
