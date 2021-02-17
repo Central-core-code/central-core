@@ -9,7 +9,7 @@ import { settings, slides } from "./slidesData";
 
 function Carousel() {
   return (
-    <div className="padding-y">
+    <div>
       <Slider className="slider" {...settings}>
         {slides.map((slide, i) => (
           <Slide key={i} slide={slide} />

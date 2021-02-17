@@ -8,7 +8,7 @@ function MainHeader() {
   return (
     <div className="container">
       <div className="row justify-content-center">
-        <div className="col-10 text-center">
+        <div className="col-10 text-center header__border">
           <div className="header__wrap">
             <p className="h1">{header1}</p>
             <h1>{header2}</h1>
