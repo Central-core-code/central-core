@@ -1,8 +1,28 @@
 .offers {
   &__wrap {
-    // background-color: black;
     padding-top: 85px;
     padding-bottom: 190px;
+    position: relative;
+  }
+  &__contact-triger {
+    position: absolute;
+    right: 10%;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    cursor: pointer;
+    span {
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 30px;
+        right: -8px;
+        content: "";
+        height: 2px;
+        width: 41px;
+        background-color: currentColor;
+        transform: rotate(-90deg);
+      }
+    }
   }
   &__row {
     margin-bottom: 40px;
