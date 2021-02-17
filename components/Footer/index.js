@@ -13,7 +13,7 @@ function Footer({ bgColor }) {
     <footer className="py-3 container footer" id="footer" name="footer">
       <div className="row justify-content-between footer__block">
         <div className="col-auto">
-          <Img src={LogoWhite} width={78} height={41} alt="logo" />
+          <img src={logo} width={78} height={41} alt="logo" />
         </div>
         <div className="col-auto">
           <Link href="#contactForm">
