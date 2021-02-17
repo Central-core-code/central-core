@@ -2,6 +2,8 @@ import React from "react";
 import getLocale from "../../utils/getLocale";
 import OfferBlock from "./OfferBlock";
 import translations from "../../translations";
+import { Link } from "react-scroll";
+import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
@@ -14,6 +16,12 @@ function Offers() {
       className="offers__wrap spotlight__wrap-offers"
       id="offers"
       name="scrollBg">
+      <Link to="contactForm" {...linkPropsNoActive}>
+        <p className="offers__contact-triger">
+          contact us<span></span>
+        </p>
+      </Link>
+
       <div className="container">
         <div className="row offers__row-wrap">
           <div className="col-12 col-lg-4 offset-lg-2 pb-5">

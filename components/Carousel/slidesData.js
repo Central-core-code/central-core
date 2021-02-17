@@ -58,7 +58,7 @@ export const settings = {
   centerPadding: "120px",
   dots: false,
   infinite: true,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 2500,
   speed: 1000,
   slidesToShow: 3,

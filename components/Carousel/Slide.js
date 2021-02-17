@@ -2,7 +2,7 @@ import React from "react";
 
 import getLocale from "../../utils/getLocale";
 
-function Slide({ slide: { alt, img, link } }) {
+function Slide({ slide: { alt, title, img, link } }) {
   return (
     <div className="mx-3">
       <div className="slide embed-responsive embed-responsive-1by1-25">
@@ -14,6 +14,7 @@ function Slide({ slide: { alt, img, link } }) {
           />
         </a>
       </div>
+      <p className="slide__item">{title}</p>
     </div>
   );
 }
