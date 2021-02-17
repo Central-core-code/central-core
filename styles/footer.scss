@@ -1,7 +1,6 @@
 .footer {
-  &::before {
-    border-top: 1px solid $gray;
-  }
+  padding: 30px 0;
+  border-top: 1px solid currentColor;
 
   &__block {
     margin-bottom: 50px;
