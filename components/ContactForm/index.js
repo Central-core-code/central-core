@@ -85,7 +85,7 @@ function ContactForm() {
   }
 
   return (
-    <div id="contactForm" className="contact_wrap" name="scrollBg">
+    <div id="contactForm" className="contact_wrap padding-y" name="scrollBg">
       <div className="container">
         <div className="row justify-content-center contact_wrap__row">
           <div className="col col-sm-4">

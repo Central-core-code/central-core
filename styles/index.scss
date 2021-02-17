@@ -27,10 +27,11 @@ body {
     background-color: $black !important;
     color: $white;
   }
-}
-.white {
-  background-color: $white !important;
-  transition: background-color 0.8s, color 0.8s;
+
+  .white {
+    background-color: $white !important;
+    transition: background-color 0.3s, color 0.3s;
+  }
 }
 
 h1,
@@ -138,4 +139,9 @@ a {
   100% {
     opacity: 0;
   }
+}
+
+.padding-y {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
