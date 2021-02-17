@@ -22,7 +22,7 @@
         box-shadow: inset 0px 0px 0px 2px $gray;
       }
     }
-    z label,
+    label,
     input,
     textarea {
       transition: all 0.2s;
@@ -96,5 +96,13 @@
   }
   .contact_wrap .contact_form label {
     color: $white;
+  }
+}
+
+.white {
+  .button {
+    background-color: $black !important;
+    border-color: $black !important;
+    color: $white !important;
   }
 }
