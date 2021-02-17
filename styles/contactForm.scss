@@ -94,8 +94,11 @@
   textarea {
     color: $white;
   }
-  .contact_wrap .contact_form label {
-    color: $white;
+  .contact_wrap .contact_form {
+    label,
+    textarea {
+      color: $white;
+    }
   }
 }
 
