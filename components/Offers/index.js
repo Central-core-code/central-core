@@ -15,11 +15,11 @@ function Offers() {
       id="offers"
       name="scrollBg">
       <div className="container">
-        <div className="row">
-          <div className="col-4 offset-2">
+        <div className="row offers__row-wrap">
+          <div className="col-12 col-lg-4 offset-lg-2 pb-5">
             <h3>{header}</h3>
           </div>
-          <div className="col-4">
+          <div className="col-12 col-lg-4">
             <p className="offers__main_description">{desc}</p>
           </div>
         </div>

@@ -38,8 +38,8 @@ export default function Home() {
           </div>
         </div>
         <Offers />
-        <Technologies />
         <Carousel />
+        <Technologies />
         <ContactForm />
       </div>
     </>

@@ -88,10 +88,10 @@ function ContactForm() {
     <div id="contactForm" className="contact_wrap" name="scrollBg">
       <div className="container">
         <div className="row justify-content-center contact_wrap__row">
-          <div className="col-4">
+          <div className="col col-sm-4">
             <h3>Let's work together</h3>
           </div>
-          <div className="col-4">
+          <div className="col col-sm-4">
             <p>
               What is the scope of your project? We'll estimate costs and time
               for you.

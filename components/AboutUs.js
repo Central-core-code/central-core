@@ -4,15 +4,15 @@ import translations from "translations";
 
 function AboutUs() {
   const locale = getLocale();
-  const { title, header, desc } = translations[locale].aboutUs;
+  const { title, headline, desc } = translations[locale].aboutUs;
 
   return (
-    <div id="aboutUs">
+    <div id="aboutUs" className="about">
       <div className="container">
         <div className="row justify-content-center">
-          <div className="col-8 text-center">
-            <p className="font-bold">{title}</p>
-            <h2 className="h3">{header}</h2>
+          <div className="col-lg-8 text-center">
+            <p className="font-bold about__title">{title}</p>
+            <h2 className="h3 about__headline">{headline}</h2>
             <p>{desc}</p>
           </div>
         </div>
