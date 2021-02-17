@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import uniqueId from "lodash/uniqueId";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,10 +10,10 @@ import { settings, slides } from "./slidesData";
 
 function Carousel() {
   return (
-    <div>
+    <div id="projects">
       <Slider className="slider" {...settings}>
-        {slides.map((slide, i) => (
-          <Slide key={i} slide={slide} />
+        {slides.map((slide) => (
+          <Slide key={uniqueId()} slide={slide} />
         ))}
       </Slider>
     </div>

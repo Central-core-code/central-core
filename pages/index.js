@@ -30,7 +30,7 @@ export default function Home() {
           content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"
         ></meta>
       </Head>
-      <div className="nav__desktop">
+      <div className="nav__desktop" id="top">
         <div className="spotlight__wrap">
           <div ref={containerRef} className="spotlight__point">
             <MainHeader />
