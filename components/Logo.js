@@ -14,9 +14,7 @@ function Logo({ bgColor, handleClick = () => {} }) {
         width={78}
         height={41}
         alt="logo"
-        onClick={() => {
-          console.log(1);
-        }}
+        className="cursor-pointer"
       />
     </Link>
   );

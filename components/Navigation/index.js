@@ -30,7 +30,7 @@ function Navigation({ bgColor }) {
     <div ref={containerRef} className="container-fluid nav__wrap">
       <div className="container">
         <div className="row justify-content-between align-items-center py-3">
-          <div className="col-6 nav__logo-wrap">
+          <div className="col-2 nav__logo-wrap">
             <div className="nav__logo">
               <Logo bgColor={bgColor} />
             </div>
