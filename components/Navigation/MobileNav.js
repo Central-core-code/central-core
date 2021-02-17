@@ -1,7 +1,6 @@
+import Logo from "@components/Logo";
 import React, { useState } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
-import LogoBlack from "public/logo_black.svg";
-import LogoWhite from "public/logo_white.svg";
 import { MenuList } from "./MenuList";
 
 function MobileNav({ bgColor }) {
@@ -11,14 +10,16 @@ function MobileNav({ bgColor }) {
     setNavOpen((prevState) => !prevState);
   };
 
-  const logo = bgColor === "black" ? LogoWhite : LogoBlack;
+  const closeMenu = () => {
+    setNavOpen(false);
+  };
 
   return (
     <div className={`is-mobile ${isNavOpen ? "is-open" : ""}`}>
       <div className="container">
         <div className="row nav__mobile-wrap">
           <div className="col-6">
-            <img src={logo} width={78} height={41} alt="logo" />
+            <Logo bgColor={bgColor} handleClick={closeMenu} />
           </div>
           <div className="col-6 text-right">
             <div onClick={handleMenu} className="nav__hamburger">

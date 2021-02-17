@@ -8,6 +8,7 @@ export default {
       projects: "Projects",
       offer: "Offer",
       contact: "Contact",
+      technologies: "Technologies",
     },
     header: {
       header1: "We build digital world",
@@ -51,6 +52,7 @@ export default {
       projects: "Projekty",
       offer: "Oferta",
       contact: "Kontakt",
+      technologies: "Technologie",
     },
     header: {
       header1: "Tworzymy cyfrowy świat",

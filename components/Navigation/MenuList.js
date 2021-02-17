@@ -2,19 +2,13 @@ import React from "react";
 import getLocale from "../../utils/getLocale";
 import translations from "../../translations";
 import { Link } from "react-scroll";
-
-const linkProps = {
-  spy: true,
-  smooth: true,
-  offset: 50,
-  duration: 500,
-  activeClass: "is_active",
-  offset: -100,
-};
+import { linkProps } from "../../utils/linkProps";
 
 export function MenuList({ handleMenu = () => {} }) {
   const locale = getLocale();
-  const { aboutUs, projects, offer, contact } = translations[locale].navigation;
+  const { aboutUs, projects, offer, contact, technologies } = translations[
+    locale
+  ].navigation;
 
   return (
     <>
@@ -31,6 +25,11 @@ export function MenuList({ handleMenu = () => {} }) {
       <li>
         <Link onClick={handleMenu} to="projects" {...linkProps}>
           {projects}
+        </Link>
+      </li>
+      <li>
+        <Link onClick={handleMenu} to="technologies" {...linkProps}>
+          {technologies}
         </Link>
       </li>
       <li>

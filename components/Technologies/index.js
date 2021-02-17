@@ -10,7 +10,11 @@ function Technologies() {
   const { js, wordpress, ux } = translations[locale].technologies;
 
   return (
-    <div className="container text-center tech" id="projects" name="scrollBg">
+    <div
+      className="container text-center tech"
+      id="technologies"
+      name="scrollBg"
+    >
       <div className="row">
         <div className="col-8 mx-auto">
           <p className="font-bold m-0 tech__title">OUR TECHNOLOGIES</p>
@@ -20,7 +24,7 @@ function Technologies() {
           </h3>
         </div>
       </div>
-      <div className="row justify-content-between">
+      <div className="row justify-content-between" data-aos="fade-down">
         <TechBlock
           title="WORDPRESS"
           description={wordpress}
@@ -28,13 +32,13 @@ function Technologies() {
           alt="triangle"
         />
         <TechBlock
-          title="JAVASCRIPT"
+          title="React.js"
           description={js}
           img={envelope}
           alt="square"
         />
         <TechBlock
-          title="UX/UI"
+          title="Node.js"
           description={ux}
           img={envelope}
           alt="triangle"

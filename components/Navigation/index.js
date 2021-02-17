@@ -1,17 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
-import Img from "react-optimized-image";
-import LogoBlack from "public/logo_black.svg";
-import LogoWhite from "public/logo_white.svg";
-
 import MobileNav from "./MobileNav";
 import { useWindowWidth } from "../../utils/useWindowWidth";
 import { MenuList } from "./MenuList";
+import Logo from "../Logo";
 
 function Navigation({ bgColor }) {
   const containerRef = useRef(null);
   const isMobile = useWindowWidth() < 1032;
-  const logo = bgColor === "black" ? LogoWhite : LogoBlack;
 
   useEffect(() => {
     const navContainer = containerRef.current;
@@ -34,9 +30,9 @@ function Navigation({ bgColor }) {
     <div ref={containerRef} className="container-fluid nav__wrap">
       <div className="container">
         <div className="row justify-content-between align-items-center py-3">
-          <div className="col-6 nav__logo-wrap">
+          <div className="col-2 nav__logo-wrap">
             <div className="nav__logo">
-              <img src={logo} width={78} height={41} alt="logo" />
+              <Logo bgColor={bgColor} />
             </div>
           </div>
           <div className="col-6 nav__language">

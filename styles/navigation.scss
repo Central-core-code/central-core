@@ -17,8 +17,10 @@
   }
   &__scroll_down {
     top: -73px;
+    z-index: 5;
     .nav__logo-wrap {
       top: 70px;
+      z-index: 5;
     }
   }
   &__logo-wrap {
