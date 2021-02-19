@@ -1,9 +1,9 @@
-import React from "react";
-import TechBlock from "./TechBlock";
+import React from 'react';
+import TechBlock from './TechBlock';
 
-import envelope from "public/icons/envelope-dark.svg";
-import getLocale from "../../utils/getLocale";
-import translations from "translations";
+import envelope from 'public/icons/test.png';
+import getLocale from '../../utils/getLocale';
+import translations from 'translations';
 
 function Technologies() {
   const locale = getLocale();
@@ -13,8 +13,7 @@ function Technologies() {
     <div
       className="container text-center tech"
       id="technologies"
-      name="scrollBg"
-    >
+      name="scrollBg">
       <div className="row">
         <div className="col-8 mx-auto">
           <p className="font-bold m-0 tech__title">OUR TECHNOLOGIES</p>
