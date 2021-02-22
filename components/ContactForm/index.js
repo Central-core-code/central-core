@@ -97,7 +97,7 @@ function ContactForm() {
               for you.
             </p>
           </div>
-          <div className="col-sm-8">
+          <div className="col-sm-10">
             <form
               className="contact_form"
               name="contactForm"

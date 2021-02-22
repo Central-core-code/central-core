@@ -1,6 +1,12 @@
 .tech {
   padding-top: 85px;
   padding-bottom: 190px;
+
+  @media (max-width: $screen-sm-max) {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
   position: relative;
   &:before {
     content: "";
