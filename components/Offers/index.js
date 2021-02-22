@@ -7,7 +7,7 @@ import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
-  const { header, desc, webApp, ecommerce, seo, cms } = translations[
+  const { header, desc, webApp, ecommerce, seo, cms, ux } = translations[
     locale
   ].offers;
 
@@ -15,13 +15,11 @@ function Offers() {
     <div
       id="offers"
       className="offers__wrap spotlight__wrap-offers"
-      name="scrollBg"
-    >
+      name="scrollBg">
       <Link
         className="offers__contact-triger"
         to="contactForm"
-        {...linkPropsNoActive}
-      >
+        {...linkPropsNoActive}>
         <p>
           contact us<span></span>
         </p>
@@ -29,10 +27,10 @@ function Offers() {
 
       <div className="container text-center">
         <div className="row offers__row-wrap">
-          <div className="col-12 pb-5">
+          <div className="col-lg-10 pb-5">
             <h3>{header}</h3>
           </div>
-          <div className="col-12">
+          <div className="col-lg-10">
             <p className="offers__main_description">{desc}</p>
           </div>
         </div>
@@ -46,6 +44,7 @@ function Offers() {
         />
         <OfferBlock title="SEO" content={seo} offset="2" slide="left" />
         <OfferBlock title="CMS" content={cms} offset="7" slide="right" />
+        <OfferBlock title="UX" content={ux} offset="3" slide="left" />
       </div>
     </div>
   );
