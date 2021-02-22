@@ -33,6 +33,7 @@ export default {
         "Each page created by us is fully programmatically optimized for SEO so that your website is as high as possible in the google search engine",
       cms:
         "Content management system, will allow you to fully manage the text on your website. Fully consciously, without programming knowledge, you can create new content by navigating the admin panel.",
+      ux: "We strongly care about user experience. Blah blah blah",
     },
     technologies: {
       js:
@@ -77,6 +78,7 @@ export default {
         "Każda stworzona przez nas strona jest w pełni programowo zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:
         "System zarzadzania treścią pozwoli ci  calkowicie dysponować tekstem znajdującycm się na twojej stronie. W pelni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
+      ux: "We strongly care about user experience. Blah blah blah",
     },
     technologies: {
       js:

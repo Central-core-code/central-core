@@ -7,7 +7,7 @@ import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
-  const { header, desc, webApp, ecommerce, seo, cms } = translations[
+  const { header, desc, webApp, ecommerce, seo, cms, ux } = translations[
     locale
   ].offers;
 
@@ -46,6 +46,7 @@ function Offers() {
         />
         <OfferBlock title="SEO" content={seo} offset="2" slide="left" />
         <OfferBlock title="CMS" content={cms} offset="7" slide="right" />
+        <OfferBlock title="UX" content={ux} offset="3" slide="left" />
       </div>
     </div>
   );
