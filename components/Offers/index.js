@@ -13,8 +13,8 @@ function Offers() {
 
   return (
     <div
-      className="offers__wrap spotlight__wrap-offers"
       id="offers"
+      className="offers__wrap spotlight__wrap-offers"
       name="scrollBg">
       <Link
         className="offers__contact-triger"

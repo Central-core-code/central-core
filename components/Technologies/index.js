@@ -13,8 +13,8 @@ function Technologies() {
 
   return (
     <div
-      className="container text-center tech"
       id="technologies"
+      className="container text-center tech"
       name="scrollBg">
       <div className="row">
         <div className="col-8 mx-auto">

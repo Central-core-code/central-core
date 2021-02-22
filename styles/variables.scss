@@ -71,25 +71,25 @@ $font-SF-Compact: "SF-Compact-Text";
 }
 
 .spotlight__point {
+  position: absolute;
   height: 100%;
   width: 100%;
   transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  background-image: radial-gradient(
-    circle,
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
     transparent 160px,
-    rgba(255, 255, 255, 1) 200px
+    rgb(255, 255, 255) 200px
   );
 }
-
-.spotlight__point2 {
-  height: 100%;
-  width: 100%;
-  transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
-  background-image: radial-gradient(
-    circle,
-    transparent 160px,
-    rgba(000, 000, 000, 1) 200px
-  );
+.black {
+  .spotlight__point {
+    transition: all 0.5s;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      transparent 160px,
+      rgb(0, 0, 0) 200px
+    );
+  }
 }
 // /embed
 // Credit: Nicolas Gallagher and SUIT CSS.
