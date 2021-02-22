@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
+import gsap from "gsap";
 
 function Layout({ children }) {
   const [scrollHeight, setScrolLHeight] = useState(0);
@@ -26,6 +27,11 @@ function Layout({ children }) {
     window.addEventListener("resize", throttle(getSectionsOffset, 100));
     window.addEventListener("scroll", throttle(handleScroll, 100));
 
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+    tl.to(".text", { y: "0%", duration: 0.7, stagger: 0.2 });
+    tl.to(".intro__slider", { y: "-100%", duration: 1, delay: 0.5 });
+    tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
     return () => {
       window.removeEventListener("resize", getSectionsOffset);
       window.removeEventListener("scroll", handleScroll);
@@ -36,9 +42,17 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
-      <div className="load-wrap">
-        <h1 className="load-wrap__content">helllo</h1>
+      <div class="intro">
+        <div class="intro__text">
+          <h1 class="intro__hide">
+            <span class="text">We build</span>
+          </h1>
+          <h1 class="intro__hide">
+            <span class="text">digital world</span>
+          </h1>
+        </div>
       </div>
+      <div class="intro__slider"></div>
       <Navigation bgColor={bgColor} />
       {children}
       <Footer bgColor={bgColor} />
