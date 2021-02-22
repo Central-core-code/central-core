@@ -5,7 +5,8 @@
     position: relative;
   }
   &__contact-triger {
-    position: absolute;
+    position: fixed;
+    top: 50%;
     right: 20px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);

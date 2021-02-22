@@ -16,8 +16,11 @@ function Offers() {
       className="offers__wrap spotlight__wrap-offers"
       id="offers"
       name="scrollBg">
-      <Link to="contactForm" {...linkPropsNoActive}>
-        <p className="offers__contact-triger">
+      <Link
+        className="offers__contact-triger"
+        to="contactForm"
+        {...linkPropsNoActive}>
+        <p>
           contact us<span></span>
         </p>
       </Link>
