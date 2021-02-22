@@ -1,9 +1,11 @@
-import React from 'react';
-import TechBlock from './TechBlock';
+import React from "react";
+import TechBlock from "./TechBlock";
 
-import envelope from 'public/icons/test.png';
-import getLocale from '../../utils/getLocale';
-import translations from 'translations';
+import triangle from "public/icons/triangle.png";
+import rectangle from "public/icons/rectangle.png";
+import circle from "public/icons/circle.png";
+import getLocale from "../../utils/getLocale";
+import translations from "translations";
 
 function Technologies() {
   const locale = getLocale();
@@ -11,8 +13,8 @@ function Technologies() {
 
   return (
     <div
-      className="container text-center tech"
       id="technologies"
+      className="container text-center tech"
       name="scrollBg">
       <div className="row">
         <div className="col-8 mx-auto">
@@ -27,19 +29,19 @@ function Technologies() {
         <TechBlock
           title="WORDPRESS"
           description={wordpress}
-          img={envelope}
+          img={triangle}
           alt="triangle"
         />
         <TechBlock
           title="React.js"
           description={js}
-          img={envelope}
+          img={rectangle}
           alt="square"
         />
         <TechBlock
           title="Node.js"
           description={ux}
-          img={envelope}
+          img={circle}
           alt="triangle"
         />
       </div>

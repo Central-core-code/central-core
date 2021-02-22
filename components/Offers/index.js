@@ -13,21 +13,26 @@ function Offers() {
 
   return (
     <div
-      className="offers__wrap spotlight__wrap-offers"
       id="offers"
-      name="scrollBg">
-      <Link to="contactForm" {...linkPropsNoActive}>
-        <p className="offers__contact-triger">
+      className="offers__wrap spotlight__wrap-offers"
+      name="scrollBg"
+    >
+      <Link
+        className="offers__contact-triger"
+        to="contactForm"
+        {...linkPropsNoActive}
+      >
+        <p>
           contact us<span></span>
         </p>
       </Link>
 
-      <div className="container">
+      <div className="container text-center">
         <div className="row offers__row-wrap">
-          <div className="col-12 col-lg-4 offset-lg-2 pb-5">
+          <div className="col-12 pb-5">
             <h3>{header}</h3>
           </div>
-          <div className="col-12 col-lg-4">
+          <div className="col-12">
             <p className="offers__main_description">{desc}</p>
           </div>
         </div>

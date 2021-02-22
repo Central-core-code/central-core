@@ -16,6 +16,7 @@
     "aos": "^2.3.4",
     "bootstrap": "^4.6.0",
     "emailjs-com": "^2.6.4",
+    "gsap": "^3.6.0",
     "lodash": "^4.17.20",
     "next": "10.0.5",
     "next-compose-plugins": "^2.2.1",
