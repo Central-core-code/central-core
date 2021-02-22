@@ -1,12 +1,12 @@
 .offers {
   &__wrap {
-    padding-top: 85px;
-    padding-bottom: 190px;
+    padding-top: 40px;
+    padding-bottom: 60px;
     position: relative;
 
-    @media (max-width: $screen-sm-max) {
-      padding-top: 40px;
-      padding-bottom: 60px;
+    @media (min-width: $screen-sm-max) {
+      padding-top: 85px;
+      padding-bottom: 190px;
     }
   }
   &__contact-triger {
@@ -44,6 +44,7 @@
   }
   &__row-wrap {
     padding-bottom: 85px;
+    justify-content: center;
   }
   &__title {
     @include fluid-type(14px, 64px);
