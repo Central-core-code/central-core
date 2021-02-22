@@ -5,6 +5,9 @@
     position: relative;
   }
   &__contact-triger {
+    @media (max-width: $screen-sm-max) {
+      display: none;
+    }
     position: fixed;
     top: 50%;
     right: 20px;
