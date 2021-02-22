@@ -40,9 +40,6 @@
   &__row-wrap {
     padding-bottom: 85px;
   }
-  &__main_description {
-    font-style: italic;
-  }
   &__title {
     @include fluid-type(14px, 64px);
     @include fluid-line-height(20px, 50px);

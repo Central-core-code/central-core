@@ -92,12 +92,12 @@
 .black {
   input,
   textarea {
-    color: $white;
+    color: $white !important;
   }
   .contact_wrap .contact_form {
     label,
     textarea {
-      color: $white;
+      color: $white !important;
     }
   }
 }
