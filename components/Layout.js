@@ -11,7 +11,7 @@ function Layout({ children }) {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
-      sections.forEach((section) => {
+      sections.forEach(section => {
         const offset = section.offsetTop;
         offsetArr.push(offset);
       });
@@ -36,6 +36,9 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
+      <div className="load-wrap">
+        <h1 className="load-wrap__content">helllo</h1>
+      </div>
       <Navigation bgColor={bgColor} />
       {children}
       <Footer bgColor={bgColor} />
