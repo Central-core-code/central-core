@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
-import gsap from "gsap";
-import logo from "../public/logo_white.svg";
-
+import Intro from "./Intro";
 function Layout({ children }) {
   const [scrollHeight, setScrolLHeight] = useState(0);
   const [sectionOffset, setSectionOffset] = useState([]);
@@ -27,13 +25,6 @@ function Layout({ children }) {
     getSectionsOffset();
     window.addEventListener("resize", throttle(getSectionsOffset, 100));
     window.addEventListener("scroll", throttle(handleScroll, 100));
-
-    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-    tl.fromTo(".intro__logo", { opacity: 0 }, { opacity: 1, duration: 1 });
-    tl.to(".intro__logo", { opacity: 0, duration:0.5, delay: 0.3 });
-    tl.to(".intro", { opacity: 0, duration:1, delay: 0.3 });
-    tl.to(".intro__slider", { y: "-100%", duration: 0.2 });
-    tl.to(".intro", { y: "-100%", duration: 0.2 }, "-=0.2");
     return () => {
       window.removeEventListener("resize", getSectionsOffset);
       window.removeEventListener("scroll", handleScroll);
@@ -44,14 +35,7 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
-      <div className="intro">
-        <div className="intro__text">
-          <div className="intro__logo">
-            <img className="text" src={logo} alt="Logo" />
-          </div>
-        </div>
-      </div>
-      <div className="intro__slider" />
+      <Intro />
       <Navigation bgColor={bgColor} />
       {React.cloneElement(children, { bgColor })}
       <Footer bgColor={bgColor} />
