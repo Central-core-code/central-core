@@ -1,13 +1,13 @@
 import printHouse from "public/projects/printHouse.png";
-import staszica16 from "public/projects/staszica16.jpg";
+import staszica16 from "public/projects/staszica16.png";
 import newArtDesign from "public/projects/newArtDesign.jpg";
 import pizzaNowar from "public/projects/pizzaNowar.jpg";
 import skyTower from "public/projects/skyTower.png";
-import printHouseLogo from "public/projects/logo_v1.png";
-import staszica16Logo from "public/projects/logo_v1.png";
-import newArtDesignLogo from "public/projects/logo_v1.png";
-import pizzaNowarLogo from "public/projects/logo_v1.png";
-import skyTowerLogo from "public/projects/logo_v1.png";
+import printHouseLogo from "public/projects/printHouseLogo.svg";
+import staszica16Logo from "public/projects/staszica16Logo.svg";
+import newArtDesignLogo from "public/projects/newArtDesignLogo.svg";
+import pizzaNowarLogo from "public/projects/pizzaNowarLogo.svg";
+import skyTowerLogo from "public/projects/skyTowerLogo.svg";
 
 export const slides = [
   {

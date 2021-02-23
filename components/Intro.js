@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import logo from "../public/logo_white.svg";
 import gsap from "gsap";
 
-const Intro = () => {
+function Intro() {
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
     tl.fromTo(".intro__logo", { opacity: 0 }, { opacity: 1, duration: 1 });
@@ -23,6 +23,6 @@ const Intro = () => {
       <div className="intro__slider" />
     </>
   );
-};
+}
 
 export default Intro;
