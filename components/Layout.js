@@ -54,7 +54,7 @@ function Layout({ children }) {
       </div>
       <div className="intro__slider" />
       <Navigation bgColor={bgColor} />
-      {children}
+      {React.cloneElement(children, { bgColor })}
       <Footer bgColor={bgColor} />
     </div>
   );

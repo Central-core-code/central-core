@@ -7,12 +7,12 @@ import Offers from "../components/Offers";
 import Carousel from "../components/Carousel";
 import Technologies from "@components/Technologies";
 
-export default function Home() {
+export default function Home({ bgColor }) {
   const containerRef = useRef(null);
 
   useEffect(() => {
     const spotlight = containerRef.current;
-    window.addEventListener("mousemove", e => {
+    window.addEventListener("mousemove", (e) => {
       spotlight.style.setProperty("--x", `${e.pageX}px`);
       spotlight.style.setProperty("--y", `${e.pageY}px`);
     });
@@ -25,7 +25,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"></meta>
+          content="Kazdy projekt budowany indywidualnie według potrzeb klienta. Next Js, Wordpress, CMS"
+        ></meta>
       </Head>
       <div className="nav__desktop" id="top">
         <div className="spotlight__wrap">
@@ -35,7 +36,7 @@ export default function Home() {
         </div>
         <Offers />
         <Carousel />
-        <Technologies />
+        <Technologies bgColor={bgColor} />
         <ContactForm />
       </div>
     </>
