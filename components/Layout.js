@@ -63,7 +63,7 @@ function Layout({ children }) {
 export default Layout;
 
 function determineBgColor(height, sections) {
-  if (between(height, 0, sections[0])) {
+  if (between(height, -500, sections[0])) {
     return "white";
   } else if (between(height, sections[0], sections[1])) {
     return "black";

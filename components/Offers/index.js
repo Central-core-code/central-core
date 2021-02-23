@@ -25,13 +25,10 @@ function Offers() {
         </p>
       </Link>
 
-      <div className="container text-center">
-        <div className="row offers__row-wrap">
-          <div className="col-lg-10 pb-5">
+      <div className="container">
+        <div className="row offers__row-wrap text-center">
+          <div className="col-12 pb-5">
             <h3>{header}</h3>
-          </div>
-          <div className="col-lg-10">
-            <p className="offers__main_description">{desc}</p>
           </div>
         </div>
 
