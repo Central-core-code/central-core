@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
 import gsap from "gsap";
+import logo from "../public/logo_white.svg";
 
 function Layout({ children }) {
   const [scrollHeight, setScrolLHeight] = useState(0);
@@ -12,7 +13,7 @@ function Layout({ children }) {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
-      sections.forEach((section) => {
+      sections.forEach(section => {
         const offset = section.offsetTop;
         offsetArr.push(offset);
       });
@@ -28,7 +29,8 @@ function Layout({ children }) {
     window.addEventListener("scroll", throttle(handleScroll, 100));
 
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
+    tl.fromTo(".intro__logo", { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.to(".intro__logo", { opacity: 0, duration: 0.7 });
     tl.to(".text", { y: "0%", duration: 0.7, stagger: 0.2 });
     tl.to(".intro__slider", { y: "-100%", duration: 1, delay: 0.5 });
     tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
@@ -44,6 +46,9 @@ function Layout({ children }) {
     <div className={`content ${bgColor}`}>
       <div className="intro">
         <div className="intro__text">
+          <div className="intro__logo">
+            <img className="text" src={logo} alt="Logo" />
+          </div>
           <h1 className="intro__hide">
             <span className="text">We build</span>
           </h1>

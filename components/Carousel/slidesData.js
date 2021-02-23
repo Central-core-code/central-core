@@ -2,54 +2,59 @@ import printHouse from "public/projects/printHouse.jpg";
 import staszica16 from "public/projects/staszica16.jpg";
 import newArtDesign from "public/projects/newArtDesign.jpg";
 import pizzaNowar from "public/projects/pizzaNowar.jpg";
-import skyTower from "public/projects/skyTower.jpg";
+import skyTower from "public/projects/skyTower.png";
+import printHouseLogo from "public/projects/logo_v1.png";
+import staszica16Logo from "public/projects/logo_v1.png";
+import newArtDesignLogo from "public/projects/logo_v1.png";
+import pizzaNowarLogo from "public/projects/logo_v1.png";
+import skyTowerLogo from "public/projects/logo_v1.png";
 
 export const slides = [
   {
     title: "Sky tower reservation",
     img: skyTower,
+    logo: skyTowerLogo,
     alt: {
       en: "Sky tower apartments reservation system page",
       pl: "Sky tower apartamenty system rezerwacji",
     },
-    link: "https://skytowerapartment.com/",
   },
 
   {
     title: "New Art Design",
     img: newArtDesign,
+    logo: newArtDesignLogo,
     alt: {
       en: "New Art Design company page",
       pl: "New Art Design strona firmowa",
     },
-    link: "https://www.newartdesign.pl/",
   },
   {
     title: "Pizza Nowar",
     img: pizzaNowar,
+    logo: pizzaNowarLogo,
     alt: {
       en: "Pizza Nowar company page",
       pl: "Pizza Nowar strona firmowa",
     },
-    link: "http://pizzerianowar.pl/",
   },
   {
     title: "Staszica 16",
     img: staszica16,
+    logo: staszica16Logo,
     alt: {
       en: "Staszica16 apartment booking",
       pl: "Staszica16 rezerwacja apratamentów",
     },
-    link: "https://www.staszica16.com/",
   },
   {
     title: "Print House",
     img: printHouse,
+    logo: printHouseLogo,
     alt: {
       en: "Print House company page",
       pl: "Print House strona firmowa",
     },
-    link: "https://printhousedbk.pl/",
   },
 ];
 

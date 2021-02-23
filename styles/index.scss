@@ -93,9 +93,20 @@ a {
     color: rgb(233, 233, 233);
     font-size: 3rem;
   }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    img {
+      width: 300px;
+    }
+  }
   &__hide {
     background: black;
     overflow: hidden;
+    z-index: 999;
     span {
       transform: translateY(100%);
       display: inline-block;
