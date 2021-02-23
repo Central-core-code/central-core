@@ -98,20 +98,15 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0;
     img {
-      width: 300px;
+      width: 200px;
+      @media (min-width: $screen-sm-max){
+        width: 300px;
+
+      }
     }
   }
-  &__hide {
-    background: black;
-    overflow: hidden;
-    z-index: 999;
-    span {
-      transform: translateY(100%);
-      display: inline-block;
-    }
-  }
+
 }
 
 .cursor-pointer {
