@@ -1,4 +1,4 @@
-import printHouse from "public/projects/printHouse.jpg";
+import printHouse from "public/projects/printHouse.png";
 import staszica16 from "public/projects/staszica16.jpg";
 import newArtDesign from "public/projects/newArtDesign.jpg";
 import pizzaNowar from "public/projects/pizzaNowar.jpg";
