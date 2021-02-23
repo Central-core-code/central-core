@@ -6,7 +6,7 @@ export function FooterPrivacy() {
     <div className="row justify-content-between">
       <div className="col-auto">2021 © All rights reserved</div>
       <div className="col-auto">
-        <Link href="">
+        <Link href="privacyTerms">
           <a className="mr-2">Privacy</a>
         </Link>
         <Link href="">Terms</Link>
