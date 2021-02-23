@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import logo from "../public/logo_white.svg";
-
 import gsap from "gsap";
 
 const Intro = () => {
