@@ -15,11 +15,13 @@ function Offers() {
     <div
       id="offers"
       className="offers__wrap spotlight__wrap-offers"
-      name="scrollBg">
+      name="scrollBg"
+    >
       <Link
         className="offers__contact-triger"
         to="contactForm"
-        {...linkPropsNoActive}>
+        {...linkPropsNoActive}
+      >
         <p>
           contact us<span></span>
         </p>
@@ -41,7 +43,7 @@ function Offers() {
         />
         <OfferBlock title="SEO" content={seo} offset="2" slide="left" />
         <OfferBlock title="CMS" content={cms} offset="7" slide="right" />
-        <OfferBlock title="UX" content={ux} offset="3" slide="left" />
+        <OfferBlock title="UX/UI" content={ux} offset="3" slide="left" />
       </div>
     </div>
   );
