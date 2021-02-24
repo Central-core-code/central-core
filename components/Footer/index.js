@@ -1,8 +1,7 @@
 import React from "react";
 import Img from "react-optimized-image";
 import { FooterPrivacy } from "./FooterPrivacy";
-import Link from "next/link";
-import envelopeLight from "public/icons/envelope-light.svg";
+import facebookIcon from "public/icons/facebook-f-brands.svg";
 import Logo from "@components/Logo";
 
 function Footer({ bgColor }) {
@@ -13,22 +12,19 @@ function Footer({ bgColor }) {
           <Logo bgColor={bgColor} />
         </div>
         <div className="col-auto">
-          <Link href="#contactForm">
+          <a
+            target="_blank"
+            href="https://www.facebook.com/centralCoreSH"
+            rel="noreferrer"
+          >
             <Img
-              src={envelopeLight}
+              src={facebookIcon}
               width={30}
-              height={20}
+              height={30}
               alt="envelope footer icon"
+              style={{ background: "white" }}
             />
-          </Link>
-          <Link href="#contactForm">
-            <Img
-              src={envelopeLight}
-              width={30}
-              height={20}
-              alt="envelope footer icon"
-            />
-          </Link>
+          </a>
         </div>
       </div>
       <FooterPrivacy />
