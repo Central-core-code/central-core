@@ -10,18 +10,17 @@
     }
   }
   &__contact-triger {
+    z-index: 8;
     @media (max-width: $screen-sm-max) {
       display: none;
     }
     position: fixed;
     top: 50%;
-    right: 20px;
+    right: 30px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     cursor: pointer;
-    @media (min-width: $screen-sm-max) {
-      right: 10%;
-    }
+
     span {
       position: relative;
       &::after {

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
-import gsap from "gsap";
-
+import Intro from "./Intro";
 function Layout({ children }) {
   const [scrollHeight, setScrolLHeight] = useState(0);
   const [sectionOffset, setSectionOffset] = useState([]);
@@ -12,7 +11,7 @@ function Layout({ children }) {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
-      sections.forEach((section) => {
+      sections.forEach(section => {
         const offset = section.offsetTop;
         offsetArr.push(offset);
       });
@@ -26,12 +25,6 @@ function Layout({ children }) {
     getSectionsOffset();
     window.addEventListener("resize", throttle(getSectionsOffset, 100));
     window.addEventListener("scroll", throttle(handleScroll, 100));
-
-    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-
-    tl.to(".text", { y: "0%", duration: 0.7, stagger: 0.2 });
-    tl.to(".intro__slider", { y: "-100%", duration: 1, delay: 0.5 });
-    tl.to(".intro", { y: "-100%", duration: 1 }, "-=1");
     return () => {
       window.removeEventListener("resize", getSectionsOffset);
       window.removeEventListener("scroll", handleScroll);
@@ -42,17 +35,7 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
-      <div className="intro">
-        <div className="intro__text">
-          <h1 className="intro__hide">
-            <span className="text">We build</span>
-          </h1>
-          <h1 className="intro__hide">
-            <span className="text">digital world</span>
-          </h1>
-        </div>
-      </div>
-      <div className="intro__slider" />
+      <Intro />
       <Navigation bgColor={bgColor} />
       {React.cloneElement(children, { bgColor })}
       <Footer bgColor={bgColor} />
