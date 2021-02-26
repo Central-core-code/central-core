@@ -23,7 +23,7 @@ function Technologies({ bgColor }) {
       name="scrollBg"
     >
       <div className="row">
-        <div className="col-8 mx-auto">
+        <div className="col-12 col-lg-8 mx-auto">
           <p className="font-bold m-0 tech__title">OUR TECHNOLOGIES</p>
           <h3 className="tech__description">
             Sed ut perspicatinus ode ominis iste natus error sit voluptatem
