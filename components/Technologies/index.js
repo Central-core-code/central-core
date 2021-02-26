@@ -12,7 +12,7 @@ import translations from "translations";
 
 function Technologies({ bgColor }) {
   const locale = getLocale();
-  const { js, wordpress, ux } = translations[locale].technologies;
+  const { js, wordpress, nodejs } = translations[locale].technologies;
 
   const isWhite = bgColor === "white";
 
@@ -46,7 +46,7 @@ function Technologies({ bgColor }) {
         />
         <TechBlock
           title="Node.js"
-          description={ux}
+          description={nodejs}
           img={isWhite ? circleDark : circleLight}
           alt="triangle"
         />

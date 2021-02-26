@@ -33,14 +33,15 @@ export default {
         "Each page created by us is fully programmatically optimized for SEO so that your website is as high as possible in the google search engine",
       cms:
         "Content management system, will allow you to fully manage the text on your website. Fully consciously, without programming knowledge, you can create new content by navigating the admin panel.",
-      ux: "We strongly care about user experience. Blah blah blah",
+      ux:
+        "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
     },
     technologies: {
       js:
         "We have many years of experience in creating fast interactive applications using javascript. Each application is built using the React library, which ensures scalability of the created applications",
       wordpress:
         "It is a content management system for clients who appreciate full website management capabilities. Mainly used in creating blogs and online stores. At this point, half of the websites are built using wordpress",
-      ux:
+      nodejs:
         "All our projects are created with the participation of an experienced graphic designer, so that each project complies with the client's requirements and corresponds to the current market trends",
     },
   },
@@ -78,14 +79,15 @@ export default {
         "Każda stworzona przez nas strona jest w pełni programowo zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:
         "System zarzadzania treścią pozwoli ci  calkowicie dysponować tekstem znajdującycm się na twojej stronie. W pelni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
-      ux: "We strongly care about user experience. Blah blah blah",
+      ux:
+        "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
     },
     technologies: {
       js:
         "Posiadamy wieloletnie doświadczenie w tworzeniu szybkich interaktywnych aplikacji z wykorzystaniem języka javascript. Kazda aplikacja budowana jest z użyciem biblioteki React ktora zapewnia skalowalność tworzonych aplikacji",
       wordpress:
         "Jest to system zarzadzania trescia dla klientów którzy cenia sobie pelna mozliwosc zarzadzania strona. Głownie wykorzystywany przy tworzeniu blogów jak i sklepów internetowych. W tym momencie polowa interentu Wordpressem stoi",
-      ux:
+      nodejs:
         "Wszystkie nasze projekty są tworzone z współudziałem doświadczonego grafika, aby kady projekt był zgodny z wymaganiami klienta oraz odpowiadał aktualnym trendom rynku",
     },
   },
