@@ -7,7 +7,7 @@ import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
-  const { header, desc, webApp, ecommerce, seo, cms, ux } = translations[
+  const { header, webApp, ecommerce, seo, cms, ux } = translations[
     locale
   ].offers;
 
