@@ -42,8 +42,8 @@ function Offers() {
           slide="right"
         />
         <OfferBlock title="SEO" content={seo} offset="2" slide="left" />
-        <OfferBlock title="CMS" content={cms} offset="7" slide="right" />
-        <OfferBlock title="UX/UI" content={ux} offset="3" slide="left" />
+        <OfferBlock title="CMS" content={cms} offset="6" slide="right" />
+        <OfferBlock title="UX" content={ux} offset="3" slide="left" />
       </div>
     </div>
   );

@@ -18,4 +18,29 @@
     overflow: hidden;
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
   }
+  &__point {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+    background: rgba(255, 255, 255, 0.69);
+    @media (min-width: $screen-sm-max) {
+      background: radial-gradient(
+        circle at var(--x, 50%) var(--y, 50%),
+        transparent 160px,
+        rgb(255, 255, 255) 200px
+      );
+    }
+  }
+}
+
+.black {
+  .spotlight__point {
+    transition: all 0.5s;
+    background: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      transparent 160px,
+      rgb(0, 0, 0) 200px
+    );
+  }
 }

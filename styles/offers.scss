@@ -40,26 +40,59 @@
   }
   &__row {
     margin-bottom: 40px;
+    &:nth-child(odd) {
+      h2 {
+        margin-left: auto;
+        &::after {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
   }
   &__row-wrap {
-    padding-bottom: 85px;
+    padding-bottom: 42px;
     justify-content: center;
+    @media (min-width: $screen-sm-max) {
+      padding-bottom: 85px;
+    }
   }
   &__title {
-    @include fluid-type(14px, 64px);
-    @include fluid-line-height(20px, 50px);
+    @include fluid-type(54px, 64px);
+    @include fluid-line-height(50px, 50px);
     font-weight: 500;
     margin-bottom: 25px;
+    position: relative;
+    width: fit-content;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -20px;
+      width: calc(100% + 15px);
+      height: 1px;
+      background-color: $black;
+      display: block;
+      left: 0;
+      @media (min-width: $screen-sm-max) {
+        content: unset;
+      }
+    }
   }
   &__description {
     padding: 25px 30px;
-    border-top: 1px solid $black; //to change for white
-    border-bottom: 1px solid $black;
+    @media (min-width: $screen-sm-max) {
+      border-top: 1px solid $black;
+      border-bottom: 1px solid $black;
+    }
   }
 }
 .black {
   .technology__description,
   .offers__description {
     border-color: $white-opacity;
+  }
+  .offers__title::after {
+    background-color: $white;
   }
 }

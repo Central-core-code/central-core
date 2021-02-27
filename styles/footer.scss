@@ -6,7 +6,19 @@
   &__block {
     margin-bottom: 50px;
   }
+  &__privacy {
+    @include fluid-type(14px, 16px);
+    @include fluid-line-height(22px, 22px);
+    padding-bottom: 35px;
+    @media (min-width: $screen-sm-max) {
+      padding-bottom: 0px;
+    }
+  }
 
+  &__rights {
+    @include fluid-type(10px, 16px);
+    @include fluid-line-height(22px, 22px);
+  }
   h1,
   h2,
   h3,

@@ -1,15 +1,15 @@
-@import "./variables";
+@import './variables';
 
-@import "./navigation.scss";
-@import "./contactForm.scss";
-@import "./footer.scss";
-@import "./layout.scss";
-@import "./header.scss";
-@import "./slider.scss";
-@import "./spotlight.scss";
-@import "./technologies.scss";
-@import "./offers.scss";
-@import "./aboutUs.scss";
+@import './navigation.scss';
+@import './contactForm.scss';
+@import './footer.scss';
+@import './layout.scss';
+@import './header.scss';
+@import './slider.scss';
+@import './spotlight.scss';
+@import './technologies.scss';
+@import './offers.scss';
+@import './aboutUs.scss';
 
 html,
 body {
@@ -36,8 +36,8 @@ body {
 
 h1,
 .h1 {
-  @include fluid-type(14px, 68px);
-  @include fluid-line-height(20px, 75px);
+  @include fluid-type(28px, 68px);
+  @include fluid-line-height(30px, 75px);
   margin-bottom: 20px;
   font-family: $GT-Sectra-Fine;
   font-weight: 600;
@@ -46,20 +46,22 @@ h1,
 
 h2,
 .h2 {
+  // @include fluid-type(54px, 32px);
+  // @include fluid-line-height(50px, 39px);
 }
 
 h3,
 .h3 {
-  @include fluid-type(14px, 32px);
-  @include fluid-line-height(20px, 39px);
+  @include fluid-type(24px, 32px);
+  @include fluid-line-height(24px, 39px);
   font-family: $GT-Sectra-Fine;
   font-weight: 500;
   font-style: italic;
 }
 
 p {
-  @include fluid-type(14px, 18px);
-  @include fluid-line-height(20px, 22px);
+  @include fluid-type(16px, 18px);
+  @include fluid-line-height(22px, 22px);
   letter-spacing: 1.5px;
 }
 
@@ -100,13 +102,11 @@ a {
     transform: translate(-50%, -50%);
     img {
       width: 200px;
-      @media (min-width: $screen-sm-max){
+      @media (min-width: $screen-sm-max) {
         width: 300px;
-
       }
     }
   }
-
 }
 
 .cursor-pointer {

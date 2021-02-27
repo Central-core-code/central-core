@@ -8,7 +8,7 @@
 
   position: relative;
   &:before {
-    content: "";
+    content: '';
     width: 83.333333%;
     height: 1px;
     background-color: currentColor;
@@ -17,12 +17,18 @@
     position: absolute;
   }
   &__title {
-    padding-top: 45px;
+    padding-top: 30px;
+    @media (min-width: $screen-sm-max) {
+      padding-top: 45px;
+    }
   }
 
   &__description {
-    padding-top: 47px;
+    padding-top: 17px;
     padding-bottom: 68px;
-    margin: 0 40px;
+    @media (min-width: $screen-sm-max) {
+      margin: 0 40px;
+      padding-top: 47px;
+    }
   }
 }
