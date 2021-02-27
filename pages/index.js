@@ -12,10 +12,13 @@ export default function Home({ bgColor }) {
 
   useEffect(() => {
     const spotlight = containerRef.current;
-    window.addEventListener("mousemove", (e) => {
-      spotlight.style.setProperty("--x", `${e.pageX}px`);
-      spotlight.style.setProperty("--y", `${e.pageY}px`);
-    });
+    let intViewportWidth = window.innerWidth > 1032;
+    if (intViewportWidth) {
+      window.addEventListener("mousemove", e => {
+        spotlight.style.setProperty("--x", `${e.pageX}px`);
+        spotlight.style.setProperty("--y", `${e.pageY}px`);
+      });
+    }
   });
 
   return (
