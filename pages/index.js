@@ -5,7 +5,7 @@ import MainHeader from "../components/MainHeader";
 import AboutUs from "../components/AboutUs";
 import Offers from "../components/Offers";
 import Carousel from "../components/Carousel";
-import Technologies from "@components/Technologies";
+import ThreeColBlock from "../components/ThreeColBlock";
 
 export default function Home({ bgColor }) {
   const containerRef = useRef(null);
@@ -14,7 +14,7 @@ export default function Home({ bgColor }) {
     const spotlight = containerRef.current;
     let intViewportWidth = window.innerWidth > 1032;
     if (intViewportWidth) {
-      window.addEventListener("mousemove", e => {
+      window.addEventListener("mousemove", (e) => {
         spotlight.style.setProperty("--x", `${e.pageX}px`);
         spotlight.style.setProperty("--y", `${e.pageY}px`);
       });
@@ -39,7 +39,7 @@ export default function Home({ bgColor }) {
         </div>
         <Offers />
         <Carousel />
-        <Technologies bgColor={bgColor} />
+        <ThreeColBlock bgColor={bgColor} />
         <ContactForm />
       </div>
     </>

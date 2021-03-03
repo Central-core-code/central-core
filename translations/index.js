@@ -8,7 +8,7 @@ export default {
       projects: "Projects",
       offer: "Offer",
       contact: "Contact",
-      technologies: "Technologies",
+      estimation: "Estimation",
     },
     header: {
       header1: "We build digital world",
@@ -36,13 +36,23 @@ export default {
       ux:
         "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
     },
-    technologies: {
-      js:
-        "We have many years of experience in creating fast interactive applications using javascript. Each application is built using the React library, which ensures scalability of the created applications",
-      wordpress:
-        "It is a content management system for clients who appreciate full website management capabilities. Mainly used in creating blogs and online stores. At this point, half of the websites are built using wordpress",
-      nodejs:
-        "All our projects are created with the participation of an experienced graphic designer, so that each project complies with the client's requirements and corresponds to the current market trends",
+    workProgress: {
+      contact: "Etapy wyceny projektu",
+      project: {
+        title: "Kontakt",
+        description:
+          "Skontaktuj się z nami. Opowiedz o swoim pomyśle. Sprecyzujemy wspólnie wymagania",
+      },
+      estimation: {
+        title: "Wycena projektu",
+        description:
+          "Nastepnie musimy przeanalizować projekt pod kątem technicznym. Wrócimy do ciebie z wycena.",
+      },
+      realization: {
+        title: "Podsumowanie",
+        description:
+          "Spotkanie podsumowujące i czas zaczynać prace nad projektem!",
+      },
     },
   },
   pl: {
@@ -54,7 +64,7 @@ export default {
       projects: "Projekty",
       offer: "Oferta",
       contact: "Kontakt",
-      technologies: "Technologie",
+      estimation: "Estymacja",
     },
     header: {
       header1: "Tworzymy cyfrowy świat",
@@ -74,21 +84,31 @@ export default {
       webApp:
         "Aplikacje internetowe zapewniają firmom i markom możliwość łączenia się i angażowania ludzi. Uzyskaj kompleksowe usługi tworzenia niestandardowego oprogramowania w oparciu o zaawansowane technologie i najnowsze trendy w branży.",
       ecommerce:
-        "Responsywne i spersonalizowane witryny e-commerce pomagają w tworzeniu niesamowitych doświadczeń zakupowych. Zapewnia zaangażowanie online dla firm i zwiększa przepływ klientów do witryny.",
+        "Responsywne i spersonalizowane witryny ecommerce pomagają w tworzeniu niesamowitych doświadczeń zakupowych. Zapewnia zaangażowanie online dla firm i zwiększa przepływ klientów do witryny.",
       seo:
-        "Każda stworzona przez nas strona jest w pełni programowo zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
+        "Każda stworzona przez nas strona jest w pełni zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:
         "System zarzadzania treścią pozwoli ci  calkowicie dysponować tekstem znajdującycm się na twojej stronie. W pelni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
       ux:
-        "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
+        "User Experience to suma wszystkich reakcji i odczuć, których doświadcza użytkownik produktu. UX to projektowanie doświadczeń, czyli dbanie o to, aby produkt wzbudzał pozytywne odczucia w ludziach, którzy z niego korzystają.",
     },
-    technologies: {
-      js:
-        "Posiadamy wieloletnie doświadczenie w tworzeniu szybkich interaktywnych aplikacji z wykorzystaniem języka javascript. Kazda aplikacja budowana jest z użyciem biblioteki React ktora zapewnia skalowalność tworzonych aplikacji",
-      wordpress:
-        "Jest to system zarzadzania trescia dla klientów którzy cenia sobie pelna mozliwosc zarzadzania strona. Głownie wykorzystywany przy tworzeniu blogów jak i sklepów internetowych. W tym momencie polowa interentu Wordpressem stoi",
-      nodejs:
-        "Wszystkie nasze projekty są tworzone z współudziałem doświadczonego grafika, aby kady projekt był zgodny z wymaganiami klienta oraz odpowiadał aktualnym trendom rynku",
+    workProgress: {
+      contact: "Etapy wyceny projektu",
+      project: {
+        title: "Kontakt",
+        description:
+          "Skontaktuj się z nami. Opowiedz o swoim pomyśle. Sprecyzujemy wspólnie wymagania",
+      },
+      estimation: {
+        title: "Wycena projektu",
+        description:
+          "Nastepnie musimy przeanalizować projekt pod kątem technicznym. Wrócimy do ciebie z wycena.",
+      },
+      realization: {
+        title: "Podsumowanie",
+        description:
+          "Spotkanie podsumowujące i czas zaczynać prace nad projektem!",
+      },
     },
   },
 };

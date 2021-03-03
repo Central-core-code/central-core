@@ -1,5 +1,5 @@
 import React from "react";
-import TechBlock from "./TechBlock";
+import ColBlock from "./ColBlock";
 
 import triangleDark from "public/icons/triangle-dark.png";
 import triangleLight from "public/icons/triangle-light.png";
@@ -10,43 +10,38 @@ import circleLight from "public/icons/circle-light.png";
 import getLocale from "../../utils/getLocale";
 import translations from "translations";
 
-function Technologies({ bgColor }) {
+function ThreeColBlock({ bgColor }) {
   const locale = getLocale();
-  const { js, wordpress, nodejs } = translations[locale].technologies;
+  const { contact, project, estimation, realization } = translations[
+    locale
+  ].workProgress;
 
   const isWhite = bgColor === "white";
 
   return (
-    <div
-      id="technologies"
-      className="container text-center tech"
-      name="scrollBg"
-    >
+    <div id="estimation" className="container text-center tech" name="scrollBg">
       <div className="row">
         <div className="col-12 col-lg-8 mx-auto">
-          <p className="font-bold m-0 tech__title">OUR TECHNOLOGIES</p>
-          <h3 className="tech__description">
-            Sed ut perspicatinus ode ominis iste natus error sit voluptatem
-            accusantinum diloreqm
-          </h3>
+          <p className="font-bold m-0 tech__title">{contact}</p>
+          <h3 className="tech__description"></h3>
         </div>
       </div>
       <div className="row justify-content-between" data-aos="fade-down">
-        <TechBlock
-          title="WORDPRESS"
-          description={wordpress}
+        <ColBlock
+          title={project.title}
+          description={project.description}
           img={isWhite ? triangleDark : triangleLight}
           alt="triangle"
         />
-        <TechBlock
-          title="React.js"
-          description={js}
+        <ColBlock
+          title={estimation.title}
+          description={estimation.description}
           img={isWhite ? rectangleDark : rectangleLight}
           alt="square"
         />
-        <TechBlock
-          title="Node.js"
-          description={nodejs}
+        <ColBlock
+          title={realization.title}
+          description={realization.description}
           img={isWhite ? circleDark : circleLight}
           alt="triangle"
         />
@@ -55,4 +50,4 @@ function Technologies({ bgColor }) {
   );
 }
 
-export default Technologies;
+export default ThreeColBlock;

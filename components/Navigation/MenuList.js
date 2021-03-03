@@ -6,7 +6,7 @@ import { linkProps } from "../../utils/linkProps";
 
 export function MenuList({ handleMenu = () => {} }) {
   const locale = getLocale();
-  const { aboutUs, projects, offer, contact, technologies } = translations[
+  const { aboutUs, projects, offer, contact, estimation } = translations[
     locale
   ].navigation;
 
@@ -28,8 +28,8 @@ export function MenuList({ handleMenu = () => {} }) {
         </Link>
       </li>
       <li>
-        <Link onClick={handleMenu} to="technologies" {...linkProps}>
-          {technologies}
+        <Link onClick={handleMenu} to="estimation" {...linkProps}>
+          {estimation}
         </Link>
       </li>
       <li>
