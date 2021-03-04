@@ -3,7 +3,11 @@ import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
 import Intro from "./Intro";
+import { useRouter } from "next/router";
+
 function Layout({ children }) {
+  const router = useRouter();
+
   const [scrollHeight, setScrolLHeight] = useState(0);
   const [sectionOffset, setSectionOffset] = useState([]);
 
@@ -11,7 +15,7 @@ function Layout({ children }) {
     function getSectionsOffset() {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
-      sections.forEach(section => {
+      sections.forEach((section) => {
         const offset = section.offsetTop;
         offsetArr.push(offset);
       });
@@ -29,7 +33,7 @@ function Layout({ children }) {
       window.removeEventListener("resize", getSectionsOffset);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [router.pathname]);
 
   const bgColor = determineBgColor(scrollHeight, sectionOffset);
 
