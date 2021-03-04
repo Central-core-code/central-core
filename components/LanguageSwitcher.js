@@ -7,6 +7,8 @@ export const LanguageSwitcher = () => {
   const locale = getLocale();
   const isEn = locale === "en";
 
+  return null;
+
   return (
     <>
       <Link href="/" locale="en">
