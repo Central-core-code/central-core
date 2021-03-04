@@ -1,7 +1,11 @@
 export default {
   en: {
+    contactUs: "Contact us",
     contactForm: {
-      sendButton: "Send",
+      headline: "Pracujmy razem!",
+      text: "Jaki jest zakres twojego projeku? Napisz do nas",
+      message: "Message",
+      sendButton: "Wyślij",
     },
     navigation: {
       aboutUs: "About us",
@@ -37,7 +41,7 @@ export default {
         "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
     },
     workProgress: {
-      contact: "Etapy wyceny projektu",
+      contact: "Etapy współpracy",
       project: {
         title: "Kontakt",
         description:
@@ -56,7 +60,11 @@ export default {
     },
   },
   pl: {
+    contactUs: "Napisz do nas",
     contactForm: {
+      headline: "Pracujmy razem!",
+      text: "Jaki jest zakres twojego projeku? Napisz do nas",
+      message: "Wiadomość",
       sendButton: "Wyślij",
     },
     navigation: {
@@ -93,7 +101,7 @@ export default {
         "User Experience to suma wszystkich reakcji i odczuć, których doświadcza użytkownik produktu. UX to projektowanie doświadczeń, czyli dbanie o to, aby produkt wzbudzał pozytywne odczucia w ludziach, którzy z niego korzystają.",
     },
     workProgress: {
-      contact: "Etapy wyceny projektu",
+      contact: "Etapy współpracy",
       project: {
         title: "Kontakt",
         description:

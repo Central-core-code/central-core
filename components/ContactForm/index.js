@@ -84,18 +84,19 @@ function ContactForm() {
     return <SuccessMessage />;
   }
 
+  const { sendButton, headline, text, message } = translations[
+    locale
+  ].contactForm;
+
   return (
     <div id="contactForm" className="contact_wrap" name="scrollBg">
       <div className="container">
         <div className="row justify-content-center contact_wrap__row text-center text-sm-left">
           <div className="col-12 col-sm-4 ">
-            <h3>Let's work together</h3>
+            <h3>{headline}</h3>
           </div>
           <div className="col-12 col-sm-4">
-            <p>
-              What is the scope of your project? We'll estimate costs and time
-              for you.
-            </p>
+            <p>{text}</p>
           </div>
           <div className="col-sm-10">
             <form
@@ -132,7 +133,7 @@ function ContactForm() {
                   rows="5"
                   placeholder="message"
                 />
-                <label htmlFor="message">Message</label>
+                <label htmlFor="message">{message}</label>
                 <small
                   id="emailHelp"
                   className="form-text text-muted float-right"
@@ -147,7 +148,7 @@ function ContactForm() {
                   disabled={isValidationFailed()}
                   type="submit"
                 >
-                  {translations[locale].contactForm.sendButton}
+                  {sendButton}
                 </button>
               </div>
             </form>

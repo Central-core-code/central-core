@@ -11,6 +11,8 @@ function Offers() {
     locale
   ].offers;
 
+  const { contactUs } = translations[locale];
+
   return (
     <div
       id="offers"
@@ -23,7 +25,8 @@ function Offers() {
         {...linkPropsNoActive}
       >
         <p>
-          contact us<span></span>
+          {contactUs}
+          <span></span>
         </p>
       </Link>
 
