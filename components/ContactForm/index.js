@@ -99,12 +99,7 @@ function ContactForm() {
             <p>{text}</p>
           </div>
           <div className="col-sm-10">
-            <form
-              className="contact_form"
-              name="contactForm"
-              onSubmit={handleSubmit}
-              noValidate
-            >
+            <form className="contact_form" onSubmit={handleSubmit} noValidate>
               <div
                 className={classNames("field position-relative mb-3", {
                   is_error: errors["email"],

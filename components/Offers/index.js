@@ -3,7 +3,6 @@ import getLocale from "../../utils/getLocale";
 import OfferBlock from "./OfferBlock";
 import translations from "../../translations";
 import { Link } from "react-scroll";
-import { linkPropsNoActive } from "../../utils/linkProps";
 
 function Offers() {
   const locale = getLocale();
@@ -22,7 +21,10 @@ function Offers() {
       <Link
         className="offers__contact-triger"
         to="contactForm"
-        {...linkPropsNoActive}
+        spy={true}
+        smooth={true}
+        duration={0}
+        offset={-50}
       >
         <p>
           {contactUs}
