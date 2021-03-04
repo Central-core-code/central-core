@@ -90,12 +90,10 @@
   position: fixed;
   z-index: 9;
   max-height: 83px;
-  transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
   height: 100vh;
 
   &.is-open {
     max-height: 10000px;
-    transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
 
     .nav {
       &__items {
@@ -103,10 +101,8 @@
         opacity: 1;
         max-height: 10000px;
         background-color: $white;
-        transition: max-height 0.7s 0s, opacity 0.2s 0.3s;
         li {
           margin-top: 0;
-          transition: margin-top 0.5s ease-in-out;
         }
       }
       &__hamburger {
@@ -130,7 +126,6 @@
       display: block;
       position: absolute;
       max-height: 1000px;
-      transition: max-height 1s 0s, opacity 0.2s 0.5s;
       left: 0;
       width: 100%;
       text-align: center;
@@ -143,7 +138,6 @@
         margin-left: 0%;
         margin-top: 30px;
         padding: 20px 0;
-        transition: margin-top 0.5s ease-in-out;
         &:last-child {
           a {
             padding: 10px;
