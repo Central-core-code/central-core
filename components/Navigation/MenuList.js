@@ -42,9 +42,11 @@ export function MenuList({ handleMenu = () => {} }) {
         </Link>
       </li>
       <li>
-        <LinkScroll onClick={handleMenu} to="contactForm" {...linkProps}>
-          <Link href="/#contactForm">{contact}</Link>
-        </LinkScroll>
+        <Link href="/#contactForm">
+          <LinkScroll onClick={handleMenu} to="contactForm" {...linkProps}>
+            {contact}
+          </LinkScroll>
+        </Link>
       </li>
     </>
   );
