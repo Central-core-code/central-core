@@ -5,7 +5,7 @@ import { useWindowWidth } from "../../utils/useWindowWidth";
 import { MenuList } from "./MenuList";
 import Logo from "../Logo";
 
-function Navigation({ bgColor }) {
+function Navigation({ bgColor, currSection }) {
   const containerRef = useRef(null);
   const isMobile = useWindowWidth() < 1032;
 
@@ -23,7 +23,7 @@ function Navigation({ bgColor }) {
   });
 
   if (isMobile) {
-    return <MobileNav bgColor={bgColor} />;
+    return <MobileNav bgColor={bgColor} currSection={currSection} />;
   }
 
   return (
@@ -43,7 +43,7 @@ function Navigation({ bgColor }) {
         <div className="nav__items_wrap">
           <div className="col-10 d-flex justify-content-end">
             <ul className="nav__items">
-              <MenuList />
+              <MenuList currSection={currSection} />
             </ul>
           </div>
         </div>

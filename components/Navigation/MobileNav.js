@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { LanguageSwitcher } from "../LanguageSwitcher";
 import { MenuList } from "./MenuList";
 
-function MobileNav({ bgColor }) {
+function MobileNav({ bgColor, currSection }) {
   const [isNavOpen, setNavOpen] = useState(false);
 
   const handleMenu = () => {
@@ -31,7 +31,7 @@ function MobileNav({ bgColor }) {
         </div>
         <div className="row">
           <ul className="nav__items">
-            <MenuList handleMenu={handleMenu} />
+            <MenuList handleMenu={handleMenu} currSection={currSection} />
             <li onClick={handleMenu}>
               <LanguageSwitcher />
             </li>

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 function Layout({ children }) {
   const router = useRouter();
 
-  const [scrollHeight, setScrolLHeight] = useState(0);
+  const [scrollHeight, setScrollHeight] = useState(0);
   const [sectionOffset, setSectionOffset] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ function Layout({ children }) {
     }
 
     function handleScroll() {
-      setScrolLHeight(window.pageYOffset);
+      setScrollHeight(window.pageYOffset);
     }
 
     getSectionsOffset();
@@ -37,10 +37,23 @@ function Layout({ children }) {
 
   const bgColor = determineBgColor(scrollHeight, sectionOffset);
 
+  let section = 0;
+  if (scrollHeight > sectionOffset[4]) {
+    section = 5;
+  } else if (scrollHeight > sectionOffset[3]) {
+    section = 4;
+  } else if (scrollHeight > sectionOffset[2]) {
+    section = 3;
+  } else if (scrollHeight > sectionOffset[1]) {
+    section = 2;
+  } else if (scrollHeight > sectionOffset[0]) {
+    section = 1;
+  }
+
   return (
     <div className={`content ${bgColor}`}>
       <Intro />
-      <Navigation bgColor={bgColor} />
+      <Navigation bgColor={bgColor} currSection={section} />
       {React.cloneElement(children, { bgColor })}
       <Footer bgColor={bgColor} />
     </div>
@@ -50,11 +63,11 @@ function Layout({ children }) {
 export default Layout;
 
 function determineBgColor(height, sections) {
-  if (between(height, -500, sections[0])) {
+  if (between(height, -500, sections[1])) {
     return "white";
-  } else if (between(height, sections[0], sections[1])) {
+  } else if (between(height, sections[1], sections[3])) {
     return "black";
-  } else if (between(height, sections[1], sections[2])) {
+  } else if (between(height, sections[3], sections[4])) {
     return "white";
   } else {
     return "black";

@@ -7,7 +7,7 @@ function AboutUs() {
   const { title, headline, desc } = translations[locale].aboutUs;
 
   return (
-    <div id="aboutUs" className="about">
+    <div id="aboutUs" className="about" name="scrollBg">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center">
