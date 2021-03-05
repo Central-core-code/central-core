@@ -1,9 +1,10 @@
 import React from "react";
+import getLocale from "../../utils/getLocale";
 
-function SuccessMessage() {
+function SuccessMessage({ successMessage }) {
   return (
-    <div>
-      <h2>Success message</h2>
+    <div className="success-message">
+      <h2 className="animate">{successMessage}</h2>
     </div>
   );
 }

@@ -76,17 +76,14 @@ function ContactForm() {
       );
   };
 
-  if (isError) {
-    return <ErrorMessage />;
-  }
-
-  if (isSuccess) {
-    return <SuccessMessage />;
-  }
-
-  const { sendButton, headline, text, message } = translations[
-    locale
-  ].contactForm;
+  const {
+    sendButton,
+    headline,
+    text,
+    message,
+    successMessage,
+    errorMessage,
+  } = translations[locale].contactForm;
 
   return (
     <div id="contactForm" className="contact_wrap" name="scrollBg">
@@ -148,6 +145,8 @@ function ContactForm() {
               </div>
             </form>
           </div>
+          {isSuccess && <SuccessMessage successMessage={successMessage} />}
+          {isError && <ErrorMessage errorMessage={errorMessage} />}
         </div>
       </div>
     </div>

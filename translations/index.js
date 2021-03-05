@@ -6,6 +6,8 @@ export default {
       text: "Jaki jest zakres twojego projeku? Napisz do nas",
       message: "Message",
       sendButton: "Wyślij",
+      successMessage: "Wiadomość wysłana",
+      errorMessage: "Coś poszłno nie tak, wiadmośc nie została wysłana",
     },
     navigation: {
       aboutUs: "About us",
@@ -66,6 +68,8 @@ export default {
       text: "Jaki jest zakres twojego projeku? Napisz do nas",
       message: "Wiadomość",
       sendButton: "Wyślij",
+      successMessage: "Wiadność wysłana",
+      errorMessage: "Coś poszłno nie tak, wiadmośc nie została wysłana",
     },
     navigation: {
       aboutUs: "O nas",

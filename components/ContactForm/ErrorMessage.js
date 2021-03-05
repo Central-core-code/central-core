@@ -1,9 +1,9 @@
 import React from "react";
 
-function ErrorMessage() {
+function ErrorMessage({ errorMessage }) {
   return (
-    <div>
-      <h2>Error message</h2>
+    <div className="error-message">
+      <h2 className="animate">{errorMessage}</h2>
     </div>
   );
 }
