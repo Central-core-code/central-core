@@ -1,18 +1,19 @@
-@import './variables';
+@import "./variables";
 
-@import './navigation.scss';
-@import './contactForm.scss';
-@import './footer.scss';
-@import './layout.scss';
-@import './header.scss';
-@import './slider.scss';
-@import './spotlight.scss';
-@import './technologies.scss';
-@import './offers.scss';
-@import './aboutUs.scss';
+@import "./navigation.scss";
+@import "./contactForm.scss";
+@import "./footer.scss";
+@import "./layout.scss";
+@import "./header.scss";
+@import "./slider.scss";
+@import "./spotlight.scss";
+@import "./technologies.scss";
+@import "./offers.scss";
+@import "./aboutUs.scss";
 
 html,
 body {
+  scroll-behavior: smooth;
   padding: 0;
   margin: 0;
   font-family: $font-SF-Compact, Helvetica, Arial, Sans-Serif;

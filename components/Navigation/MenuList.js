@@ -1,8 +1,6 @@
 import React from "react";
 import getLocale from "../../utils/getLocale";
 import translations from "../../translations";
-import { Link as LinkScroll } from "react-scroll";
-import { linkProps } from "../../utils/linkProps";
 import Link from "next/link";
 
 export function MenuList({ handleMenu = () => {} }) {
@@ -14,38 +12,28 @@ export function MenuList({ handleMenu = () => {} }) {
   return (
     <>
       <li>
-        <Link href="/#aboutUs">
-          <LinkScroll onClick={handleMenu} to="aboutUs" {...linkProps}>
-            {aboutUs}
-          </LinkScroll>
+        <Link href="/#aboutUs" onClick={handleMenu}>
+          {aboutUs}
         </Link>
       </li>
       <li>
-        <Link href="/#offers">
-          <LinkScroll onClick={handleMenu} to="offers" {...linkProps}>
-            {offer}
-          </LinkScroll>
+        <Link href="/#offers" onClick={handleMenu}>
+          {offer}
         </Link>
       </li>
       <li>
-        <Link href="/#projects">
-          <LinkScroll onClick={handleMenu} to="projects" {...linkProps}>
-            {projects}
-          </LinkScroll>
+        <Link href="/#projects" onClick={handleMenu}>
+          {projects}
         </Link>
       </li>
       <li>
-        <Link href="/#estimation">
-          <LinkScroll onClick={handleMenu} to="estimation" {...linkProps}>
-            {estimation}
-          </LinkScroll>
+        <Link href="/#estimation" onClick={handleMenu}>
+          {estimation}
         </Link>
       </li>
       <li>
-        <Link href="/#contactForm">
-          <LinkScroll onClick={handleMenu} to="contactForm" {...linkProps}>
-            {contact}
-          </LinkScroll>
+        <Link href="/#contactForm" onClick={handleMenu}>
+          {contact}
         </Link>
       </li>
     </>
