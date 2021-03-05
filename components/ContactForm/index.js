@@ -86,7 +86,8 @@ function ContactForm() {
   } = translations[locale].contactForm;
 
   return (
-    <div id="contactForm" className="contact_wrap" name="scrollBg">
+    <div className="contact_wrap" name="scrollBg">
+      <span id="contactForm" className="offset" />
       <div className="container">
         <div className="row justify-content-center contact_wrap__row text-center text-sm-left">
           <div className="col-12 col-sm-4 ">

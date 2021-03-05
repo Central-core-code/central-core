@@ -19,7 +19,8 @@ function ThreeColBlock({ bgColor }) {
   const isWhite = bgColor === "white";
 
   return (
-    <div id="estimation" className="container text-center tech" name="scrollBg">
+    <div className="container text-center tech" name="scrollBg">
+      <span id="estimation" className="offset" />
       <div className="row">
         <div className="col-12 col-lg-8 mx-auto">
           <p className="font-bold m-0 tech__title">{contact}</p>

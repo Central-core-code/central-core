@@ -10,7 +10,8 @@ import { settings, slides } from "./slidesData";
 
 function Carousel() {
   return (
-    <div id="projects" name="scrollBg">
+    <div name="scrollBg">
+      <span id="projects" className="offset" />
       <Slider className="slider" {...settings}>
         {slides.map((slide) => (
           <Slide key={uniqueId()} slide={slide} />

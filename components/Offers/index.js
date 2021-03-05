@@ -13,11 +13,9 @@ function Offers() {
   const { contactUs } = translations[locale];
 
   return (
-    <div
-      id="offers"
-      className="offers__wrap spotlight__wrap-offers"
-      name="scrollBg"
-    >
+    <div className="offers__wrap spotlight__wrap-offers" name="scrollBg">
+      <span id="offers" className="offset" />
+
       <Link
         className="offers__contact-triger"
         to="contactForm"
