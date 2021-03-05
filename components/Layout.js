@@ -16,7 +16,7 @@ function Layout({ children }) {
       const sections = document.getElementsByName("scrollBg");
       const offsetArr = [];
       sections.forEach((section) => {
-        const offset = section.offsetTop;
+        const offset = section.offsetTop - 100;
         offsetArr.push(offset);
       });
       setSectionOffset(offsetArr);
