@@ -94,6 +94,10 @@ function ContactForm() {
           </div>
           <div className="col-12 col-sm-4">
             <p>{text}</p>
+            <p>
+              E-mail:
+              <a href="mailto:office@central-core.pl">office@central-core.pl</a>
+            </p>
           </div>
           <div className="col-sm-10">
             <form className="contact_form" onSubmit={handleSubmit} noValidate>
