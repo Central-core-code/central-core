@@ -9,6 +9,7 @@ import circleDark from "public/icons/circle-dark.png";
 import circleLight from "public/icons/circle-light.png";
 import getLocale from "../../utils/getLocale";
 import translations from "translations";
+import { useWindowWidth } from "../../utils/useWindowWidth";
 
 function ThreeColBlock({ bgColor }) {
   const locale = getLocale();
@@ -17,6 +18,9 @@ function ThreeColBlock({ bgColor }) {
   ].workProgress;
 
   const isWhite = bgColor === "white";
+
+  const isMobile = useWindowWidth() < 1032;
+  const aos = !isMobile ? "fade-down" : "";
 
   return (
     <div className="container text-center tech" name="scrollBg">
@@ -27,7 +31,7 @@ function ThreeColBlock({ bgColor }) {
           <h3 className="tech__description"></h3>
         </div>
       </div>
-      <div className="row justify-content-between" data-aos="fade-down">
+      <div className="row justify-content-between" data-aos={aos}>
         <ColBlock
           title={project.title}
           description={project.description}
