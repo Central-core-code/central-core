@@ -15,7 +15,7 @@ module.exports = withPlugins([
       EMAILJS_USER_KEY: "user_iQVZK0yjOPgkdyw4uCOeX",
     },
     i18n: {
-      locales: ["pl"],
+      locales: ["en", "pl"],
       defaultLocale: "pl",
     },
     target: "serverless",
