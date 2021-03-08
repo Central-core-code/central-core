@@ -1,13 +1,13 @@
 export default {
   en: {
-    contactUs: "Contact us",
+    contactUs: "Get in touch",
     contactForm: {
-      headline: "Pracujmy razem!",
-      text: "Jaki jest zakres twojego projeku? Napisz do nas",
+      headline: "Let's work together!",
+      text: "Tell us what you need in your project. Get in touch.",
       message: "Message",
-      sendButton: "Wyślij",
-      successMessage: "Wiadomość wysłana",
-      errorMessage: "Coś poszłno nie tak, wiadmośc nie została wysłana",
+      sendButton: "Send",
+      successMessage: "Message sent",
+      errorMessage: "Something wen't wrong.",
     },
     navigation: {
       aboutUs: "About us",
@@ -17,47 +17,47 @@ export default {
       estimation: "Estimation",
     },
     header: {
-      header1: "We build digital world",
+      header1: "We are creating a digital world",
       header2: "Your transformation",
-      header3: "starts here",
+      header3: "starts here...",
     },
     aboutUs: {
       title: "About us",
-      headline: "We can build future together",
+      headline: "We can build your future together",
       desc:
-        "We are a company with an established position on the market. Fully focused on the success of the project. We use state-of-the-art technologies and flexible processes that ensure greater efficiency, faster results and better product quality. We have years of experience behind us. We have worked for large and small companies. We will definitely find a common language.",
+        "We are a team with an extended experience in the market. Fully focused on the success of our projects. We use state-of-the-art technology and a flexible proces that ensures greater efficiency, faster results and better product quality. We have worked for both small and large companies in this sector. We will definitely find a common language.",
     },
     offers: {
       header: "Upholding technology as a force for good",
       desc:
         "We look for high-impact interventions, where focusing on helping a specific group of people—journalists, civil society, or activists, for example—makes the internet and society stronger and safer for everyone. Our focus areas address some of the most complex challenges facing open societies.",
       webApp:
-        "Web apps provides opportunities for businesses and brands to connect as well as engage with people. Get full stack custom software development services based on advanced technologies and latest industry trends.",
+        "Web apps provide opportunities for businesses and brands to connect as well as engage with people. Get full stack custom software development services based on advanced technology and latest industry trends.",
       ecommerce:
-        "Responsive and customized e-commerce websites help in creating awesome shopping experience. It provides an online engagement for businesses and increase the customer flow to the website.",
+        "Responsive and customized e-commerce websites help in creating awesome shopping experiences. It provides an online engagement for businesses and increases customer flow to the website.",
       seo:
-        "Each page created by us is fully programmatically optimized for SEO so that your website is as high as possible in the google search engine",
+        "Each page created by us is fully optimized for Search Engine Optimazation, so that your website is as visbile as possible in the google search engine",
       cms:
-        "Content management system, will allow you to fully manage the text on your website. Fully consciously, without programming knowledge, you can create new content by navigating the admin panel.",
+        "Content management system, this will allow you to fully manage the text found on your website,without any programming knowledge you can create new content by navigating the admin panel.",
       ux:
-        "We improve customer satisfaction and loyalty through the utility, ease of use, and pleasure provided in the interaction with a product.",
+        "We improve customer satisfaction and loyalty through the ease of use, utility and pleasure provided in the interaction with a product.",
     },
     workProgress: {
-      contact: "Etapy współpracy",
+      contact: "Working together",
       project: {
-        title: "Kontakt",
+        title: "Contact",
         description:
-          "Skontaktuj się z nami. Opowiedz o swoim pomyśle. Sprecyzujemy wspólnie wymagania",
+          "Get in contact with us. Tell us your ideas. We will focus on the fine details together.",
       },
       estimation: {
-        title: "Wycena projektu",
+        title: "Get a quote",
         description:
-          "Nastepnie musimy przeanalizować projekt pod kątem technicznym. Wrócimy do ciebie z wycena.",
+          "We will assess the needs and challenges in your project and quote accordingly",
       },
       realization: {
-        title: "Podsumowanie",
+        title: "Finally",
         description:
-          "Spotkanie podsumowujące i czas zaczynać prace nad projektem!",
+          "Once the i's are dotted and the t's are crossed we can focus on the work to be done...",
       },
     },
   },
