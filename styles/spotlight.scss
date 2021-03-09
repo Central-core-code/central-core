@@ -31,6 +31,15 @@
         rgb(255, 255, 255) 200px
       );
     }
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+        background: radial-gradient(
+          circle at var(--x, 50%) var(--y, 50%),
+          transparent 200px,
+          rgb(255, 255, 255) 200px
+        );
+      }
+    }
   }
 }
 
