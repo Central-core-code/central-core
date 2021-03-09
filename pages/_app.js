@@ -16,12 +16,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.asPath]);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      disable: function () {
-        return window.innerWidth < 1032;
-      },
-    });
+    AOS.init({ duration: 1000 });
   }, []);
 
   return (
