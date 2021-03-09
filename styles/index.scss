@@ -1,15 +1,15 @@
-@import "./variables";
+@import './variables';
 
-@import "./navigation.scss";
-@import "./contactForm.scss";
-@import "./footer.scss";
-@import "./layout.scss";
-@import "./header.scss";
-@import "./slider.scss";
-@import "./spotlight.scss";
-@import "./technologies.scss";
-@import "./offers.scss";
-@import "./aboutUs.scss";
+@import './navigation.scss';
+@import './contactForm.scss';
+@import './footer.scss';
+@import './layout.scss';
+@import './header.scss';
+@import './slider.scss';
+@import './spotlight.scss';
+@import './technologies.scss';
+@import './offers.scss';
+@import './aboutUs.scss';
 
 html,
 body {
@@ -116,6 +116,6 @@ a {
 .offset {
   display: block;
   position: relative;
-  top: -100px;
+  top: -90px;
   visibility: hidden;
 }
