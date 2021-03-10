@@ -17,8 +17,8 @@ import skyTowerLogo from "public/projects/skyTowerLogo.svg";
 export const slides = [
   {
     title: "Sky tower apartment",
-    img: skyTower,
-    img1: skyTower1,
+    imgWebp: skyTower,
+    imgPng: skyTower1,
     logo: skyTowerLogo,
     alt: {
       en: "Sky tower apartments reservation system page",
@@ -28,8 +28,8 @@ export const slides = [
 
   {
     title: "New Art Design",
-    img: newArtDesign,
-    img1: newArtDesign1,
+    imgWebp: newArtDesign,
+    imgPng: newArtDesign1,
     logo: newArtDesignLogo,
     alt: {
       en: "New Art Design company page",
@@ -38,8 +38,8 @@ export const slides = [
   },
   {
     title: "Pizza Nowar",
-    img: pizzaNowar,
-    img1: pizzaNowar1,
+    imgWebp: pizzaNowar,
+    imgPng: pizzaNowar1,
     logo: pizzaNowarLogo,
     alt: {
       en: "Pizza Nowar company page",
@@ -48,8 +48,8 @@ export const slides = [
   },
   {
     title: "Staszica 16",
-    img: staszica16,
-    img1: staszica161,
+    imgWebp: staszica16,
+    imgPng: staszica161,
     logo: staszica16Logo,
     alt: {
       en: "Staszica16 apartment booking",
@@ -58,8 +58,8 @@ export const slides = [
   },
   {
     title: "Print House",
-    img: printHouse,
-    img1: printHouse1,
+    imgWebp: printHouse,
+    imgPng: printHouse1,
 
     logo: printHouseLogo,
     alt: {
