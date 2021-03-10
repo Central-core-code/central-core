@@ -6,11 +6,6 @@ function Slide({ slide: { alt, title, imgWebp, imgPng, logo } }) {
   return (
     <div className="mx-3">
       <div className="slide embed-responsive embed-responsive-1by1-25">
-        {/* <img
-          src={img}
-          className="embed-responsive-item"
-          alt={alt[getLocale()]}
-        /> */}
         <picture>
           <source
             className="embed-responsive-item"
