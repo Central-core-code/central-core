@@ -1,8 +1,13 @@
 import printHouse from "public/projects/printHouse.webp";
+import printHouse1 from "public/projects/printHouse.png";
 import staszica16 from "public/projects/staszica16.webp";
+import staszica161 from "public/projects/staszica16.png";
 import newArtDesign from "public/projects/newArtDesign.webp";
+import newArtDesign1 from "public/projects/newArtDesign.jpg";
 import pizzaNowar from "public/projects/pizzaNowar.webp";
+import pizzaNowar1 from "public/projects/pizzaNowar.jpg";
 import skyTower from "public/projects/skyTower.webp";
+import skyTower1 from "public/projects/skyTower.png";
 import printHouseLogo from "public/projects/printHouseLogo.svg";
 import staszica16Logo from "public/projects/staszica16Logo.svg";
 import newArtDesignLogo from "public/projects/newArtDesignLogo.svg";
@@ -12,7 +17,8 @@ import skyTowerLogo from "public/projects/skyTowerLogo.svg";
 export const slides = [
   {
     title: "Sky tower apartment",
-    img: skyTower,
+    imgWebp: skyTower,
+    imgPng: skyTower1,
     logo: skyTowerLogo,
     alt: {
       en: "Sky tower apartments reservation system page",
@@ -22,7 +28,8 @@ export const slides = [
 
   {
     title: "New Art Design",
-    img: newArtDesign,
+    imgWebp: newArtDesign,
+    imgPng: newArtDesign1,
     logo: newArtDesignLogo,
     alt: {
       en: "New Art Design company page",
@@ -31,7 +38,8 @@ export const slides = [
   },
   {
     title: "Pizza Nowar",
-    img: pizzaNowar,
+    imgWebp: pizzaNowar,
+    imgPng: pizzaNowar1,
     logo: pizzaNowarLogo,
     alt: {
       en: "Pizza Nowar company page",
@@ -40,7 +48,8 @@ export const slides = [
   },
   {
     title: "Staszica 16",
-    img: staszica16,
+    imgWebp: staszica16,
+    imgPng: staszica161,
     logo: staszica16Logo,
     alt: {
       en: "Staszica16 apartment booking",
@@ -49,7 +58,9 @@ export const slides = [
   },
   {
     title: "Print House",
-    img: printHouse,
+    imgWebp: printHouse,
+    imgPng: printHouse1,
+
     logo: printHouseLogo,
     alt: {
       en: "Print House company page",
