@@ -11,7 +11,7 @@ import skyTowerLogo from "public/projects/skyTowerLogo.svg";
 
 export const slides = [
   {
-    title: "Sky tower reservation",
+    title: "Sky tower apartment",
     img: skyTower,
     logo: skyTowerLogo,
     alt: {

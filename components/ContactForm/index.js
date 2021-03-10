@@ -87,7 +87,7 @@ function ContactForm() {
 
   return (
     <div className="contact_wrap" name="scrollBg">
-      <span id="contactForm" className="offset" />
+      <span id="contactForm" className="offset less" />
       <div className="container">
         <div className="row justify-content-center contact_wrap__row text-center text-sm-left">
           <div className="col-12 col-sm-4 ">
