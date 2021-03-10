@@ -1,6 +1,11 @@
 .spotlight {
   &__wrap {
-    background-image: url('../public/black_small.webp');
+    background-image: url("../public/black_small.webp");
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+        background-image: url("../public/black_small.png");
+      }
+    }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +15,12 @@
     transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
   }
   &__wrap-offers {
-    background-image: url('../public/color_small.webp');
+    background-image: url("../public/color_small.webp");
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+        background-image: url("../public/color_small.png");
+      }
+    }
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
