@@ -28,7 +28,7 @@ export default {
         "We are a team with extended experience in the market. Fully focused on the success of our projects. We use state-of-the-art technology and a flexible process that ensures greater efficiency, faster results and better product quality. We have worked for both small and large companies in this sector. We will definitely find a common language.",
     },
     offers: {
-      header: "TBD",
+      header: "Our environment",
       desc:
         "We look for high-impact interventions, where focusing on helping a specific group of people—journalists, civil society, or activists, for example—makes the internet and society stronger and safer for everyone. Our focus areas address some of the most complex challenges facing open societies.",
       webApp:
@@ -90,7 +90,7 @@ export default {
         "Jesteśmy firmą o ugruntowanej pozycji na rynku. W pełni skoncentrowaną na sukcesie projektu. Korzystamy z najnowocześniejszych technologii i elastycznych procesów, które zapewniają większą wydajność, szybsze wyniki i lepszą jakość produktów. Posiadamy za sobą lata doswiadczenia. Pracowaliśmy dla wielkich jak i małych firm. Napewno znajdziemy wspólny język.",
     },
     offers: {
-      header: "TBD",
+      header: "Nasze środowisko",
       desc:
         "Poszukujemy interwencji o dużym wpływie, w których skupienie się na pomocy określonej grupie ludzi - na przykład dziennikarzom, społeczeństwu obywatelskiemu lub aktywistom - sprawia, że ​​internet i społeczeństwo stają się silniejsze i bezpieczniejsze dla wszystkich. Nasze obszary zainteresowania dotyczą najbardziej złożonych wyzwań stojących przed otwartymi społeczeństwami.",
       webApp:
