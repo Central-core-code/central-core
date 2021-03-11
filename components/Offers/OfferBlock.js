@@ -3,7 +3,7 @@ import { useWindowWidth } from "../../utils/useWindowWidth";
 
 function OfferBlock({ offset, title, content, slide = "left" }) {
   const isMobile = useWindowWidth() < 1032;
-  const aos = !isMobile ? `fade-${slide}` : "";
+  const aos = `fade-${slide}`;
 
   return (
     <div className="row offers__row" data-aos={aos}>

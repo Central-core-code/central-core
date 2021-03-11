@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
   }, [router.asPath]);
 
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, disable: "mobile" });
   }, []);
 
   return (

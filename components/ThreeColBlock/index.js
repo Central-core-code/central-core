@@ -19,9 +19,6 @@ function ThreeColBlock({ bgColor }) {
 
   const isWhite = bgColor === "white";
 
-  const isMobile = useWindowWidth() < 1032;
-  const aos = !isMobile ? "fade-down" : "";
-
   return (
     <div className="container text-center tech" name="scrollBg">
       <span id="estimation" className="offset" />
@@ -31,7 +28,7 @@ function ThreeColBlock({ bgColor }) {
           <h3 className="tech__description"></h3>
         </div>
       </div>
-      <div className="row justify-content-between" data-aos={aos}>
+      <div className="row justify-content-between" data-aos="fade-down">
         <ColBlock
           title={project.title}
           description={project.description}
