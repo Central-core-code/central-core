@@ -24,7 +24,7 @@ export default function Home({ bgColor }) {
   return (
     <>
       <Head>
-        <title>Central corp</title>
+        <title>Central core</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
