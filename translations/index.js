@@ -114,7 +114,7 @@ export default {
       estimation: {
         title: "Wycena projektu",
         description:
-          "Nastepnie musimy przeanalizować projekt pod kątem technicznym. Wrócimy do ciebie z wycena.",
+          "Nastepnie musimy przeanalizować projekt pod kątem technicznym. Wrócimy do Ciebie z wyceną.",
       },
       realization: {
         title: "Podsumowanie",
