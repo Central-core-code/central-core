@@ -87,7 +87,7 @@ export default {
       title: "O nas",
       headline: "Zbudujmy wspólnie przyszłość",
       desc:
-        "Jesteśmy firmą o ugruntowanej pozycji na rynku. W pełni skoncentrowaną na sukcesie projektu. Korzystamy z najnowocześniejszych technologii i elastycznych procesów, które zapewniają większą wydajność, szybsze wyniki i lepszą jakość produktów. Posiadamy za sobą lata doswiadczenia. Pracowaliśmy dla wielkich jak i małych firm. Napewno znajdziemy wspólny język.",
+        "Jesteśmy firmą o ugruntowanej pozycji na rynku. W pełni skoncentrowaną na sukcesie projektu. Korzystamy z najnowocześniejszych technologii i elastycznych procesów, które zapewniają większą wydajność, szybsze wyniki i lepszą jakość produktów. Posiadamy za sobą lata doswiadczenia. Pracowaliśmy dla wielkich jak i małych firm. Na pewno znajdziemy wspólny język.",
     },
     offers: {
       header: "Nasze środowisko",
@@ -100,7 +100,7 @@ export default {
       seo:
         "Każda stworzona przez nas strona jest w pełni zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:
-        "System zarzadzania treścią pozwoli ci  calkowicie dysponować tekstem znajdującycm się na twojej stronie. W pelni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
+        "System zarządzania treścią pozwoli Ci całkowicie dysponować tekstem znajdującycm się na twojej stronie. W pełni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
       ux:
         "User Experience to suma wszystkich reakcji i odczuć, których doświadcza użytkownik produktu. UX to projektowanie doświadczeń, czyli dbanie o to, aby produkt wzbudzał pozytywne odczucia w ludziach, którzy z niego korzystają.",
     },
