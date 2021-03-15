@@ -34,6 +34,10 @@ export default function Home({ bgColor }) {
           name="image"
           content="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-9/161272723_120474113422457_1060235310063031373_n.png?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Kxb7KDemHz4AX-xI7Sn&_nc_ht=scontent.fpoz1-1.fna&oh=083c81df2a13ab6785f49f59eba936d1&oe=607747E2"
         ></meta>
+        <meta
+          property="og:image"
+          content="https://scontent.fpoz1-1.fna.fbcdn.net/v/t1.0-9/161272723_120474113422457_1060235310063031373_n.png?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=Kxb7KDemHz4AX-xI7Sn&_nc_ht=scontent.fpoz1-1.fna&oh=083c81df2a13ab6785f49f59eba936d1&oe=607747E2"
+        ></meta>
       </Head>
       <div className="nav__desktop" id="top">
         <div className="spotlight__wrap">
