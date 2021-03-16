@@ -65,7 +65,7 @@ export default {
     contactUs: "Napisz do nas",
     contactForm: {
       headline: "Pracujmy razem!",
-      text: "Jaki jest zakres twojego projeku? Napisz do nas",
+      text: "Jaki jest zakres Twojego projektu? Napisz do nas",
       message: "Wiadomość",
       sendButton: "Wyślij",
       successMessage: "Wiadność wysłana",
@@ -81,7 +81,7 @@ export default {
     header: {
       header1: "Tworzymy cyfrowy świat",
       header2: "Twoja transformacja",
-      header3: "zaczyna sie tutaj",
+      header3: "zaczyna się tutaj",
     },
     aboutUs: {
       title: "O nas",
@@ -100,7 +100,7 @@ export default {
       seo:
         "Każda stworzona przez nas strona jest w pełni zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:
-        "System zarządzania treścią pozwoli Ci całkowicie dysponować tekstem znajdującycm się na twojej stronie. W pełni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając sie po panelu administratora.",
+        "System zarządzania treścią pozwoli Ci całkowicie dysponować tekstem znajdującycm się na twojej stronie. W pełni świadomie bez wiedzy programistycznej możesz tworzyć nowe treści poruszając się po panelu administratora.",
       ux:
         "User Experience to suma wszystkich reakcji i odczuć, których doświadcza użytkownik produktu. UX to projektowanie doświadczeń, czyli dbanie o to, aby produkt wzbudzał pozytywne odczucia w ludziach, którzy z niego korzystają.",
     },
