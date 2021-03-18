@@ -20,6 +20,8 @@ export const slides = [
     imgWebp: skyTower,
     imgPng: skyTower1,
     logo: skyTowerLogo,
+    logoWidth: "150",
+    logoHeight: "150",
     alt: {
       en: "Sky tower apartments reservation system page",
       pl: "Sky tower apartamenty system rezerwacji",
@@ -31,6 +33,8 @@ export const slides = [
     imgWebp: newArtDesign,
     imgPng: newArtDesign1,
     logo: newArtDesignLogo,
+    logoWidth: "150",
+    logoHeight: "150",
     alt: {
       en: "New Art Design company page",
       pl: "New Art Design strona firmowa",
@@ -41,6 +45,8 @@ export const slides = [
     imgWebp: pizzaNowar,
     imgPng: pizzaNowar1,
     logo: pizzaNowarLogo,
+    logoWidth: "150",
+    logoHeight: "150",
     alt: {
       en: "Pizza Nowar company page",
       pl: "Pizza Nowar strona firmowa",
@@ -51,6 +57,8 @@ export const slides = [
     imgWebp: staszica16,
     imgPng: staszica161,
     logo: staszica16Logo,
+    logoWidth: "185",
+    logoHeight: "70",
     alt: {
       en: "Staszica16 apartment booking",
       pl: "Staszica16 rezerwacja apratamentów",
@@ -60,8 +68,9 @@ export const slides = [
     title: "Print House",
     imgWebp: printHouse,
     imgPng: printHouse1,
-
     logo: printHouseLogo,
+    logoWidth: "185",
+    logoHeight: "90",
     alt: {
       en: "Print House company page",
       pl: "Print House strona firmowa",
