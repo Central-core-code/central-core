@@ -11,8 +11,8 @@ function Logo({ bgColor, handleClick = () => {} }) {
       <a onClick={handleClick}>
         <img
           src={logo}
-          width={78}
-          height={41}
+          width="78"
+          height="41"
           alt="logo"
           className="cursor-pointer"
         />
