@@ -16,7 +16,13 @@ function Intro() {
       <div className="intro">
         <div className="intro__text">
           <div className="intro__logo">
-            <img className="text" src={logo} alt="Logo" />
+            <img
+              className="text"
+              src={logo}
+              alt="Logo"
+              width="300"
+              height="161"
+            />
           </div>
         </div>
       </div>
