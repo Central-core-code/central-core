@@ -96,7 +96,7 @@ export default {
       webApp:
         "Aplikacje internetowe zapewniają firmom i markom możliwość łączenia się i angażowania ludzi. Uzyskaj kompleksowe usługi tworzenia niestandardowego oprogramowania w oparciu o zaawansowane technologie i najnowsze trendy w branży.",
       ecommerce:
-        "Responsywne i spersonalizowane witryny ecommerce pomagają w tworzeniu niesamowitych doświadczeń zakupowych. Zapewnia zaangażowanie online dla firm i zwiększa przepływ klientów do witryny.",
+        "Responsywne i spersonalizowane witryny e-commerce pomagają w tworzeniu niesamowitych doświadczeń zakupowych. Zapewnia zaangażowanie online dla firm i zwiększa przepływ klientów do witryny.",
       seo:
         "Każda stworzona przez nas strona jest w pełni zoptymalizowana pod kątem SEO, aby Twoja strona znajdowała się jak najwyżej w wyszukiwarce Google.",
       cms:

@@ -26,7 +26,7 @@ function Offers() {
       >
         <p>
           {contactUs}
-          <span></span>
+          <span />
         </p>
       </Link>
 
@@ -39,7 +39,7 @@ function Offers() {
 
         <OfferBlock title="Web Dev" content={webApp} offset="1" slide="left" />
         <OfferBlock
-          title="Ecommerce"
+          title="E-commerce"
           content={ecommerce}
           offset="5"
           slide="right"
