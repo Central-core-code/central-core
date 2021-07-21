@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navigation from "./Navigation";
 import Footer from "./Footer";
 import throttle from "lodash/throttle";
-// import Intro from "./Intro";
+import Intro from "./Intro";
 import { useRouter } from "next/router";
 
 function Layout({ children }) {
@@ -52,7 +52,7 @@ function Layout({ children }) {
 
   return (
     <div className={`content ${bgColor}`}>
-      {/* <Intro /> */}
+      <Intro />
       <Navigation bgColor={bgColor} currSection={section} />
       {React.cloneElement(children, { bgColor })}
       <Footer bgColor={bgColor} />
