@@ -5,28 +5,33 @@
   src: url("./GT-Sectra-Fine-Regular-Trial.otf") format("truetype");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Regular-Italic-Trial.otf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Bold-Trial.otf") format("truetype");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "GT-Sectra-Fine";
   src: url("./GT-Sectra-Fine-Black-Trial.otf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "GT-Zirkon-Ultra-Light";
   src: url("./GT-Zirkon-Ultra-Light-Trial.otf") format("truetype");
+  font-display: swap;
 }
 
 // SF-Compact-Text
@@ -35,19 +40,23 @@
   font-family: "SF-Compact-Text";
   src: url("./SF-Compact/SF-Compact-Text-Light.otf") format("truetype");
   font-weight: 300;
+  font-display: swap;
 }
 @font-face {
   font-family: "SF-Compact-Text";
   src: url("./SF-Compact/SF-Compact-Text-Regular.otf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 @font-face {
   font-family: "SF-Compact-Text";
   src: url("./SF-Compact/SF-Compact-Text-Semibold.otf") format("truetype");
   font-weight: 500;
+  font-display: swap;
 }
 @font-face {
   font-family: "SF-Compact-Text";
   src: url("./SF-Compact/SF-Compact-Text-Bold.otf") format("truetype");
   font-weight: 600;
+  font-display: swap;
 }
