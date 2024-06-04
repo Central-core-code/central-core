@@ -13,6 +13,11 @@ import staszica16Logo from "public/projects/staszica16Logo.svg";
 import newArtDesignLogo from "public/projects/newArtDesignLogo.svg";
 import pizzaNowarLogo from "public/projects/pizzaNowarLogo.svg";
 import skyTowerLogo from "public/projects/skyTowerLogo.svg";
+import alchimowiczBike from "public/projects/alchimowiczBike.webp";
+import alhimowiczBikeLogo from "public/projects/alhimowiczBikeLogo.svg";
+import motoTravels from "public/projects/motoTravels.webp";
+import motoTravels1 from "public/projects/motoTravels.jpg";
+import motoTravelsLogo from "public/projects/motoTravelsLogo.svg";
 
 export const slides = [
   {
@@ -25,6 +30,26 @@ export const slides = [
     alt: {
       en: "Sky tower apartments reservation system page",
       pl: "Sky tower apartamenty system rezerwacji",
+    },
+  },
+  {
+    title: "Alchimowiczbike",
+    imgWebp: alchimowiczBike,
+    imgPng: alchimowiczBike,
+    logo: alhimowiczBikeLogo,
+    alt: {
+      en: "Alchimowiczbike company page",
+      pl: "Alchimowiczbike strona firmowa",
+    },
+  },
+  {
+    title: "Mototravels",
+    imgWebp: motoTravels,
+    imgPng: motoTravels1,
+    logo: motoTravelsLogo,
+    alt: {
+      en: "Mototravels company page",
+      pl: "Mototravels strona firmowa",
     },
   },
 
