@@ -1,10 +1,8 @@
 [build.environment]
   NODE_VERSION = "18"
-  NETLIFY_NEXT_PLUGIN = "false"
-  NETLIFY_ENABLE_FRAMEWORK_DETECTION = "false"
 
 [build]
-  command = "npm run build"
+  command = "npx --yes next@14.2.35 build"
   publish = "out"
 
-# Całkowicie bez pluginów Next.js - używamy tylko static export
+# Bezpośrednie wywołanie next build bez framework detection
