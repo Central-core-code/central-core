@@ -1,30 +1,9 @@
-import printHouse from "public/projects/printHouse.webp";
-import printHouse1 from "public/projects/printHouse.png";
-import staszica16 from "public/projects/staszica16.webp";
-import staszica161 from "public/projects/staszica16.png";
-import newArtDesign from "public/projects/newArtDesign.webp";
-import newArtDesign1 from "public/projects/newArtDesign.jpg";
-import pizzaNowar from "public/projects/pizzaNowar.webp";
-import pizzaNowar1 from "public/projects/pizzaNowar.jpg";
-import skyTower from "public/projects/skyTower.webp";
-import skyTower1 from "public/projects/skyTower.png";
-import printHouseLogo from "public/projects/printHouseLogo.svg";
-import staszica16Logo from "public/projects/staszica16Logo.svg";
-import newArtDesignLogo from "public/projects/newArtDesignLogo.svg";
-import pizzaNowarLogo from "public/projects/pizzaNowarLogo.svg";
-import skyTowerLogo from "public/projects/skyTowerLogo.svg";
-import alchimowiczBike from "public/projects/alchimowiczBike.webp";
-import alhimowiczBikeLogo from "public/projects/alhimowiczBikeLogo.svg";
-import motoTravels from "public/projects/motoTravels.webp";
-import motoTravels1 from "public/projects/motoTravels.jpg";
-import motoTravelsLogo from "public/projects/motoTravelsLogo.svg";
-
 export const slides = [
   {
     title: "Sky tower apartment",
-    imgWebp: skyTower,
-    imgPng: skyTower1,
-    logo: skyTowerLogo,
+    imgWebp: "/projects/skyTower.webp",
+    imgPng: "/projects/skyTower.png",
+    logo: "/projects/skyTowerLogo.svg",
     logoWidth: "150",
     logoHeight: "150",
     alt: {
@@ -34,9 +13,9 @@ export const slides = [
   },
   {
     title: "Alchimowiczbike",
-    imgWebp: alchimowiczBike,
-    imgPng: alchimowiczBike,
-    logo: alhimowiczBikeLogo,
+    imgWebp: "/projects/alchimowiczBike.webp",
+    imgPng: "/projects/alchimowiczBike.webp",
+    logo: "/projects/alhimowiczBikeLogo.svg",
     alt: {
       en: "Alchimowiczbike company page",
       pl: "Alchimowiczbike strona firmowa",
@@ -44,9 +23,9 @@ export const slides = [
   },
   {
     title: "Mototravels",
-    imgWebp: motoTravels,
-    imgPng: motoTravels1,
-    logo: motoTravelsLogo,
+    imgWebp: "/projects/motoTravels.webp",
+    imgPng: "/projects/motoTravels.jpg",
+    logo: "/projects/motoTravelsLogo.svg",
     alt: {
       en: "Mototravels company page",
       pl: "Mototravels strona firmowa",
@@ -55,9 +34,9 @@ export const slides = [
 
   {
     title: "New Art Design",
-    imgWebp: newArtDesign,
-    imgPng: newArtDesign1,
-    logo: newArtDesignLogo,
+    imgWebp: "/projects/newArtDesign.webp",
+    imgPng: "/projects/newArtDesign.jpg",
+    logo: "/projects/newArtDesignLogo.svg",
     logoWidth: "150",
     logoHeight: "150",
     alt: {
@@ -67,9 +46,9 @@ export const slides = [
   },
   {
     title: "Pizza Nowar",
-    imgWebp: pizzaNowar,
-    imgPng: pizzaNowar1,
-    logo: pizzaNowarLogo,
+    imgWebp: "/projects/pizzaNowar.webp",
+    imgPng: "/projects/pizzaNowar.jpg",
+    logo: "/projects/pizzaNowarLogo.svg",
     logoWidth: "150",
     logoHeight: "150",
     alt: {
@@ -79,9 +58,9 @@ export const slides = [
   },
   {
     title: "Staszica 16",
-    imgWebp: staszica16,
-    imgPng: staszica161,
-    logo: staszica16Logo,
+    imgWebp: "/projects/staszica16.webp",
+    imgPng: "/projects/staszica16.png",
+    logo: "/projects/staszica16Logo.svg",
     logoWidth: "185",
     logoHeight: "70",
     alt: {
@@ -91,9 +70,9 @@ export const slides = [
   },
   {
     title: "Print House",
-    imgWebp: printHouse,
-    imgPng: printHouse1,
-    logo: printHouseLogo,
+    imgWebp: "/projects/printHouse.webp",
+    imgPng: "/projects/printHouse.png",
+    logo: "/projects/printHouseLogo.svg",
     logoWidth: "185",
     logoHeight: "90",
     alt: {

@@ -9,11 +9,11 @@ export const LanguageSwitcher = () => {
 
   return (
     <>
-      <Link href="/" locale="en">
-        <a className={isEn ? "nav__language_select" : ""}>EN</a>
+      <Link href="/" locale="en" className={isEn ? "nav__language_select" : ""}>
+        EN
       </Link>
-      <Link href="/" locale="pl">
-        <a className={!isEn ? "nav__language_select" : ""}>PL</a>
+      <Link href="/" locale="pl" className={!isEn ? "nav__language_select" : ""}>
+        PL
       </Link>
     </>
   );

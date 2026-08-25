@@ -1,7 +1,6 @@
 import React from "react";
-import Img from "react-optimized-image";
+import Image from "next/image";
 import { FooterPrivacy } from "./FooterPrivacy";
-import facebookIcon from "public/icons/facebook-f-brands.svg";
 import Logo from "@components/Logo";
 
 function Footer({ bgColor }) {
@@ -17,8 +16,8 @@ function Footer({ bgColor }) {
             href="https://www.facebook.com/centralCoreSH"
             rel="noreferrer"
           >
-            <Img
-              src={facebookIcon}
+            <Image
+              src="/icons/facebook-f-brands.svg"
               width={30}
               height={30}
               alt="envelope footer icon"

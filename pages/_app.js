@@ -19,11 +19,10 @@ function MyApp({ Component, pageProps }) {
     AOS.init({ duration: 1000 });
   }, []);
 
-  return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
-  );
+  // Use the layout defined at the page level, if available
+  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
+
+  return getLayout(<Component {...pageProps} />);
 }
 
 export default MyApp;

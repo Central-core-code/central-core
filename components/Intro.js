@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import logo from "../public/logo_white.svg";
 import gsap from "gsap";
 
 function Intro() {
@@ -18,7 +17,7 @@ function Intro() {
           <div className="intro__logo">
             <img
               className="text"
-              src={logo}
+              src="/logo_white.svg"
               alt="Logo"
               width="300"
               height="161"
