@@ -1,8 +1,11 @@
 [build.environment]
   NODE_VERSION = "18"
+  NETLIFY_ENABLE_FRAMEWORK_DETECTION = "false"
 
 [build]
   command = "npm run build"
   publish = "out"
 
-# Pluginy usunięte przez API - tylko static build
+# Wyłączamy framework detection i dodajemy plugin explicite
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
