@@ -4,3 +4,7 @@
 [build]
   command = "npm run build"
   publish = "out"
+
+# Dodajemy nowszą wersję pluginu explicite
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
