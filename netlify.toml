@@ -1,8 +1,8 @@
 [build.environment]
-  NODE_VERSION = "18"
+  NODE_VERSION = "22"
 
 [build]
-  command = "npx --yes next@14.2.35 build"
+  command = "npm run build"
   publish = "out"
 
-# Bezpośrednie wywołanie next build bez framework detection
+# Node.js 22 może mieć lepszą kompatybilność z Next.js 14
