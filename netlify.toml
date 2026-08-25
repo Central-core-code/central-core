@@ -1,8 +1,10 @@
 [build.environment]
   NODE_VERSION = "22"
+  NETLIFY_USE_YARN = "false"
+  NETLIFY_SKIP_BUILD_PLUGINS = "true"
 
 [build]
   command = "npm ci && npm run build"
   publish = "out"
 
-# Node.js 22 + explicit install powinno pomóc z Next.js detection
+# Próba całkowitego wyłączenia pluginów build
