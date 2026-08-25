@@ -1,5 +1,8 @@
+[build.environment]
+  NODE_VERSION = "18"
+
 [build]
   command = "npm run build"
   publish = "out"
 
-# Minimalna konfiguracja - pozwalamy Netlify użyć domyślnego Node.js
+# Pluginy usunięte przez API - tylko static build
