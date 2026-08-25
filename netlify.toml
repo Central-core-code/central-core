@@ -1,8 +1,5 @@
-[build.environment]
-  NODE_VERSION = "18"
-
 [build]
   command = "npm run build"
   publish = "out"
 
-# Usunięty plugin - static export działa bez Next.js plugin
+# Minimalna konfiguracja - pozwalamy Netlify użyć domyślnego Node.js
