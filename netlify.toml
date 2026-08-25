@@ -2,7 +2,7 @@
   NODE_VERSION = "22"
 
 [build]
-  command = "npm run build"
+  command = "npm ci && npm run build"
   publish = "out"
 
-# Node.js 22 może mieć lepszą kompatybilność z Next.js 14
+# Node.js 22 + explicit install powinno pomóc z Next.js detection
