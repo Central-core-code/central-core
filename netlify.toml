@@ -5,6 +5,4 @@
   command = "npm run build"
   publish = "out"
 
-# Dodajemy plugin Next.js (bez wersji - Netlify automatycznie użyje najnowszej)
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
+# Usunięty plugin - static export działa bez Next.js plugin
