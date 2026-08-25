@@ -5,6 +5,6 @@
   command = "npm run build"
   publish = "out"
 
-# Dodajemy nowszą wersję pluginu explicite
+# Wymuszamy konkretną nowszą wersję pluginu
 [[plugins]]
-  package = "@netlify/plugin-nextjs"
+  package = "@netlify/plugin-nextjs@5.15.13"
